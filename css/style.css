@@ -211,8 +211,10 @@
     transition: .5s;
 }
 
+/* change picture here */
+
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../Taipei/Chiufen_2018.jpg) center center no-repeat;
     background-size: cover;
 }
 
