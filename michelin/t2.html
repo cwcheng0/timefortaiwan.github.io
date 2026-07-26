@@ -1,1 +1,249 @@
-dfd
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>態芮 Taïrroir | 米其林三星時尚台灣菜</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "PingFang TC", sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+    .lang-bar {
+      display: flex; gap: 8px; margin-bottom: 32px; justify-content: center;
+    }
+    .lang-btn {
+      padding: 8px 18px; border-radius: 6px; border: 1px solid #d4d0c8;
+      background: #fff; color: #666; cursor: pointer; font-size: 14px;
+      transition: all 0.2s ease;
+    }
+    .lang-btn:hover { background: #f5f3ef; }
+    .lang-btn.active {
+      background: #1a1a1a; color: #fff; border-color: #1a1a1a;
+    }
+    .stars { color: #c9a227; font-size: 20px; letter-spacing: 3px; margin-bottom: 12px; }
+    .hero-title { font-size: 32px; font-weight: 600; line-height: 1.2; margin-bottom: 6px; }
+    .hero-sub { font-size: 16px; color: #666; margin-bottom: 16px; }
+    .badge-wrap { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .badge {
+      display: inline-block; padding: 4px 12px; border-radius: 4px;
+      font-size: 12px; font-weight: 500; background: #f0ebe3; color: #5c4a32;
+    }
+    .divider { height: 1px; background: #e5e2dc; margin: 32px 0; }
+    h2 { font-size: 20px; font-weight: 600; margin: 32px 0 16px; color: #1a1a1a; }
+    .bilingual-block {
+      border-left: 3px solid #c9a227; padding-left: 18px; margin-bottom: 20px;
+    }
+    .zh-text { font-size: 16px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px; }
+    .en-text { font-size: 14px; line-height: 1.7; color: #666; font-style: italic; }
+    .dish-card {
+      background: #fff; border: 1px solid #e5e2dc; border-radius: 10px;
+      padding: 20px; margin-bottom: 14px;
+    }
+    .dish-name { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+    .dish-en-name { font-size: 13px; color: #888; margin-bottom: 10px; }
+    .dish-desc { font-size: 14px; color: #555; line-height: 1.7; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .info-item {
+      background: #fff; padding: 14px; border-radius: 8px;
+      border: 1px solid #e5e2dc;
+    }
+    .info-label {
+      font-size: 11px; color: #999; margin-bottom: 4px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .info-value { font-size: 14px; color: #1a1a1a; line-height: 1.6; }
+    .quote {
+      font-size: 18px; font-weight: 500; line-height: 1.6;
+      color: #1a1a1a; padding: 20px 24px; border-radius: 10px;
+      background: #f5f3ef; margin: 24px 0; position: relative;
+    }
+    .quote::before {
+      content: "“"; font-size: 48px; position: absolute;
+      top: -6px; left: 14px; color: #d4d0c8; line-height: 1;
+    }
+    .quote-en {
+      font-size: 14px; color: #666; margin-top: 10px; font-style: italic;
+      padding-left: 10px; border-left: 2px solid #d4d0c8;
+    }
+    .footer-note {
+      text-align: center; padding-top: 20px; color: #aaa;
+      font-size: 12px; font-style: italic;
+    }
+    @media (max-width: 480px) {
+      .info-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 26px; }
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-bar">
+      <button class="lang-btn active" onclick="setLang('both')" id="btn-both">雙語並陳 / Bilingual</button>
+      <button class="lang-btn" onclick="setLang('zh')" id="btn-zh">中文</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="stars">★ ★ ★</div>
+    <div class="hero-title" data-zh="態芮 Taïrroir" data-en="Taïrroir">態芮 Taïrroir</div>
+    <div class="hero-sub" data-zh="全球唯一米其林三星時尚台灣菜" data-en="The world's only Michelin 3-star modern Taiwanese cuisine">全球唯一米其林三星時尚台灣菜</div>
+    <div class="badge-wrap">
+      <span class="badge">MICHELIN ★★★ 2023–2025</span>
+      <span class="badge">Taipei</span>
+      <span class="badge">Fine Dining</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 data-zh="餐廳理念" data-en="Philosophy">餐廳理念</h2>
+    <div class="bilingual-block">
+      <div class="zh-text" data-lang="zh">「Taïrroir」是「Taiwan」與「Terroir」（法文：風土）的融合，代表餐廳的精神——發揮台灣風土的美味。主廚何順凱（Chef Kai）兼具臺菜與法餐經驗，以法式料理手法重新演譯台灣經典，從不同角度體現台灣風土文化，向世界發聲。</div>
+      <div class="en-text" data-lang="en">"Taïrroir" is a portmanteau of "Taiwan" and "Terroir" (French for "sense of place"), embodying the restaurant's spirit of celebrating Taiwan's land and produce. Chef Kai Ho, with expertise in both Taiwanese and French cuisines, reinterprets Taiwanese classics through French techniques, presenting Taiwan's terroir culture to the world from a fresh perspective.</div>
+    </div>
+
+    <h2 data-zh="主廚介紹" data-en="About the Chef">主廚介紹</h2>
+    <div class="bilingual-block">
+      <div class="zh-text" data-lang="zh">主廚何順凱來自台中，曾在新加坡知名餐廳接受正統法餐訓練。他堅持選用貼近生活的食材——它們也許不華麗、不稀奇，但與記憶緊緊相繫。他相信真正能留下來的味道，是發自內心的真誠與情感。</div>
+      <div class="en-text" data-lang="en">Chef Kai Ho hails from Taichung and received formal French culinary training at renowned restaurants in Singapore. He insists on using ingredients close to everyday life — perhaps not glamorous or rare, but deeply tied to memory. He believes that the flavors that truly endure are those born from sincerity and emotion.</div>
+    </div>
+    <div class="quote">
+      <div data-zh="所謂料理，就是用料有理，也是種找尋自我認同的旅程。" data-en="Cuisine is about using ingredients with reason, and also a journey of finding self-identity.">所謂料理，就是用料有理，也是種找尋自我認同的旅程。</div>
+      <div class="quote-en" data-lang="en">Cuisine is about using ingredients with reason, and also a journey of finding self-identity.</div>
+    </div>
+
+    <h2 data-zh="經典菜色" data-en="Signature Dishes">經典菜色</h2>
+
+    <div class="dish-card">
+      <div class="dish-name" data-zh="休息站的回憶" data-en="Memories of the Rest Stop">休息站的回憶</div>
+      <div class="dish-en-name" data-lang="en">Pu'er Tea Free Range Organic Egg, Sweet Potato Fondant, Chicken Broth Rice Porridge</div>
+      <div class="dish-desc">
+        <span data-lang="zh">靈感來自 Chef Kai 兒時與家人搭客運旅行，在休息站買上一顆熱呼呼的茶葉蛋的溫暖記憶。放牧紅殼蛋以普洱茶湯低溫浸泡成溏心蛋，搭配 57 號方旦地瓜煎製的 Fondant，再淋上雞湯熬煮的白米粥。這道菜自開業以來幾乎從未缺席，是態芮最具代表性的經典之作。</span>
+        <span data-lang="en">Inspired by Chef Kai's childhood memory of buying a warm tea egg at a highway rest stop with his family. A free-range organic egg is slow-cooked in Pu'er tea broth to achieve a silky yolk, paired with a fondant of No. 57 sweet potato, and finished with a pour of chicken-broth rice porridge. This dish has rarely left the menu since opening and remains Taïrroir's most iconic creation.</span>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="dish-name" data-zh="慢條絲蜊" data-en="Slowly, with Luffa and Clams">慢條絲蜊</div>
+      <div class="dish-en-name" data-lang="en">Sponge Gourd Velouté, Star Jelly, Clam Puff Pastry, Bottarga</div>
+      <div class="dish-desc">
+        <span data-lang="zh">以諧音「慢條斯理」命名，將台灣夏天最常見的絲瓜化為精緻湯品。湯底加入薑，清爽中帶點暖意。蛤蜊湯做成的泡泡撒上烏魚子粉，旁邊的酥皮貝殼內包著雨來菇與金針菇蛋，再放上鮮甜的牛奶貝肉，將山裡與海邊的味道收進一個小小的殼裡。</span>
+        <span data-lang="en">Named as a pun on the idiom "slowly and unhurriedly." Taiwan's most common summer vegetable — sponge gourd — is transformed into an elegant velouté. The broth is warmed with ginger, topped with clam-foam and bottarga powder. A puff-pastry "shell" holds stir-fried star jelly and enoki mushrooms with a tender clam, capturing the flavors of both mountain and sea in one bite.</span>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="dish-name" data-zh="載鴿載舞" data-en="Dancing with Pigeon">載鴿載舞</div>
+      <div class="dish-en-name" data-lang="en">Pingtung Pigeon, Fengyuan Spring Onion, Ginkgo & Lily Bulb Ragoût</div>
+      <div class="dish-desc">
+        <span data-lang="zh">靈感來自台式宴席的「脆皮雞」，主角換成屏東乳鴿。運用粵菜「刷脆皮水」工法，低溫熟成後炙火烘烤，外皮酥脆薄香、內裡細嫩多汁。搭配豐原東京蔥的炙烤蔥白與蔥油，再加上乳鴿濃縮醬汁與葡萄醬。鴿肝、鴿心與鴿胗則與銀杏、百合、腐竹慢燉成溫潤的 Ragoût。</span>
+        <span data-lang="en">Inspired by the Taiwanese banquet classic "crispy chicken," featuring Pingtung squab instead. Using the Cantonese "crispy-skin glazing" technique, the squab is slow-cooked then flame-roasted for a paper-thin, fragrant crust and juicy interior. Paired with charred Fengyuan spring onion and scallion oil, plus squab jus and grape reduction. The liver, heart, and gizzard are slowly braised with ginkgo, lily bulb, and yuba into a warm ragoût.</span>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="dish-name" data-zh="魚你到永酒" data-en="Fish You to Eternity">魚你到永酒</div>
+      <div class="dish-en-name" data-lang="en">Poisson du Jour, Pickled Watermelon Rind, Century Egg, Beurre Blanc</div>
+      <div class="dish-desc">
+        <span data-lang="zh">以諧音「與你到永久」命名，靈魂食材是台灣特有的西瓜綿。新鮮鰈魚或比目魚裹上混合布里歐麵包與皮蛋黃的麵衣，煎至金黃酥脆。醬汁以奶油白酒醬為基底，加入皮蛋白與醃漬西瓜綿的酸鹹風味，搭配鮭魚卵在口中爆開的鮮美，再以焦糖、紅酒、紅酒醋和魚骨慢熬的 Dolce Forte 收尾。</span>
+        <span data-lang="en">A pun on "with you forever." The soul ingredient is Taiwan's unique pickled watermelon rind. Fresh flounder or sole is coated in a crust of brioche and century egg yolk, then pan-fried to golden crispness. The sauce is a beurre blanc enriched with century egg white and the briny-sour notes of pickled watermelon rind, topped with salmon roe. Finished with a Dolce Forte reduction of caramel, red wine, vinegar, and fish bones.</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 data-zh="餐廳資訊" data-en="Restaurant Information">餐廳資訊</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-label" data-zh="地址" data-en="Address">地址</div>
+        <div class="info-value" data-zh="台北市中山區樂群三路299號6樓（EAT-T大樓）" data-en="6F, No. 299, Lequn 3rd Rd, Zhongshan Dist, Taipei">台北市中山區樂群三路299號6樓（EAT-T大樓）</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-zh="電話" data-en="Phone">電話</div>
+        <div class="info-value">+886 2-8501-5500</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-zh="營業時間" data-en="Hours">營業時間</div>
+        <div class="info-value" data-zh="週四至週一 12:00–14:30 / 18:30–22:30&lt;br&gt;週二公休&lt;br&gt;週三僅晚餐 18:30–22:30" data-en="Thu–Mon: Lunch 12:00–14:30 / Dinner 18:30–22:30&lt;br&gt;Tue: Closed&lt;br&gt;Wed: Dinner only 18:30–22:30">週四至週一 12:00–14:30 / 18:30–22:30<br>週二公休<br>週三僅晚餐 18:30–22:30</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-zh="捷運" data-en="MRT">捷運</div>
+        <div class="info-value" data-zh="劍南路站（EAT-T大樓6樓）" data-en="Jiannan Rd Station (EAT-T Building 6F)">劍南路站（EAT-T大樓6樓）</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-zh="套餐價位" data-en="Tasting Menu">套餐價位</div>
+        <div class="info-value" data-zh="午餐 NT$5,880+10%&lt;br&gt;晚餐 NT$8,880+10%" data-en="Lunch NT$5,880 +10%&lt;br&gt;Dinner NT$8,880 +10%">午餐 NT$5,880+10%<br>晚餐 NT$8,880+10%</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-zh="官網" data-en="Website">官網</div>
+        <div class="info-value">tairroir.com</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 data-zh="榮譽紀錄" data-en="Awards & Recognition">榮譽紀錄</h2>
+    <div class="bilingual-block">
+      <div class="zh-text" data-lang="zh">
+        • 2018 年榮獲米其林一星<br>
+        • 2019 年晉升米其林二星<br>
+        • 2023 年榮獲米其林三星，成為台灣首位以台式食材奪得三星的主廚<br>
+        • 2023 年榮獲台灣米其林服務大獎<br>
+        • 2024–2026 年蟬聯米其林三星
+      </div>
+      <div class="en-text" data-lang="en">
+        • 2018: Michelin One Star<br>
+        • 2019: Promoted to Michelin Two Stars<br>
+        • 2023: Awarded Michelin Three Stars — the first chef in Taiwan to achieve this honor with Taiwanese ingredients<br>
+        • 2023: Taiwan Michelin Service Award<br>
+        • 2024–2026: Retained Michelin Three Stars
+      </div>
+    </div>
+
+    <div class="footer-note" data-zh="透過料理，我們彼此分享故事，闡述想法。" data-en="Through cuisine, we share stories and express ideas.">透過料理，我們彼此分享故事，闡述想法。</div>
+  </div>
+
+  <script>
+    function setLang(mode) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('btn-' + mode).classList.add('active');
+
+      document.querySelectorAll('[data-zh], [data-en]').forEach(el => {
+        const zh = el.getAttribute('data-zh');
+        const en = el.getAttribute('data-en');
+        if (!zh && !en) return;
+        if (mode === 'zh') { el.textContent = zh; }
+        else if (mode === 'en') { el.textContent = en; }
+        else {
+          if (zh && en) {
+            el.innerHTML = zh + '<br><span style="color:#666;font-size:0.92em;font-style:italic;margin-top:4px;display:block;">' + en + '</span>';
+          }
+        }
+      });
+
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        if (mode === 'both') { el.style.display = 'block'; }
+        else if (el.getAttribute('data-lang') === mode) { el.style.display = 'block'; }
+        else { el.style.display = 'none'; }
+      });
+
+      document.querySelectorAll('.dish-desc').forEach(block => {
+        const spans = block.querySelectorAll('span[data-lang]');
+        if (mode === 'both') {
+          spans.forEach(s => { s.style.display = 'block'; s.style.marginBottom = '6px'; });
+        } else {
+          spans.forEach(s => {
+            s.style.display = s.getAttribute('data-lang') === mode ? 'block' : 'none';
+            s.style.marginBottom = '0';
+          });
+        }
+      });
+    }
+    setLang('both');
+  </script>
+</body>
+</html>
