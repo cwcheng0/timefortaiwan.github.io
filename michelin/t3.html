@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taïrroir 態芮 - 解構台灣靈魂的法式美學饗宴 | Deconstructing Taiwan's Soul</title>
+    <style>
+        :root {
+            --primary-color: #1a2b4c;
+            --accent-gold: #c5a059;
+            --bg-light: #f8f9fa;
+            --text-main: #2c3e50;
+            --text-muted: #6c757d;
+            --card-border: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--card-border);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            margin-left: 6px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1a2b4c 0%, #0d172a 100%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #fff;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .hero .subtitle-en {
+            font-size: 1.2rem;
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .hero-desc {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            font-size: 1rem;
+            color: #e5e7eb;
+        }
+
+        .hero-desc p {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: #b08d48;
+        }
+
+        /* Container & Section Structure */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header span {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 0.3rem;
+        }
+
+        /* Cards Layout */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .time-badge {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin: 0.3rem 0;
+            color: var(--primary-color);
+        }
+
+        .card-title-en {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            font-style: italic;
+        }
+
+        .card-text-zh {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .card-text-en {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Menu Timeline */
+        .menu-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .menu-item {
+            display: grid;
+            grid-template-columns: 80px 1fr 380px;
+            gap: 2rem;
+            align-items: start;
+            background: #fff;
+            padding: 2rem;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .menu-item {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .menu-num {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .menu-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+
+        .menu-content .en-name {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .desc-zh {
+            font-size: 0.98rem;
+            margin-bottom: 0.6rem;
+            color: #2c3e50;
+        }
+
+        .desc-en {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 1.2rem;
+        }
+
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--bg-light);
+            border: 1px solid #e2e8f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #4a5568;
+        }
+
+        .menu-img-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Drinks Section */
+        .drinks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+        }
+
+        .drinks-table th, .drinks-table td {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .drinks-table th {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .drinks-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .drink-name-zh {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .drink-name-en {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-align: right;
+        }
+
+        /* Chef Section */
+        .chef-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+            align-items: center;
+            background-color: var(--bg-light);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .chef-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chef-img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .chef-info h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .chef-info h3 {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #cbd5e1;
+        }
+
+        .info-item span:first-child {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .info-item span:last-child {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        footer .logo {
+            color: #fff;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        footer p {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        footer a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        footer a:hover {
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo">Taïrroir <span>態芮</span></a>
+        <nav>
+            <ul>
+                <li><a href="#about">關於態芮 | About</a></li>
+                <li><a href="#menu">經典饗宴 | Menu</a></li>
+                <li><a href="#drinks">微醺探索 | Drinks</a></li>
+                <li><a href="#chef">主廚風采 | Chef</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="hero-badge">米其林三星傳奇之夜 | A Michelin 3-Star Legendary Night</span>
+        <h1>解構台灣靈魂的法式美學饗宴</h1>
+        <div class="subtitle-en">Deconstructing Taiwan's Soul: A French Aesthetic Feast</div>
+        
+        <div class="hero-desc">
+            <p>「態」代表態度，「芮」代表風土（Terroir）。在台北大直的靜謐空間中，以極致的法式烹飪技藝，重新詮釋台灣在地風土的溫暖記憶。</p>
+            <p style="font-size: 0.9rem; color: #cbd5e1;">"Taï" represents attitude, while "rroïr" comes from "Terroir." Located in the serene area of Dazhi, Taipei, Taïrroir uses refined French culinary techniques to re-examine and elevate warm memories of local Taiwanese terroir.</p>
+        </div>
+        
+        <a href="#menu" class="btn-cta">開啟美味旅程 | Begin Culinary Journey</a>
+    </section>
+
+    <div class="container">
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header">
+                <span>About Taïrroir</span>
+                <h2>抵達與氛圍 | Arrival & Ambiance</h2>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <img src="../img/michelin/tairroir/frontdoor_20260720.jpg" alt="Building Directory 6F" class="card-img">
+                    <div class="card-body">
+                        <span class="time-badge">18:28 ARRIVAL</span>
+                        <h3 class="card-title">尊榮啟航</h3>
+                        <div class="card-title-en">Prestigious Arrival</div>
+                        <p class="card-text-zh">位於大直核心的 6 樓，藍色燈箱簡約而醒目。</p>
+                        <p class="card-text-en">Located on the 6th floor in the heart of Dazhi, featuring a minimalist yet striking blue illuminated sign.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/michelin/tairroir/entrance_20260720.jpg" alt="Taïrroir Front Door Copper Ceiling" class="card-img">
+                    <div class="card-body">
+                        <span class="time-badge">18:30 AMBIANCE</span>
+                        <h3 class="card-title">入口意象及黃銅風土天花板</h3>
+                        <div class="card-title-en">Entrance & Copper Terroir Ceiling</div>
+                        <p class="card-text-zh">入口意象及以 1,876 片黃銅立體交織出台灣丘陵的脈絡。</p>
+                        <p class="card-text-en">An impressive entrance featuring 1,876 pieces of copper panels intricately arranged to mimic the contours of Taiwan's rolling hills.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/michelin/tairroir/glass_20260720.jpg" alt="Orchid Vase and Mineral Water" class="card-img">
+                    <div class="card-body">
+                        <span class="time-badge">18:30 TABLE SETTING</span>
+                        <h3 class="card-title">雅致桌隅</h3>
+                        <div class="card-title-en">Elegant Table Setting</div>
+                        <p class="card-text-zh">以一朵蘭花與細緻冰水，為饗宴揭開優雅序幕。</p>
+                        <p class="card-text-en">An orchid alongside pristine chilled water sets an elegant prelude to the feast.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" style="margin-top: 5rem;">
+            <div class="section-header">
+                <span>Classic Tasting Menu</span>
+                <h2>經典饗宴時光軸 | Tasting Menu Timeline</h2>
+            </div>
+
+            <div class="menu-timeline">
+                
+                <!-- Item 1 -->
+                <div class="menu-item">
+                    <div class="menu-num">01</div>
+                    <div class="menu-content">
+                        <h3>精緻開胃小點</h3>
+                        <span class="en-name">Amuse-Bouche</span>
+                        <p class="desc-zh">饗宴的第一樂章。精緻的木製承架上呈現三款一口小點：酥脆的小塔、如楓葉般輕薄的脆片，以及包裹著在地食材的圓餅，以脆、軟、滑三種層次喚醒味蕾。</p>
+                        <p class="desc-en">The opening movement of the feast. Three bite-sized creations served on an elegant wooden frame—crispy mini tart, leaf-thin crisp, and a delicate wafer filled with local ingredients—awakening the palate with layers of crispness, tenderness, and smoothness.</p>
+                        <div class="tag-group">
+                            <span class="tag">寶島四季元素 | Taiwanese Seasons</span>
+                            <span class="tag">法式脆塔 | French Tart</span>
+                            <span class="tag">香草慕斯 | Herb Mousse</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/appetizer_combine_20260720.jpg" alt="Amuse-Bouche Tree Selection">
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item">
+                    <div class="menu-num">02</div>
+                    <div class="menu-content">
+                        <h3>金玉滿餃</h3>
+                        <span class="en-name">Sweet Corn Velouté & Delicate Ravioli</span>
+                        <p class="desc-zh">天鵝絨醬，加上手工薄皮雙餃，有咖啡，椰子口味的的酸甜完美融合。</p>
+                        <p class="desc-en">A silky velouté paired with handmade thin-wrapper ravioli, featuring a harmonious balance of coffee and coconut subtle sweet and tangy notes.</p>
+                        <div class="tag-group">
+                            <span class="tag">天鵝絨醬 | Velouté</span>
+                            <span class="tag">柑橘柚子泡泡 | Citrus Yuzu Foam</span>
+                            <span class="tag">薄皮雙餃 | Handcrafted Ravioli</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/ravioli_20260720.jpg" alt="Sweet Corn Velouté">
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item">
+                    <div class="menu-num">03</div>
+                    <div class="menu-content">
+                        <h3>手作歐式麵包與專屬奶油</h3>
+                        <span class="en-name">Artisanal Sourdough & Signature Butter</span>
+                        <p class="desc-zh">新鮮烘烤出爐的歐式麵包，外皮無比香脆，內裡氣孔飽滿、濕潤軟Q。搭配塑成精緻「T」字樣的半鹽奶油，純淨的乳香與麥香相得益彰。</p>
+                        <p class="desc-en">Freshly baked artisanal sourdough with a golden crisp crust and an airy, moist, chewy interior. Served with signature semi-salted butter shaped into the letter "T," creating a delightful harmony of wheat and dairy aromas.</p>
+                        <div class="tag-group">
+                            <span class="tag">低溫發酵歐式麵包 | Artisanal Sourdough</span>
+                            <span class="tag">T字特製半鹽奶油 | Signature "T" Butter</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/bread_20260720.jpg" alt="Artisanal Sourdough and Butter">
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item">
+                    <div class="menu-num">04</div>
+                    <div class="menu-content">
+                        <h3>代表作「貝露知筍」</h3>
+                        <span class="en-name">Hokkaido Scallop with Bamboo & Lemon Verbena</span>
+                        <p class="desc-zh">搭以北海道扇貝，佐以綠竹筍，酪梨，搭配的裝飾是原住民排灣、魯凱與卑南族的馬鞭草，去除海鮮的腥味並加上台灣竹筍及水果而成的台式料理。</p>
+                        <p class="desc-en">Featuring Hokkaido scallops paired with fresh green bamboo shoots and avocado, garnished with indigenous verbena herbs (Paiwan, Rukai, and Puyuma traditions) to complement the seafood with fresh citrusy notes and local fruits.</p>
+                        <div class="tag-group">
+                            <span class="tag">北海道扇貝 | Hokkaido Scallop</span>
+                            <span class="tag">綠竹筍 | Green Bamboo Shoot</span>
+                            <span class="tag">酪梨 | Avocado</span>
+                            <span class="tag">馬鞭草 | Lemon Verbena</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/congee_20260720.jpg" alt="Hokkaido Scallop and Bamboo">
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item">
+                    <div class="menu-num">05</div>
+                    <div class="menu-content">
+                        <h3>傳奇代表作「休息站的回憶-迷魂香芋椪糖」</h3>
+                        <span class="en-name">Pu'er Tea Free Range Organic Egg - Legendary Signature</span>
+                        <p class="desc-zh">態芮最著名的靈魂代表作的變形。頂上是乾蓮藕雲朵，底層藏有溫潤的有機普洱茶葉蛋，表面鋪滿香脆的紫地瓜椪糖，口感在極致酥脆與溫潤絲滑間跳躍。</p>
+                        <p class="desc-en">A signature variation of Taïrroir's iconic dish. Topped with a lotus root crisp cloud, revealing a warm organic Pu'er tea marble egg at the base, sprinkled with purple sweet potato honeycomb candy for a contrast of crispy and velvety textures.</p>
+                        <div class="tag-group">
+                            <span class="tag">紫地瓜椪糖 | Sweet Potato Honeycomb</span>
+                            <span class="tag">有機普洱茶葉蛋 | Pu'er Tea Egg</span>
+                            <span class="tag">乾蓮藕雲朵 | Lotus Root Cloud</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/restarea_20260720.jpg" alt="Pu'er Tea Free Range Organic Egg">
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item">
+                    <div class="menu-num">06</div>
+                    <div class="menu-content">
+                        <h3>經典主菜：屏東振聲鴨三吃「鴨韻成章」</h3>
+                        <span class="en-name">Main Course: Pingtung Duck in Three Ways</span>
+                        <p class="desc-zh">主廚向台灣經典烤鴨致敬的得意之作。選用屏東振聲優質鴨肉，經過熟成與細緻烹調，完美呈現烤鴨胸的酥脆與多汁、鴨肉卷的醇厚，以及鴨油高湯搭配細粉的溫潤，成就一幅宏大的鴨肉樂章。</p>
+                        <p class="desc-en">Chef Kai's homage to classic Taiwanese roasted duck. Premium Pingtung duck is aged and cooked to perfection, presenting crispy duck breast, savory duck rolls, and a comforting duck broth with vermicelli.</p>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #e2e8f0;">
+                            <strong style="color: var(--primary-color);">第一吃：芝麻脆皮鴨胸與鴨肉卷 | Course 1: Sesame Duck Breast & Roll</strong>
+                            <p class="desc-zh" style="margin-top: 0.3rem;">金黃香脆的芝麻烤鴨皮下，是無比粉嫩多汁的熟成鴨胸肉；搭配鹹香的手工鴨肉丸卷與精美的洛神花苦瓜玫瑰。</p>
+                            <p class="desc-en">Crispy golden sesame skin over tender aged duck breast, paired with handcrafted savory duck roll and pickled hibiscus bitter melon rose.</p>
+                            
+                            <strong style="color: var(--primary-color); margin-top: 0.8rem; display: block;">第二吃：鴨油酸菜細粉湯 | Course 2: Duck Oil Sauerkraut Vermicelli Soup</strong>
+                            <p class="desc-zh" style="margin-top: 0.3rem;">清亮而濃郁的鴨湯帶著酸菜的爽口與發酵酸香，細粉吸飽了湯汁，溫暖脾胃。</p>
+                            <p class="desc-en">Rich duck broth balanced with fermented sauerkraut and silky vermicelli absorbing every bit of flavor.</p>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/dock1_20260720.jpg" alt="Pingtung Duck in Three Ways">
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="menu-item">
+                    <div class="menu-num">07</div>
+                    <div class="menu-content">
+                        <h3>前甜點「仙姿玉質」</h3>
+                        <span class="en-name">Pre-Dessert: Xian Zi Yu Zhi</span>
+                        <p class="desc-zh">冰涼爽口的台式風味甜品重塑。底層是細嫩帶微辛的薑汁奶酪（薑汁撞奶），鋪上晶瑩剔透的蜂蜜檸檬冰沙，中央是一顆醇厚的仙草雪酪，最後托起一薄片香甜的黑糖蛋白霜，宛如仙子般優雅純淨。</p>
+                        <p class="desc-en">A refreshing reimagining of classic Taiwanese dessert. Layered with ginger milk curd at the base, topped with honey lemon granita, grass jelly sorbet, and a delicate brown sugar meringue disc.</p>
+                        <div class="tag-group">
+                            <span class="tag">仙草雪酪 | Grass Jelly Sorbet</span>
+                            <span class="tag">薑汁奶酪 | Ginger Milk Curd</span>
+                            <span class="tag">檸檬蜂蜜冰沙 | Honey Lemon Granita</span>
+                            <span class="tag">黑糖蛋白霜餅 | Brown Sugar Meringue</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/jelly_20260720.jpg" alt="Pre-Dessert Xian Zi Yu Zhi">
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="menu-item">
+                    <div class="menu-num">08</div>
+                    <div class="menu-content">
+                        <h3>主甜點「鳳聲茶起」</h3>
+                        <span class="en-name">Main Dessert: Feng Sheng Cha Qi</span>
+                        <p class="desc-zh">將代表台灣靈魂的「鳳梨酥」與「高山茶」完美融合。以金黃酥香的鹹蛋黃費南雪做成圓環，填入香甜微酸的慢燉蜜漬鳳梨丁；置於溫潤清香的包種茶鮮奶油醬池中，搭配醇香的香草雪酪與酥脆的蜂巢太妃糖。</p>
+                        <p class="desc-en">Merges iconic Taiwanese pineapple cake with high-mountain tea. A salted egg yolk financier ring filled with slow-simmered candied pineapple, resting in a pool of Baozhong tea cream sauce with vanilla sorbet and honeycomb toffee.</p>
+                        <div class="tag-group">
+                            <span class="tag">鹹蛋黃費南雪 | Salted Egg Financier</span>
+                            <span class="tag">蜜漬鳳梨丁 | Candied Pineapple</span>
+                            <span class="tag">包種茶茶醬 | Baozhong Tea Sauce</span>
+                            <span class="tag">蜂巢太妃糖 | Honeycomb Toffee</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/pineapple_20260720.jpg" alt="Main Dessert Feng Sheng Cha Qi">
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="menu-item">
+                    <div class="menu-num">09</div>
+                    <div class="menu-content">
+                        <h3>茶點與茗心「飴意 / 茗心」</h3>
+                        <span class="en-name">Mignardises Cart & Tea/Coffee</span>
+                        <p class="desc-zh">饗宴的優雅句點。態芮專屬的甜點推車緩緩駛至桌邊，承載著各式融合了法式精緻與台式童趣的手工小點，任由顧客挑選。再搭配一杯溫熱的精品茶或咖啡，以及清新芬芳的手工雪酪。</p>
+                        <p class="desc-en">An elegant conclusion. The custom mignardises cart presents handcrafted treats blending French finesse with playful Taiwanese childhood nostalgia, served alongside premium tea or coffee and red guava sorbet.</p>
+                        <div class="tag-group">
+                            <span class="tag">精緻甜點推車 | Mignardises Cart</span>
+                            <span class="tag">黑芝麻脆餅 | Sesame Crisp</span>
+                            <span class="tag">檸檬蛋白霜塔 | Lemon Meringue Tart</span>
+                            <span class="tag">紅心芭樂雪酪 | Red Guava Sorbet</span>
+                        </div>
+                    </div>
+                    <div class="menu-img-container">
+                        <img src="../img/michelin/tairroir/snacks_20260720.jpg" alt="Mignardises Cart & Tea">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Drinks Explorer Section -->
+        <section id="drinks" style="margin-top: 5rem;">
+            <div class="section-header">
+                <span>Beverage Menu Explorer</span>
+                <h2>佐餐酒水與飲品探索 | Drinks & Sparkling Tea</h2>
+            </div>
+
+            <table class="drinks-table">
+                <thead>
+                    <tr>
+                        <th>品名 / Description</th>
+                        <th style="text-align: right;">價格 / Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="drink-name-zh">最澄茶香檳三重奏</div>
+                            <div class="drink-name-en">Trio Saicho Sparkling Tea (200ml each)</div>
+                        </td>
+                        <td class="price">NT$ 1,800</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="drink-name-zh">焙茶之韻</div>
+                            <div class="drink-name-en">Saicho Hojicha (200ml)</div>
+                        </td>
+                        <td class="price">NT$ 680</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="drink-name-zh">大吉嶺之華</div>
+                            <div class="drink-name-en">Saicho Darjeeling (200ml)</div>
+                        </td>
+                        <td class="price">NT$ 680</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="drink-name-zh">茉莉花之舞</div>
+                            <div class="drink-name-en">Saicho Jasmine (200ml)</div>
+                        </td>
+                        <td class="price">NT$ 680</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Chef Section -->
+        <section id="chef" style="margin-top: 5rem;">
+            <div class="chef-grid">
+                <img src="../img/michelin/tairroir/Kai_20260720.jpg" alt="Chef Kai Ho" class="chef-img">
+                <div class="chef-info">
+                    <h2>與主廚相遇</h2>
+                    <h3>Meet Chef Kai Ho (何順凱)</h3>
+                    
+                    <p class="desc-zh" style="font-weight: 600; color: var(--accent-gold);">「以法式烹調技法，解構台灣靈魂與風土。」</p>
+                    <p class="desc-en" style="margin-bottom: 1rem; font-style: italic;">"Deconstructing Taiwanese soul and terroir through French culinary techniques."</p>
+
+                    <p class="desc-zh">主廚何順凱（Kai Ho）以敏銳的直覺與豐富的在地情感，將台灣傳統小吃、辦桌文化與家常菜記憶，利用當代法式精準技法重組。在他的帶領下，Taïrroir 態芮於 2023 年榮獲米其林三星肯定，成為全球首家獲得三星殊榮的現代台灣料理餐廳。</p>
+                    <p class="desc-en">Chef Kai Ho leverages sharp intuition and local passion to deconstruct Taiwanese night market snacks, banquet dishes, and home-cooked memories using precise French techniques. Under his leadership, Taïrroir was awarded three Michelin stars in 2023, becoming the world's first modern Taiwanese restaurant to achieve 3 Michelin stars.</p>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span>餐廳名稱 / Restaurant</span>
+                            <span>Taïrroir 態芮 (台北大直)</span>
+                        </div>
+                        <div class="info-item">
+                            <span>米其林榮譽 / Michelin Status</span>
+                            <span>★★★ 米其林三星 (2023 - 2026)</span>
+                        </div>
+                        <div class="info-item">
+                            <span>料理風格 / Cuisine Style</span>
+                            <span>當代台灣菜 (Modern French-Taiwanese)</span>
+                        </div>
+                        <div class="info-item">
+                            <span>體驗日期 / Date of Visit</span>
+                            <span>2026 年 7 月 20 日</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#" class="logo">Taïrroir 態芮</a>
+        <p>態芮，用一道道驚艷的菜餚，溫柔地對這片土地訴說著熱愛。</p>
+        <p style="font-size: 0.85rem; color: #cbd5e1;">Taïrroir gently expresses its deep love for this land through every breathtaking dish.</p>
+        <ul>
+            <li><a href="#about">關於態芮 | About</a></li>
+            <li><a href="#menu">經典饗宴 | Menu</a></li>
+            <li><a href="#drinks">微醺探索 | Drinks</a></li>
+            <li><a href="#chef">主廚風采 | Chef</a></li>
+        </ul>
+        <p>© 2026 Taïrroir 態芮經典食記分享.</p>
+    </footer>
+
+</body>
+</html>
