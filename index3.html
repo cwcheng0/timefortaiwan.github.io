@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time for Taiwan - Taiwan PoPo Travel Service</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        accent: '#f97316'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-slate-50 antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-primary-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-primary-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                <span><i class="fa-solid fa-location-dot text-primary-500 mr-1.5"></i>2F No.217 Hoping E. Rd, Sec. 2, Taipei, Taiwan</span>
+                <span class="hidden sm:inline">|</span>
+                <span><i class="fa-solid fa-clock text-primary-500 mr-1.5"></i>Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+886926466715" class="hover:text-white transition"><i class="fa-solid fa-phone text-primary-500 mr-1.5"></i>+886 926 466 715</a>
+                <a href="mailto:mike@timefortaiwan.com.tw" class="hover:text-white transition"><i class="fa-solid fa-envelope text-primary-500 mr-1.5"></i>mike@timefortaiwan.com.tw</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <img src="img/logo.png" alt="Time for Taiwan Logo" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x60/0d9488/ffffff?text=Time+For+Taiwan';">
+                    <div class="hidden sm:block">
+                        <span class="text-xl font-bold text-gray-900 block leading-tight">Time for Taiwan</span>
+                        <span class="text-xs text-gray-500 tracking-wider">波波旅行社 Taiwan PoPo Travel</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+                    <a href="#home" class="text-primary-600 hover:text-primary-700 transition">Home</a>
+                    <a href="#about" class="hover:text-primary-600 transition">About Us</a>
+                    <a href="#services" class="hover:text-primary-600 transition">Services</a>
+                    <a href="#tours" class="hover:text-primary-600 transition">Featured Tours</a>
+                    <a href="#contact" class="hover:text-primary-600 transition">Contact Us</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 shadow-md shadow-primary-600/20 transition-all hover:scale-105">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-slate-900 text-white min-h-[580px] flex items-center py-20 overflow-hidden">
+        <!-- Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/hero-banner.jpg" alt="Taiwan Tourism Banner" class="w-full h-full object-cover opacity-35" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508248467071-042c1615b3c5?auto=format&fit=crop&q=80&w=1920';">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-300 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-compass"></i> Local Taiwan Travel Experts
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Discover the Magic of Taiwan with Local Experts
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Over 30 years of experience crafting customized inbound, cruise, ESG, and culture-rich tours across Taiwan. Multi-lingual guides ready to serve you.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#tours" class="px-7 py-3.5 rounded-full font-bold bg-primary-600 hover:bg-primary-500 text-white shadow-lg shadow-primary-600/30 transition-all hover:-translate-y-0.5">
+                        Explore Our Tours
+                    </a>
+                    <a href="#about" class="px-7 py-3.5 rounded-full font-bold bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all">
+                        Learn About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-slate-100 p-6 sm:p-8">
+            <div class="p-4 text-center">
+                <div class="text-3xl sm:text-4xl font-extrabold text-primary-600 mb-1">30+</div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wider">Years Experience</p>
+            </div>
+            <div class="p-4 text-center">
+                <div class="text-3xl sm:text-4xl font-extrabold text-primary-600 mb-1">1,000+</div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wider">Happy Customers</p>
+            </div>
+            <div class="p-4 text-center">
+                <div class="text-3xl sm:text-4xl font-extrabold text-primary-600 mb-1">200+</div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wider">Tours Monthly</p>
+            </div>
+            <div class="p-4 text-center">
+                <div class="text-3xl sm:text-4xl font-extrabold text-primary-600 mb-1">Multi</div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wider">Lingual Tour Guides</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cruise & Health Notice Banner -->
+    <section class="py-12 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Cruise Box -->
+                <div class="bg-gradient-to-br from-primary-800 to-primary-900 text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-primary-300 mb-4 text-xl">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Cruise Travelers Service</h3>
+                        <p class="text-primary-100 text-sm leading-relaxed mb-6">
+                            Arriving in Taiwan by cruise? We plan specialized shore excursion travel packages tailored specifically for cruise passengers.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-300 hover:text-white transition">
+                        Contact Us For Cruise Info <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Safety Notice Box -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-accent mb-4 text-xl">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Safety & Travel Guidelines</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            We follow official Taiwan CDC updates closely to ensure every tourist enjoys a smooth, health-conscious, and safe journey across Taiwan.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center text-xs font-semibold text-slate-400">
+                        <i class="fa-solid fa-circle-check text-green-500 mr-1.5"></i> Taiwan CDC Compliant
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Grid -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="img/about.jpg" alt="About Time for Taiwan" class="w-full h-[420px] object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543083477-4f785aeafaa9?auto=format&fit=crop&q=80&w=1000';">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+                        <p class="text-2xl font-bold mb-1">30+ Years</p>
+                        <p class="text-xs text-primary-100">Deep expertise in inbound and local Taiwan tourism</p>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <span class="text-primary-600 font-bold text-sm tracking-wider uppercase">About Time For Taiwan</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">
+                        30+ Years Experience in Tourism Industry in Taiwan
+                    </h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        At **Taiwan PoPo Travel Service Ltd. (波波旅行社)**, we take pride in connecting world travelers to Taiwan’s rich landscapes, vibrant culture, and delicious food. We maintain a full-time staff, professional licensed guides, and expert itinerary planners.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Experienced Tour Guides</h4>
+                                <p class="text-slate-500 text-xs">Licensed guides fluent in multiple international languages.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Reasonable Prices & Fair Itineraries</h4>
+                                <p class="text-slate-500 text-xs">Transparent pricing without hidden costs or compromised quality.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Detailed Planning & Logistics</h4>
+                                <p class="text-slate-500 text-xs">From vehicles to accommodation, every detail is seamlessly managed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold text-sm tracking-wider uppercase">Our Services</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+                    We Are Experts In Local Taiwan Travel
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-plane-arrival"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Inbound Tours</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Customized itineraries welcoming international visitors to experience Taiwan’s natural and urban beauty.
+                    </p>
+                    <img src="img/service-inbound.jpg" alt="Inbound Tours" class="rounded-lg w-full h-36 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552993805-0842ad5c00be?auto=format&fit=crop&q=80&w=500';">
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Outbound Tours</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        30 years of trusted experience bringing Taiwanese travelers to destinations all across the globe.
+                    </p>
+                    <img src="img/service-outbound.jpg" alt="Outbound Tours" class="rounded-lg w-full h-36 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=500';">
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Local Tours</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Exciting local excursions covering Taiwan's hidden gems, aboriginal heritage, farms, and coastal parks.
+                    </p>
+                    <img src="img/service-local.jpg" alt="Local Tours" class="rounded-lg w-full h-36 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508248467071-042c1615b3c5?auto=format&fit=crop&q=80&w=500';">
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">North Coast Trips</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Explore the famous Yehliu Geopark, coastal formations, and scenic northern Taiwan sea views.
+                    </p>
+                    <img src="img/service-northcoast.jpg" alt="North Coast" class="rounded-lg w-full h-36 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&q=80&w=500';">
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">ESG & Eco Tours</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Sustainable, eco-friendly tour packages promoting low-carbon transport, nature preservation, and green energy.
+                    </p>
+                    <img src="img/service-esg.jpg" alt="ESG Tours" class="rounded-lg w-full h-36 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&q=80&w=500';">
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Muslim Friendly Tours</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Dedicated arrangements with Halal certified restaurants, prayer rooms, and friendly facilities across Taiwan.
+                    </p>
+                    <img src="img/service-muslim.jpg" alt="Muslim Friendly Tours" class="rounded-lg w-full h-36 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&q=80&w=500';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tours Section -->
+    <section id="tours" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold text-sm tracking-wider uppercase">Our Tours</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+                    Popular Taiwan Tour Packages
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tour 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition">
+                    <img src="img/tour-1.jpg" alt="ESG一日雙塔" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=500';">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary-600 bg-primary-100 px-2.5 py-1 rounded-full uppercase">ESG Eco Tour</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">ESG一日雙塔 (ESG 2 Towers)</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">An inspiring low-carbon excursion visiting landmark lighthouses and eco-friendly coastal points.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700">Contact Us <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition">
+                    <img src="img/tour-2.jpg" alt="Bike Taitung" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&q=80&w=500';">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary-600 bg-primary-100 px-2.5 py-1 rounded-full uppercase">Cycling & Nature</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Bike Taitung (生態騎行台東)</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">Experience eastern Taiwan’s breathtaking mountain vistas and fresh air on two wheels.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700">Contact Us <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition">
+                    <img src="img/tour-3.jpg" alt="Happy Farm Yunlin" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=500';">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary-600 bg-primary-100 px-2.5 py-1 rounded-full uppercase">Farm Experience</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Happy Farm Yunlin (雲林農場快樂遊)</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">Enjoy hands-on agricultural experiences, fresh organic produce, and rural hospitality.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700">Contact Us <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tour 4 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition">
+                    <img src="img/tour-4.jpg" alt="Hope Island Eco Tour" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=500';">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary-600 bg-primary-100 px-2.5 py-1 rounded-full uppercase">Coastal Park</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Hope Island Eco Tour (和平島生態遊)</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">Explore unique sea-eroded rock formations and rich marine life at Heping Island.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700">Contact Us <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tour 5 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition">
+                    <img src="img/tour-5.jpg" alt="Taitung Tree Park & Hot Springs" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=500';">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary-600 bg-primary-100 px-2.5 py-1 rounded-full uppercase">Wellness & Nature</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Taitung Tree Park + Vakangan Hot Springs</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">Relax at Takeshi Kaneshiro Tree and unwind at Vakangan green energy geothermal springs.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700">Contact Us <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tour 6 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition">
+                    <img src="img/tour-6.jpg" alt="Best Township Trip" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513415564515-763d91423bdd?auto=format&fit=crop&q=80&w=500';">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary-600 bg-primary-100 px-2.5 py-1 rounded-full uppercase">Township Classic</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Best Township Trip (最佳經典小鎮遊)</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">Step back in time visiting Taiwan’s most charming historic townships and local markets.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700">Contact Us <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section (Replaces Quote & Request Form) -->
+    <section id="get-in-touch" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-primary-400 font-bold text-sm tracking-wider uppercase">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 text-white">
+                    Start Planning Your Custom Taiwan Trip
+                </h2>
+                <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                    We don't offer automated booking because every travel plan is unique. Contact our local team directly to plan your personalized Taiwan itinerary.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Direct Call -->
+                <a href="tel:+886926466715" class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl text-center hover:border-primary-500 transition group">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-primary-600/20 text-primary-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-1">Call Us Directly</h3>
+                    <p class="text-xs text-slate-400 mb-3">Mon - Fri : 9:00 AM - 5:00 PM</p>
+                    <p class="text-sm font-bold text-primary-400">+886 926 466 715</p>
+                    <p class="text-xs text-slate-300">02-2732-8732</p>
+                </a>
+
+                <!-- Email Us -->
+                <a href="mailto:mike@timefortaiwan.com.tw" class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl text-center hover:border-primary-500 transition group">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-primary-600/20 text-primary-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-1">Send an Email</h3>
+                    <p class="text-xs text-slate-400 mb-3">Reach out for itinerary proposals</p>
+                    <p class="text-sm font-bold text-primary-400 break-all">mike@timefortaiwan.com.tw</p>
+                </a>
+
+                <!-- Visit Office -->
+                <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-primary-600/20 text-primary-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-1">Visit Our Office</h3>
+                    <p class="text-xs text-slate-400 mb-2">Taipei Head Office</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">2F No.217 Hoping E. Rd, Sec. 2, Taipei, Taiwan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Col 1 -->
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="img/logo.png" alt="Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x50/0d9488/ffffff?text=Time+For+Taiwan';">
+                    <span class="text-white font-bold text-lg">Time for Taiwan</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                    Taiwan PoPo Travel Service Ltd. (波波旅行社) provides expert travel arrangements, tour guides, and custom itineraries for visitors worldwide.
+                </p>
+                <div class="text-xs text-slate-500 space-y-1">
+                    <p>交觀甲字第 874400 號</p>
+                    <p>品保北字第 27270001 號</p>
+                    <p>負責人：潘麗清</p>
+                </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#tours" class="hover:text-white transition">Popular Tours</a></li>
+                    <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Contact Info</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot text-primary-500 mt-1"></i>
+                        <span>2F No.217 Hoping E. Rd, Sec. 2, Taipei, Taiwan 106033<br>(臺北市大安區和平東路2段217號2樓)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-primary-500"></i>
+                        <span>02-2732-8732 / +886 926 466 715</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-fax text-primary-500"></i>
+                        <span>Fax: 02-2732-0045 (US: +1-425-675-1568)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-primary-500"></i>
+                        <span>mike@timefortaiwan.com.tw</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Booking Note</h4>
+                <p class="text-xs leading-relaxed mb-4">
+                    We do not provide instant automatic booking. Please contact us in advance so we can prepare tailored, high-quality arrangements for your group.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; Time for Taiwan (Taiwan PoPo Travel Service Ltd.). All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
