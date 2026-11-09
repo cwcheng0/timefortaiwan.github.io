@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宜蘭二日慢旅手帖 | TIME FOR YILAN 2026</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #065f46;
+      --primary-light: #ecfdf5;
+      --primary-hover: #10b981;
+      --secondary: #d97706;
+      --secondary-light: #fffbeb;
+      --accent: #2563eb;
+      --slate-dark: #0f172a;
+      --slate-body: #334155;
+      --slate-muted: #64748b;
+      --bg-cream: #fbfbf9;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      --card-hover-shadow: 0 20px 35px -10px rgba(5, 150, 105, 0.12), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--slate-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--slate-dark);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .font-serif-brand {
+      font-family: 'Playfair Display', 'Noto Sans TC', serif;
+    }
+
+    /* Navbar */
+    .custom-navbar {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      z-index: 1040;
+    }
+
+    .navbar-brand-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: var(--slate-dark);
+      padding: 0.5rem 1rem !important;
+      border-radius: 25px;
+      transition: all 0.25s ease;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary) !important;
+      background-color: var(--primary-light);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.78) 100%),
+                  url('./images/IMG_20261028_154510.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 120px 0 80px 0;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 0.45rem 1.25rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.2;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-lead {
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 800px;
+      margin: 1.5rem auto 2.5rem auto;
+      font-weight: 400;
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-stat-card {
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 18px;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .hero-stat-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .hero-stat-icon {
+      font-size: 1.8rem;
+      color: #fbbf24;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-stat-val {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.15rem;
+    }
+
+    .hero-stat-label {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+    }
+
+    /* Section Headers */
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      background: var(--primary-light);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--slate-muted);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+    }
+
+    /* Highlights Section */
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      height: 100%;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow);
+    }
+
+    .highlight-card:hover::before {
+      opacity: 1;
+    }
+
+    .highlight-icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.3rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-card:hover .highlight-icon-box {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    /* Day Tabs & Controls */
+    .filter-tabs-wrapper {
+      position: sticky;
+      top: 76px;
+      z-index: 1030;
+      background: rgba(251, 251, 249, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn-pill {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--slate-dark);
+      font-weight: 600;
+      padding: 0.65rem 1.5rem;
+      border-radius: 50px;
+      transition: all 0.25s ease;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .filter-btn-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .filter-btn-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+    }
+
+    /* Timeline & Itinerary Cards */
+    .itinerary-timeline {
+      position: relative;
+    }
+
+    .timeline-day-header {
+      background: linear-gradient(135deg, #065f46, #059669);
+      color: #ffffff;
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(5, 150, 105, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .day-badge-large {
+      font-size: 1.2rem;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.4rem 1.1rem;
+      border-radius: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    .spot-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 22px;
+      padding: 2.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .spot-card:hover {
+      box-shadow: var(--card-hover-shadow);
+      border-color: #cbd5e1;
+    }
+
+    .spot-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.3rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .spot-time-pill {
+      background: var(--slate-dark);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.35rem 0.95rem;
+      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .spot-category-pill {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.35rem 0.95rem;
+      border-radius: 30px;
+    }
+
+    .spot-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--slate-dark);
+      margin-top: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .spot-subtitle {
+      font-size: 0.95rem;
+      color: var(--slate-muted);
+      font-weight: 500;
+    }
+
+    .spot-map-link {
+      font-size: 0.88rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      background: var(--primary-light);
+      transition: all 0.2s ease;
+    }
+
+    .spot-map-link:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .spot-narrative {
+      font-size: 1.02rem;
+      color: var(--slate-body);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Spot Photo Grid */
+    .spot-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .photo-thumb-wrap {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #e2e8f0;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .photo-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .photo-thumb-wrap:hover img {
+      transform: scale(1.08);
+    }
+
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.75) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem;
+      color: #ffffff;
+    }
+
+    .photo-thumb-wrap:hover .photo-overlay {
+      opacity: 1;
+    }
+
+    .photo-overlay-caption {
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.35;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .photo-zoom-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease;
+    }
+
+    .photo-thumb-wrap:hover .photo-zoom-icon {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Spot Tags & Callout */
+    .spot-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .spot-tag-pill {
+      font-size: 0.82rem;
+      color: var(--slate-muted);
+      background: #f1f5f9;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-weight: 500;
+    }
+
+    .spot-tip-box {
+      background: #fffdf5;
+      border: 1px solid #fed7aa;
+      border-left: 4px solid var(--secondary);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-size: 0.92rem;
+      color: #7c2d12;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .spot-tip-icon {
+      font-size: 1.25rem;
+      color: var(--secondary);
+      margin-top: 1px;
+    }
+
+    /* Gallery Section */
+    .gallery-filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--slate-body);
+      padding: 0.4rem 1.1rem;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin: 0.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-filter-btn.active, .gallery-filter-btn:hover {
+      background: var(--slate-dark);
+      color: #ffffff;
+      border-color: var(--slate-dark);
+    }
+
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery-card-img-wrap {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card-img-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-card-body {
+      padding: 1rem 1.25rem;
+    }
+
+    .gallery-card-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--slate-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-muted);
+      line-height: 1.5;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 15, 29, 0.94);
+      backdrop-filter: blur(14px);
+      z-index: 2000;
+      padding: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .lightbox-modal.show {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-caption-bar {
+      margin-top: 1rem;
+      text-align: center;
+      color: #ffffff;
+      max-width: 800px;
+    }
+
+    .lightbox-caption-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .lightbox-caption-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .lightbox-prev {
+      left: 2rem;
+    }
+
+    .lightbox-next {
+      right: 2rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #ffffff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.25s ease;
+    }
+
+    .lightbox-close:hover {
+      background: #ef4444;
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      top: 1.8rem;
+      left: 2rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    /* Info Table & Summary */
+    .travel-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--card-shadow);
+    }
+
+    .travel-table th {
+      background: #f8fafc;
+      color: var(--slate-dark);
+      font-weight: 700;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+
+    .travel-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--slate-body);
+      font-size: 0.92rem;
+    }
+
+    .travel-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .travel-table tr:hover td {
+      background: #fbfcfe;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.35);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-4px);
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--slate-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 4rem 0 2rem 0;
+      font-size: 0.92rem;
+    }
+
+    footer h5 {
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: 1.2rem;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--primary-hover);
+    }
+
+    @media (max-width: 768px) {
+      .spot-card {
+        padding: 1.5rem;
+      }
+      .timeline-day-header {
+        padding: 1.25rem 1.5rem;
+      }
+      .lightbox-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      .lightbox-prev {
+        left: 0.5rem;
+      }
+      .lightbox-next {
+        right: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="fs-4 text-success"><i class="bi bi-compass"></i></span>
+        <div>
+          <span class="fw-bold tracking-tight text-dark">TIME FOR YILAN</span>
+          <span class="navbar-brand-pill ms-1">2026 AUTUMN</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#overview">旅程總覽</a></li>
+          <li class="nav-item"><a class="nav-link" href="#highlights">核心亮點</a></li>
+          <li class="nav-item"><a class="nav-link" href="#itinerary">詳細行程</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">精彩影集</a></li>
+          <li class="nav-item"><a class="nav-link" href="#travel-notes">旅人手記</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn btn-sm btn-success rounded-pill px-3 shadow-sm" href="#itinerary" style="background-color: var(--primary); border: none;">
+              <i class="bi bi-calendar2-check me-1"></i> 查看日程
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-section text-center" id="overview">
+    <div class="container position-relative">
+      <div class="hero-badge mx-auto">
+        <i class="bi bi-geo-alt-fill text-warning"></i> 台灣觀光精選 ‧ 宜蘭秋季慢旅手帖
+      </div>
+      <h1 class="hero-title font-serif-brand">
+        綠意水鄉 × 匠心手作 × 名湯漫活
+      </h1>
+      <p class="hero-lead">
+        走進蘭陽平原的溫柔秋日。穿梭冬山藍染工坊的靛藍幻化、探訪老城舊議會的故事記憶、感受靈芝培育與草本茶香；夜宿礁溪沉浸弱鹼溫泉，次日搭乘紅色鐵牛力阿卡探訪天然湧泉，品味古早味割稻飯，在水車湖畔敲拓自然、親手醃漬酸甜金桔蜜餞。
+      </p>
+
+      <!-- Hero Stats Grid -->
+      <div class="hero-stats-grid">
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-calendar3"></i></div>
+          <div class="hero-stat-val">2 天 1 夜</div>
+          <div class="hero-stat-label">2026.10.27 (二) – 10.28 (三)</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-palette2"></i></div>
+          <div class="hero-stat-val">4 場手作體驗</div>
+          <div class="hero-stat-label">植物藍染 ‧ 靈芝茶 ‧ 拓印 ‧ 金桔</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-water"></i></div>
+          <div class="hero-stat-val">湧泉 × 碳酸湯宿</div>
+          <div class="hero-stat-label">太陽埤純淨泉水 ＆ 捷絲旅美人湯</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-cup-hot"></i></div>
+          <div class="hero-stat-val">在地產地旬味</div>
+          <div class="hero-stat-label">傳統蘭陽船菜 ＆ 農村割稻飯</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section: Travel Highlights -->
+  <section class="py-5" id="highlights">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Trip Highlights</span>
+        <h2 class="section-title">旅程四大核心主題</h2>
+        <p class="section-desc">結合在地匠人工藝、水文生態、慢活名湯與食農文化，打造深具溫度與記憶點的深度旅行提案。</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box">
+              <i class="bi bi-brush"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">手作匠心工藝</h4>
+            <p class="text-muted small mb-0">
+              親手紮綁布巾浸潤天然靛藍染液，完成專屬隨行杯套；調配松杉靈芝養生茶包，敲拓農場花葉紋理，封存純手工蜜漬金桔。
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box" style="background: #eff6ff; color: #2563eb;">
+              <i class="bi bi-building"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">老城故事紀實</h4>
+            <p class="text-muted small mb-0">
+              走進宜蘭人故事館舊縣議會空間與阮義忠攝影故事館，漫步日式迴廊與錦鯉水塘，重溫傳統木刻糕印與純樸歷史縮影。
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box" style="background: #fef3c7; color: #d97706;">
+              <i class="bi bi-truck"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">水鄉湧泉農遊</h4>
+            <p class="text-muted small mb-0">
+              坐上員山內城古樸熱鬧的紅色「鐵牛力阿卡」，微風迎面駛過田疇，造訪澄淨透綠的太陽埤湧泉與攀藤愛玉果園。
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box" style="background: #fdf2f8; color: #db2777;">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">名湯舒活 × 割稻飯</h4>
+            <p class="text-muted small mb-0">
+              入住礁溪捷絲旅享受雙人超大石砌碳酸氫鈉泉，品味濃郁香醇的農村古早味滷控肉割稻飯與傳統蘭陽船菜手路料理。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Day Filter Controls -->
+  <div class="filter-tabs-wrapper" id="itinerary">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
+        <button class="filter-btn-pill active" onclick="filterItinerary('all', this)">
+          <i class="bi bi-grid-fill"></i> 全部精選行程 (10 站)
+        </button>
+        <button class="filter-btn-pill" onclick="filterItinerary('day1', this)">
+          <i class="bi bi-sun-fill text-warning"></i> Day 1 (10/27) 玩染茶香 ‧ 老城 ‧ 礁溪好湯
+        </button>
+        <button class="filter-btn-pill" onclick="filterItinerary('day2', this)">
+          <i class="bi bi-tree-fill text-success"></i> Day 2 (10/28) 愛玉 ‧ 鐵牛湧泉 ‧ 割稻飯 ‧ 蜜餞
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Timeline & Cards Section -->
+  <section class="pb-5">
+    <div class="container">
+
+      <!-- ================= DAY 1 TIMELINE ================= -->
+      <div class="itinerary-day-group" id="group-day1">
+        
+        <!-- Day 1 Header -->
+        <div class="timeline-day-header">
+          <div>
+            <span class="day-badge-large mb-2 d-inline-block">DAY 1 ‧ 2026.10.27 (二)</span>
+            <h3 class="h4 fw-bold mb-0 text-white">蘭陽手作與時光倒流：藍染工藝、文化老城、靈芝飄香與礁溪溫泉宿</h3>
+          </div>
+          <div class="text-white-50 small">
+            <i class="bi bi-clock me-1"></i> 08:00 台北出發 ➜ 20:30 礁溪漫步
+          </div>
+        </div>
+
+        <!-- Day 1 Spot 1: 福成玩染工坊 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 09:50 - 11:40</span>
+                <span class="spot-category-pill">工藝體驗 ‧ 綠色生活</span>
+              </div>
+              <h3 class="spot-title">福成玩染工坊 (Color Studio)</h3>
+              <div class="spot-subtitle">宜蘭縣冬山鄉柯林村（福成社區）</div>
+            </div>
+            <a href="https://maps.google.com/?q=福成玩染工坊" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            早晨抵達恬靜的冬山福成社區，踏入綠意環抱的「福成玩染工坊」。由專業的藍染工藝師親切指導，從認識天然藍草、板藍植物發酵製靛開始，學習橡皮筋束綁、木片夾防染等傳統絞染技法。大家捲起衣袖，將純棉隨行杯套浸入藍染大缸中反覆揉捏、浸染，再經由清水洗滌與空氣氧化，原本淡綠色的布面奇蹟般轉化為層次豐富、沈穩雅致的靛藍色澤，親手創作出獨一無二的隨身藝術品。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_095036.jpg', '福成玩染工坊入口', '工坊靜謐雅致的木造門面與庭園綠意')">
+              <img src="images/IMG_20261027_095036.jpg" alt="福成玩染工坊入口" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">工坊入口與寧靜庭院造景</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_102750.jpg', '藍染杯套成果示範', '老師熱情展示純手工天然藍染飲料杯套')">
+              <img src="images/IMG_20261027_102750.jpg" alt="藍染杯套示範" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">老師熱情示範藍染杯套成品質感</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_110400.jpg', '染缸沈浸手作', '圍繞傳統染缸，體驗天然氧化顯色的神奇魅力')">
+              <img src="images/IMG_20261027_110400.jpg" alt="染缸手作" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">大染缸揉染與氧化顯色工序</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_113111.jpg', '藍染純棉細節', '細膩的手工紋理與沈靜的植物靛藍')">
+              <img src="images/IMG_20261028_113111.jpg" alt="藍染細節" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">精緻紮染紋路呈現植物藍的純粹</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#天然植物藍染</span>
+            <span class="spot-tag-pill">#手工隨行杯套DIY</span>
+            <span class="spot-tag-pill">#絞染工藝</span>
+            <span class="spot-tag-pill">#冬山柯林社區</span>
+          </div>
+
+          <div class="spot-tip-box">
+            <i class="bi bi-info-circle-fill spot-tip-icon"></i>
+            <div>
+              <strong>旅人手帖：</strong>天然藍染剛完成時布料帶有獨特的植物青草芳香，前幾次清洗建議以常溫清水輕柔手洗、置於通風陰涼處晾乾，藍色會隨光陰轉化得更溫潤深邃。
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 1 Spot 2: 蘭陽船菜 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 11:50 - 13:30</span>
+                <span class="spot-category-pill" style="background:#fee2e2; color:#b91c1c;">在地旬味 ‧ 傳統宴席</span>
+              </div>
+              <h3 class="spot-title">蘭陽船菜風味午宴</h3>
+              <div class="spot-subtitle">蘭陽平原水鄉河港料理傳承</div>
+            </div>
+            <a href="https://maps.google.com/?q=蘭陽船菜宜蘭" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            中午移步至充滿在地風情的食肆享用「蘭陽船菜」。餐廳內部陳設著別具巧思的藍染長桌布，相互映襯早上的染布記憶。餐桌上熱騰騰地端出蘭陽平原經典的手路菜餚：香氣噴鼻的宜蘭炒麵、皮脆肉嫩的白斬土雞、鮮甜可口的時令冷盤，滿滿一桌展現昔日河運碼頭工人與船夫講究的紮實美味與宜蘭人的熱情好客。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_115047.jpg', '藍染桌布用餐空間', '藍染布幔鋪展於長桌，洋溢質樸溫馨氣息')">
+              <img src="images/IMG_20261027_115047.jpg" alt="藍染桌巾" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">傳統木桌與精美藍染桌巾擺飾</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_115140.jpg', '午宴歡聚氛圍', '旅伴們齊聚一堂，共享蘭陽道地佳餚')">
+              <img src="images/IMG_20261027_115140.jpg" alt="餐廳氛圍" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">用餐空間開闊明亮，充滿歡聲笑語</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_125720.jpg', '招牌蘭陽船菜手路佳餚', '經典宜蘭炒麵、鮮甜白斬土雞與家常豐盛好菜')">
+              <img src="images/IMG_20261027_125720.jpg" alt="船菜佳餚" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">鑊氣十足的宜蘭炒麵與鮮美油雞</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#蘭陽船菜</span>
+            <span class="spot-tag-pill">#宜蘭風味炒麵</span>
+            <span class="spot-tag-pill">#在地手路菜</span>
+            <span class="spot-tag-pill">#藍染餐席美學</span>
+          </div>
+        </article>
+
+        <!-- Day 1 Spot 3: 宜蘭人故事館 / 阮義忠台灣故事館 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 14:00 - 15:40</span>
+                <span class="spot-category-pill" style="background:#e0f2fe; color:#0369a1;">文化歷史 ‧ 影像美學</span>
+              </div>
+              <h3 class="spot-title">宜蘭人故事館 ＆ 阮義忠台灣故事館</h3>
+              <div class="spot-subtitle">宜蘭市舊城南路（前身為宜蘭縣議會舊址）</div>
+            </div>
+            <a href="https://maps.google.com/?q=宜蘭人故事館" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            午後漫步至宜蘭市中心的歷史核心「宜蘭人故事館」。建築原為建於民國48年的舊縣議會大樓，現已蛻變為承載城市生活記憶的人文地標。我們在此漫步參觀國際知名攝影大師「阮義忠台灣故事館」深邃有力的黑白紀實影像；庭園內保留著典雅的日式迴廊、石燈籠與波光粼粼的錦鯉水池；展廳中更典藏了難得一見的傳統手工木雕糕餅模具、紅龜印與糖塔模，每一件展品都述說著老台灣常民節慶的祈願與匠人巧思。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_140624.jpg', '故事館歷史街角地標', '阮義忠台灣故事館與宜蘭人故事館歷史街區意象')">
+              <img src="images/IMG_20261027_140624.jpg" alt="故事館標誌" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">紅磚林蔭旁的故事館入口指標</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_141144.jpg', '靜謐日式水庭園', '幽靜的木棧道、石燈籠與優游錦鯉水池')">
+              <img src="images/IMG_20261027_141144.jpg" alt="日式庭園" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">日式枯山水庭園造景與錦鯉悠游</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_141437.jpg', '傳統木雕糕印典藏', '匠人雕鑿的傳統紅龜粿模、壽桃與幾何木模具')">
+              <img src="images/IMG_20261027_141437.jpg" alt="糕餅木模" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">典藏傳統常民節慶糕印木雕工藝</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_145023.jpg', '歷史建築立面全貌', '優雅的現代主義木質與洗石子窗櫺歷史空間')">
+              <img src="images/IMG_20261027_145023.jpg" alt="故事館建築" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">保存完好的歷史議會建築外觀</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#阮義忠台灣故事館</span>
+            <span class="spot-tag-pill">#宜蘭縣議會舊址</span>
+            <span class="spot-tag-pill">#黑白人文攝影</span>
+            <span class="spot-tag-pill">#傳統木雕糕印</span>
+          </div>
+        </article>
+
+        <!-- Day 1 Spot 4: 竹林松杉靈芝農場 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 16:00 - 17:00</span>
+                <span class="spot-category-pill" style="background:#fef3c7; color:#92400e;">農村手作 ‧ 漢方養生</span>
+              </div>
+              <h3 class="spot-title">竹林松杉靈芝農場</h3>
+              <div class="spot-subtitle">宜蘭縣員山鄉（有機靈芝培育產銷班）</div>
+            </div>
+            <a href="https://maps.google.com/?q=竹林松杉靈芝農場" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            午後陽光斜照，我們來到坐落於員山鄉田間的「竹林松杉靈芝農場」。農場主人親自帶領大家參觀珍貴的相思木木屑發酵堆——這是靈芝生長天然且純淨的養分基質。走進溫控溫室，一株株形體飽滿、宛如鹿角與祥雲的松杉靈芝正旺盛生長。隨後每位旅人體驗了「養生靈芝茶包 DIY」，精選切片赤靈芝、甘甜紅棗與枸杞，依照黃金比例裝入食品級不織布濾袋中，帶回滿滿的活力與健康元氣。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_161059.jpg', '竹林松杉靈芝農場與相思木堆', '木造匾額與培育靈芝的天然相思木木屑')">
+              <img src="images/IMG_20261027_161059.jpg" alt="竹林靈芝招牌" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">農場招牌與自然發酵的相思木木屑</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_161641.jpg', '溫室生長中的赤靈芝', '控溫恆濕溫室中綻放的鹿角靈芝與赤芝')">
+              <img src="images/IMG_20261027_161641.jpg" alt="靈芝培育溫室" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">溫室內茁壯生長的頂級松杉靈芝</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_164748.jpg', '靈芝養生茶包手作原料', '靈芝切片、去籽紅棗與優質枸杞手作調配')">
+              <img src="images/IMG_20261027_164748.jpg" alt="靈芝茶包材料" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">親手秤裝的靈芝、紅棗、枸杞養生茶包</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#松杉靈芝</span>
+            <span class="spot-tag-pill">#靈芝茶包DIY</span>
+            <span class="spot-tag-pill">#相思木太空包</span>
+            <span class="spot-tag-pill">#漢方養生茶飲</span>
+          </div>
+
+          <div class="spot-tip-box">
+            <i class="bi bi-lightbulb-fill spot-tip-icon"></i>
+            <div>
+              <strong>養生小撇步：</strong>手作完成的靈芝茶包沖泡熱水時，靈芝自帶微苦回甘，搭配紅棗的自然甜味與枸杞的清香，是秋冬季節潤燥潤喉的絕佳暖心飲品。
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 1 Spot 5: 捷絲旅礁溪館 × 合棗園晚餐 × 溫泉之夜 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 17:15 - 21:30</span>
+                <span class="spot-category-pill" style="background:#f3e8ff; color:#7e22ce;">溫泉旅宿 ‧ 美人湯體驗</span>
+              </div>
+              <h3 class="spot-title">捷絲旅宜蘭礁溪館 (Just Sleep Jiaoxi) ＆ 合棗園晚餐</h3>
+              <div class="spot-subtitle">宜蘭縣礁溪鄉德陽路 ‧ 碳酸氫鈉泉舒活放鬆</div>
+            </div>
+            <a href="https://maps.google.com/?q=捷絲旅宜蘭礁溪館" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            傍晚抵達今晚下榻的精品溫泉飯店「捷絲旅宜蘭礁溪館」。庭院步道在暮色中亮起溫暖的燈串，洋溢濃濃的度假氛圍。晚間先至在地口碑名店「合棗園」品嘗豐富熱鬧的蘭陽合菜。回房後，每間客房均配置專屬的超大超深雙人原石磨石子溫泉湯池，注入無色無味的純淨碳酸氫鈉泉（俗稱美人湯），徹底洗去一日疲憊；隨後還可悠閒漫步於礁溪溫泉夜市與湯圍溝溫泉公園，享受微涼秋夜的愜意。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_171227.jpg', '捷絲旅浪漫夜間點燈花園', '溫暖燈串映照林木小徑，散發療癒度假氣息')">
+              <img src="images/IMG_20261027_171227.jpg" alt="捷絲旅夜景" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">捷絲旅戶外庭院夢幻夜間燈廊</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_175702.jpg', '合棗園晚餐豐盛合菜', '在地食材精心料理的暖心晚餐盛宴')">
+              <img src="images/IMG_20261027_175702.jpg" alt="合棗園晚餐" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">合棗園香氣撲鼻的在地合菜美食</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_193237.jpg', '客房內磨石子獨立湯池', '寬敞舒適的天然碳酸氫鈉美人湯私人泡湯池')">
+              <img src="images/IMG_20261027_193237.jpg" alt="客房溫泉池" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">房內超大雙人磨石子溫泉池極致享受</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261027_201040.jpg', '礁溪溫泉街漫遊', '漫步在礁溪街頭，感受溫泉小鎮的悠閒夜生活')">
+              <img src="images/IMG_20261027_201040.jpg" alt="礁溪夜遊" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">秋夜漫步於礁溪溫泉鄉街道</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#捷絲旅礁溪館</span>
+            <span class="spot-tag-pill">#碳酸氫鈉美人湯</span>
+            <span class="spot-tag-pill">#客房超大石砌湯池</span>
+            <span class="spot-tag-pill">#合棗園在地料理</span>
+            <span class="spot-tag-pill">#礁溪溫泉街漫步</span>
+          </div>
+        </article>
+
+      </div><!-- End Day 1 Group -->
+
+
+      <!-- ================= DAY 2 TIMELINE ================= -->
+      <div class="itinerary-day-group" id="group-day2">
+
+        <!-- Day 2 Header -->
+        <div class="timeline-day-header" style="background: linear-gradient(135deg, #0f766e, #0d9488);">
+          <div>
+            <span class="day-badge-large mb-2 d-inline-block">DAY 2 ‧ 2026.10.28 (三)</span>
+            <h3 class="h4 fw-bold mb-0 text-white">水鄉湧泉與果香漫遊：愛玉藤園、鐵牛力阿卡、割稻飯、棗稻田水車與手工金桔</h3>
+          </div>
+          <div class="text-white-50 small">
+            <i class="bi bi-clock me-1"></i> 06:30 晨間散步 ➜ 18:30 滿載賦歸
+          </div>
+        </div>
+
+        <!-- Day 2 Spot 1: 礁溪晨光 & 豐盛朝食 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 06:30 - 08:50</span>
+                <span class="spot-category-pill">晨光散策 ‧ 元氣朝食</span>
+              </div>
+              <h3 class="spot-title">礁溪晨光漫步 ＆ 捷絲旅元氣早餐</h3>
+              <div class="spot-subtitle">捷絲旅 Just Café 宜蘭在地旬味朝食吧</div>
+            </div>
+            <a href="https://maps.google.com/?q=捷絲旅宜蘭礁溪館" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            在清脆鳥鳴與薄霧晨光中醒來，清晨漫步礁溪溫泉公園與文旅街區，呼吸微涼的山邊清新空氣。隨後回到捷絲旅餐廳享用備受好評的自助式早餐：融入宜蘭三星蔥、鴨賞、溫泉蛋、現煮地瓜粥與西式熱食，補足一天飽滿的活力，精神抖擻地展開第二天的田園水鄉旅程。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_063411.jpg', '礁溪清晨街道景致', '山林旁靜謐安詳的溫泉鄉清晨市街')">
+              <img src="images/IMG_20261028_063411.jpg" alt="礁溪清晨" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">清晨靜謐純淨的礁溪溫泉街角</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_073910.jpg', '捷絲旅豐盛元氣早餐吧', '琳瑯滿目的在地食材早餐，營養滿分')">
+              <img src="images/IMG_20261028_073910.jpg" alt="捷絲旅早餐" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">現煮熟食與在地特色食材自助吧</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#礁溪晨光散策</span>
+            <span class="spot-tag-pill">#捷絲旅朝食</span>
+            <span class="spot-tag-pill">#在地三星蔥食材</span>
+          </div>
+        </article>
+
+        <!-- Day 2 Spot 2: 豐盛愛玉 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 09:30 - 11:00</span>
+                <span class="spot-category-pill" style="background:#ecfdf5; color:#047857;">農業生態 ‧ 台灣特有</span>
+              </div>
+              <h3 class="spot-title">豐盛愛玉休閒果園</h3>
+              <div class="spot-subtitle">宜蘭縣員山鄉 ‧ 台灣特有種植物攀藤果園</div>
+            </div>
+            <a href="https://maps.google.com/?q=豐盛愛玉" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            驅車來到員山鄉的「豐盛愛玉」。愛玉是全世界僅產於台灣的珍貴特有植物，果園中一根根整齊的水泥柱上爬滿了翠綠繁茂的愛玉藤蔓。園主熱情解說愛玉獨特的「榕小蜂授粉」奇妙共生生態，帶大家親手觸摸剛採摘、飽滿渾圓的青綠色愛玉隱花果，認識從一粒微小種子到晶瑩剔透、天然消暑愛玉凍的神奇旅程。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_095926.jpg', '鮮採翠綠愛玉果實竹籃', '新鮮採摘的愛玉果實與圖文並茂的生態導覽摺頁')">
+              <img src="images/IMG_20261028_095926.jpg" alt="愛玉果竹籃" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">剛自枝頭摘下的一籃翠綠飽滿愛玉果</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_101826.jpg', '枝頭藤蔓上的愛玉果特寫', '攀附於枝條上的新鮮愛玉果，帶著天然白斑紋')">
+              <img src="images/IMG_20261028_101826.jpg" alt="愛玉果近拍" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">枝葉藤蔓間結實纍纍的愛玉果實</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_102733.jpg', '愛玉園水泥柱架棚全貌', '立柱上攀附生長的壯觀愛玉森林，綠意盎然')">
+              <img src="images/IMG_20261028_102733.jpg" alt="愛玉棚架" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">整齊劃一的攀藤水泥柱愛玉立體果園</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#豐盛愛玉果園</span>
+            <span class="spot-tag-pill">#台灣特有種桑科榕屬</span>
+            <span class="spot-tag-pill">#愛玉小蜂授粉奇蹟</span>
+            <span class="spot-tag-pill">#天然手搓愛玉</span>
+          </div>
+        </article>
+
+        <!-- Day 2 Spot 3: 內城生態社區 ‧ 鐵牛力阿卡 ＆ 太陽埤湧泉 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 11:15 - 12:30</span>
+                <span class="spot-category-pill" style="background:#fef3c7; color:#b45309;">鄉村農遊 ‧ 天然湧泉</span>
+              </div>
+              <h3 class="spot-title">內城生態社區 ‧ 鐵牛力阿卡車隊 ＆ 太陽埤湧泉</h3>
+              <div class="spot-subtitle">宜蘭縣員山鄉內城村 ‧ 傳統耕耘機改裝觀光車巡禮</div>
+            </div>
+            <a href="https://maps.google.com/?q=內城社區鐵牛力阿卡" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            迎著秋風，登上最具宜蘭農村代表性的「鐵牛力阿卡」！這項由老農耕耘機改裝的休閒車隊，由在地長輩熟練駕駛，引擎「噠噠噠」地帶領大家在無邊翠綠的田埂小徑間暢快前行。車隊抵達隱身於山坳中的「太陽埤」——這座由天然地下湧泉形成的靜謐湖泊，水質清澈如鏡，倒映著雪山山脈連綿的山峰與綠樹，令人心曠神怡。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_120350.jpg', '經典8號紅色鐵牛力阿卡車', '漆上鮮豔紅色的力行車，承載著滿滿鄉村人情味')">
+              <img src="images/IMG_20261028_120350.jpg" alt="紅色鐵牛力阿卡" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">熱鬧歡樂的經典紅色8號鐵牛車</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_131033.jpg', '太陽埤碧綠天然湧泉湖泊', '湖水平靜如翡翠，環抱於青山綠林之中')">
+              <img src="images/IMG_20261028_131033.jpg" alt="太陽埤天然湧泉" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">水質甘甜清澈的太陽埤天然湧泉</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_134821.jpg', '壯闊田園與遠山風光', '沿途掠過的田野農路與遠方層疊山巒')">
+              <img src="images/IMG_20261028_134821.jpg" alt="內城田園景觀" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">鐵牛車馳騁於山林與田埂間的開闊視野</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#鐵牛力阿卡</span>
+            <span class="spot-tag-pill">#內城生態社區</span>
+            <span class="spot-tag-pill">#太陽埤地下湧泉</span>
+            <span class="spot-tag-pill">#老農耕耘機巡禮</span>
+          </div>
+        </article>
+
+        <!-- Day 2 Spot 4: 農村割稻飯午宴 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 12:30 - 14:00</span>
+                <span class="spot-category-pill" style="background:#fee2e2; color:#991b1b;">農家旬味 ‧ 古早味大鼎香</span>
+              </div>
+              <h3 class="spot-title">內城農村傳統割稻飯大饗宴</h3>
+              <div class="spot-subtitle">重溫昔日秋收互助「相放伴」的豐盛人情味</div>
+            </div>
+            <a href="https://maps.google.com/?q=內城農村割稻飯" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            鐵牛車巡禮後，飢腸轆轆的大家圍坐享用古早味「割稻飯」。源自過去農忙採收時，主人家準備給「相放伴」幫忙割稻農民最澎湃的菜色。大不鏽鋼深盤中，盛滿燉煮得皮Q肉嫩、醬香透徹的經典厚切滷控肉；搭配炸至金黃酥脆的柳葉魚、當季清甜綠蔬菜與大骨熱湯，淋上一匙油亮肉汁拌飯，入口香氣四溢，每個人都忍不住多添了好幾碗！
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_121206.jpg', '大盤油亮古早味滷控肉', '醬色誘人、肥瘦勻稱軟嫩的農村厚切控肉')">
+              <img src="images/IMG_20261028_121206.jpg" alt="古早味滷控肉" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">香味撲鼻、入口即化的秘製農村滷控肉</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_121301.jpg', '割稻飯澎湃肉汁盛裝特寫', '濃郁鹹甜的醬汁，是白米飯的最佳靈魂伴侶')">
+              <img src="images/IMG_20261028_121301.jpg" alt="滷肉大盤" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">滿滿一大盤農家招牌傳統好肉</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_121312.jpg', '現炸金黃香酥柳葉魚', '外皮酥脆金黃、魚卵飽滿的香酥鮮魚')">
+              <img src="images/IMG_20261028_121312.jpg" alt="香酥柳葉魚" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">炸至香脆可口的古早味配菜柳葉魚</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#古早味割稻飯</span>
+            <span class="spot-tag-pill">#經典秘製滷控肉</span>
+            <span class="spot-tag-pill">#相放伴農家情</span>
+            <span class="spot-tag-pill">#酥炸柳葉魚</span>
+          </div>
+        </article>
+
+        <!-- Day 2 Spot 5: 棗稻田休閒農場 ＆ 植物拓印體驗 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 14:15 - 15:55</span>
+                <span class="spot-category-pill" style="background:#ecfdf5; color:#047857;">綠能水車 ‧ 生態拓染</span>
+              </div>
+              <h3 class="spot-title">棗稻田休閒農場 ＆ 植物敲拓染 DIY</h3>
+              <div class="spot-subtitle">宜蘭縣員山鄉員山路 ‧ 湧泉引水大水車與落羽松湖畔</div>
+            </div>
+            <a href="https://maps.google.com/?q=棗稻田休閒農場" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            午後造訪以綠建築與自然農法聞名的「棗稻田休閒農場」。農場坐擁壯觀的巨型木造引水大水車，湖面倒映著藍天與兩旁筆直的落羽松，噴泉水珠在日光下閃耀。大家走入玻璃溫室參與「植物敲拓染環保帆布袋手作」，在園區摘取各色花草嫩葉，排版於純棉帆布包上，以小木槌細心敲擊，將植物天然的葉綠素與花青素汁液永久拓印在布料上，留下獨具匠心的綠色生活紀念。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_143244.jpg', '棗稻田迎賓木造門樓', '溫潤木造意象與質樸有致的農場入口迎賓亭')">
+              <img src="images/IMG_20261028_143244.jpg" alt="棗稻田入口" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">棗稻田質樸典雅的木構門面</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_144500.jpg', '植物敲拓染帆布袋手作', '在溫室中細心敲拓，將葉片天然脈絡烙印於布袋')">
+              <img src="images/IMG_20261028_144500.jpg" alt="植物敲拓染DIY" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">溫室內敲拓自然花草紋理的環保袋</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_154510.jpg', '標誌性木造巨型水車與景觀湖', '湧泉噴泉、巨型引水水車與落羽松倒影')">
+              <img src="images/IMG_20261028_154510.jpg" alt="棗稻田大水車" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">絕美的巨型木造大水車與落羽松湖景</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_155151.jpg', '水面如鏡的湖光山色', '清風徐來，波光與綠意相映成趣')">
+              <img src="images/IMG_20261028_155151.jpg" alt="棗稻田湖畔" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">農場景觀湖畔水波清澈，令人流連</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#棗稻田休閒農場</span>
+            <span class="spot-tag-pill">#巨型木造引水水車</span>
+            <span class="spot-tag-pill">#植物敲拓染帆布包</span>
+            <span class="spot-tag-pill">#落羽松景觀湖</span>
+          </div>
+        </article>
+
+        <!-- Day 2 Spot 6: 橘之鄉蜜餞形象館 -->
+        <article class="spot-card">
+          <div class="spot-header">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="spot-time-pill"><i class="bi bi-clock"></i> 16:15 - 17:30</span>
+                <span class="spot-category-pill" style="background:#fff7ed; color:#c2410c;">觀光工廠 ‧ 金桔手作</span>
+              </div>
+              <h3 class="spot-title">橘之鄉蜜餞形象館 (AGRIOZ)</h3>
+              <div class="spot-subtitle">宜蘭市梅洲二路 ‧ 全台第一家天然透明化蜜餞觀光工廠</div>
+            </div>
+            <a href="https://maps.google.com/?q=橘之鄉蜜餞形象館" target="_blank" class="spot-map-link">
+              <i class="bi bi-geo-alt"></i> 地圖導航
+            </a>
+          </div>
+
+          <div class="spot-narrative">
+            最後一站抵達宛若歐洲童話小鎮的「橘之鄉蜜餞形象館」。在溫暖木質與柔美自然採光的挑高體驗教室中，進行招牌「手工金桔蜜餞 DIY」。將鮮採金桔經過專用器具精準割劃，放入特製搖果瓶，加入純糖與鹽，大家一同開心地用力搖盪讓果汁自然滲出，接著夾入精緻的密封玻璃罐，套上色彩典雅的客家花布與棉繩封罐。這瓶不含防腐劑與色素的手作金桔，甘甜中帶著生津果香，是為這趟宜蘭慢旅封存的最佳酸甜紀念。
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_163219.jpg', '橘之鄉歐風白色主木屋', '夢幻的白色鄉村木屋與綠意花木')">
+              <img src="images/IMG_20261028_163219.jpg" alt="橘之鄉主館" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">浪漫的歐式鄉村風情白色建築</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_164136.jpg', '金桔蜜餞DIY體驗台準備', '鮮黃透亮的宜蘭金桔、玻璃封罐與手作工具')">
+              <img src="images/IMG_20261028_164136.jpg" alt="金桔DIY材料" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">一顆顆新鮮飽滿的在地宜蘭金桔準備醃製</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_164449.jpg', '親手完成的花布金桔蜜餞罐', '金黃蜜漬金桔搭配復古花布包裝，精緻滿分')">
+              <img src="images/IMG_20261028_164449.jpg" alt="金桔蜜餞成品" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">手作完成的高質感花布包裝蜜漬金桔罐</div>
+              </div>
+            </div>
+            <div class="photo-thumb-wrap" onclick="openLightbox('images/IMG_20261028_170722.jpg', '伴手禮精品門市陳列', '天然無添加的宜蘭在地金桔蜜餞與果醬專區')">
+              <img src="images/IMG_20261028_170722.jpg" alt="橘之鄉伴手禮" loading="lazy">
+              <div class="photo-zoom-icon"><i class="bi bi-zoom-in"></i></div>
+              <div class="photo-overlay">
+                <div class="photo-overlay-caption">選購精美在地名產與健康果醬伴手禮</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag-pill">#橘之鄉蜜餞形象館</span>
+            <span class="spot-tag-pill">#手工金桔蜜餞DIY</span>
+            <span class="spot-tag-pill">#天然無添加色素</span>
+            <span class="spot-tag-pill">#宜蘭經典伴手禮</span>
+          </div>
+
+          <div class="spot-tip-box">
+            <i class="bi bi-gift-fill spot-tip-icon"></i>
+            <div>
+              <strong>享用指南：</strong>帶回家的自製金桔蜜餞請常溫靜置約 2-3 天入味，冷藏後風味更佳！可直接夾取果肉享用，也可以舀幾匙蜜汁加入溫開水沖泡成「金桔蜜茶」，潤喉生津。
+            </div>
+          </div>
+        </article>
+
+      </div><!-- End Day 2 Group -->
+
+    </div>
+  </section>
+
+  <!-- Photo Gallery Showcase -->
+  <section class="py-5 bg-white border-top border-bottom" id="gallery">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-eyebrow">Snapshots & Memories</span>
+        <h2 class="section-title">精彩瞬間 ‧ 旅程影集</h2>
+        <p class="section-desc">透過鏡頭定格的每一幀美好，記錄手作的專注、大自然的清澈，以及人與人交會的溫暖微笑。</p>
+        
+        <!-- Gallery Filter Buttons -->
+        <div class="d-flex flex-wrap justify-content-center gap-1 mb-4">
+          <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">全部照片</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('craft', this)">匠人手作工藝</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('nature', this)">水鄉湧泉生態</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('food', this)">在地旬味饗宴</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('hotel', this)">溫泉湯宿漫活</button>
+        </div>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="masonry-grid" id="masonryContainer">
+
+        <!-- Item: 藍染手作 -->
+        <div class="gallery-card" data-category="craft">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_102750.jpg', '福成玩染工坊', '工坊老師向夥伴們示範染製完成的純棉隨行杯套')">
+            <img src="images/IMG_20261027_102750.jpg" alt="藍染示範" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">福成玩染 ‧ 藍染示範</div>
+            <div class="gallery-card-desc">親手探索天然植物藍的曼妙層次與防染圖紋。</div>
+          </div>
+        </div>
+
+        <!-- Item: 藍染大缸 -->
+        <div class="gallery-card" data-category="craft">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_110400.jpg', '染缸體驗', '專注地在古樸陶缸中進行藍染氧化染色')">
+            <img src="images/IMG_20261027_110400.jpg" alt="染缸揉染" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">大染缸的氧化魔法</div>
+            <div class="gallery-card-desc">雙手揉搓浸染，靜待空氣讓翠綠轉化為沉靜靛藍。</div>
+          </div>
+        </div>
+
+        <!-- Item: 蘭陽船菜 -->
+        <div class="gallery-card" data-category="food">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_125720.jpg', '蘭陽船菜手路菜', '香噴噴的傳統宜蘭炒麵、白斬油雞與鮮美冷盤')">
+            <img src="images/IMG_20261027_125720.jpg" alt="蘭陽船菜" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">蘭陽船菜手路美味</div>
+            <div class="gallery-card-desc">炒麵鑊氣飽滿，傳遞宜蘭人豪爽道地的宴席滋味。</div>
+          </div>
+        </div>
+
+        <!-- Item: 故事館庭園 -->
+        <div class="gallery-card" data-category="nature">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_141144.jpg', '宜蘭人故事館庭園', '日式庭園中的石燈籠、悠游錦鯉與清澈池水')">
+            <img src="images/IMG_20261027_141144.jpg" alt="日式水庭園" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">舊議會日式水庭園</div>
+            <div class="gallery-card-desc">微風拂過水面，錦鯉在枯山水意境中漫步悠游。</div>
+          </div>
+        </div>
+
+        <!-- Item: 傳統糕印 -->
+        <div class="gallery-card" data-category="craft">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_141437.jpg', '傳統木雕糕餅模具', '刻滿祈福圖騰與細緻線條的珍貴木造糕印')">
+            <img src="images/IMG_20261027_141437.jpg" alt="木雕糕模" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">百年糕印雕刻藝術</div>
+            <div class="gallery-card-desc">紅龜、壽桃與幾何花紋，定格舊時歲時節慶記憶。</div>
+          </div>
+        </div>
+
+        <!-- Item: 靈芝溫室 -->
+        <div class="gallery-card" data-category="nature">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_161641.jpg', '竹林松杉靈芝溫室', '在恆溫環境中茁壯生長、形如祥雲的有機松杉靈芝')">
+            <img src="images/IMG_20261027_161641.jpg" alt="靈芝培育" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">祥雲般的松杉靈芝</div>
+            <div class="gallery-card-desc">以相思木自然培育，展現大地漢方的純淨生命力。</div>
+          </div>
+        </div>
+
+        <!-- Item: 靈芝茶包DIY -->
+        <div class="gallery-card" data-category="craft">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_164748.jpg', '靈芝養生茶包手作', '以靈芝切片、去籽紅棗、清香枸杞手作秤裝的養生茶包')">
+            <img src="images/IMG_20261027_164748.jpg" alt="靈芝茶包" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">靈芝茶包手作配方</div>
+            <div class="gallery-card-desc">手心秤量健康心意，微苦回甘的草本暖心好禮。</div>
+          </div>
+        </div>
+
+        <!-- Item: 捷絲旅夜景 -->
+        <div class="gallery-card" data-category="hotel">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_171227.jpg', '捷絲旅浪漫戶外庭院', '夕陽餘暉下亮起的林間串燈，營造溫馨度假氣氛')">
+            <img src="images/IMG_20261027_171227.jpg" alt="捷絲旅夜景" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">捷絲旅花園暮色點燈</div>
+            <div class="gallery-card-desc">柔光穿透枝葉，宣告溫暖湯宿放鬆時光的降臨。</div>
+          </div>
+        </div>
+
+        <!-- Item: 捷絲旅溫泉池 -->
+        <div class="gallery-card" data-category="hotel">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261027_193237.jpg', '客房內超大雙人磨石子湯池', '寬敞深邃的原石浴池，流淌無色無味的碳酸氫鈉泉')">
+            <img src="images/IMG_20261027_193237.jpg" alt="磨石子溫泉池" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">私人獨立美人湯湯池</div>
+            <div class="gallery-card-desc">靜靜浸潤於礁溪天然溫泉，洗滌身心所有疲勞。</div>
+          </div>
+        </div>
+
+        <!-- Item: 愛玉採摘果實 -->
+        <div class="gallery-card" data-category="nature">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_095926.jpg', '鮮採愛玉果實竹籃', '圓潤飽滿、青翠鮮綠的現採愛玉果實')">
+            <img src="images/IMG_20261028_095926.jpg" alt="愛玉果竹籃" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">一籃翠綠愛玉鮮果</div>
+            <div class="gallery-card-desc">台灣土地限定的瑰寶，飽含大自然造化的清涼。</div>
+          </div>
+        </div>
+
+        <!-- Item: 鐵牛力阿卡 -->
+        <div class="gallery-card" data-category="nature">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_120350.jpg', '內城紅色鐵牛力阿卡', '朝氣蓬勃的經典力行車，帶領大家在鄉野間奔馳')">
+            <img src="images/IMG_20261028_120350.jpg" alt="紅色鐵牛車" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">鐵牛力阿卡鄉村奔馳</div>
+            <div class="gallery-card-desc">紅色拖車伴隨老農引擎聲，迎著秋風穿梭田疇。</div>
+          </div>
+        </div>
+
+        <!-- Item: 太陽埤湧泉 -->
+        <div class="gallery-card" data-category="nature">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_131033.jpg', '太陽埤碧綠天然湧泉', '湖面宛若翡翠般澄澈無波，映照四圍青翠山丘')">
+            <img src="images/IMG_20261028_131033.jpg" alt="太陽埤" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">純淨清冽的太陽埤湧泉</div>
+            <div class="gallery-card-desc">地下湧泉常年溫潤清透，宛如世外桃源的一汪明鏡。</div>
+          </div>
+        </div>
+
+        <!-- Item: 割稻飯控肉 -->
+        <div class="gallery-card" data-category="food">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_121206.jpg', '農村割稻飯經典滷控肉', '濃油赤醬、軟爛入味的厚切傳統家常五花滷肉')">
+            <img src="images/IMG_20261028_121206.jpg" alt="大盤滷肉" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">香傳十里的割稻飯控肉</div>
+            <div class="gallery-card-desc">秋收時節最溫暖人心的力量，醬香醇厚直擊靈魂。</div>
+          </div>
+        </div>
+
+        <!-- Item: 棗稻田大水車 -->
+        <div class="gallery-card" data-category="nature">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_154510.jpg', '棗稻田木造大水車景觀湖', '落羽松倒影與巨大水車構築的田園如畫景致')">
+            <img src="images/IMG_20261028_154510.jpg" alt="棗稻田水車" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">棗稻田巨型引水水車</div>
+            <div class="gallery-card-desc">傳統工法與綠意水景交織，呈現絕美的田園詩畫。</div>
+          </div>
+        </div>
+
+        <!-- Item: 敲拓染手作 -->
+        <div class="gallery-card" data-category="craft">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_144500.jpg', '植物敲拓染環保袋DIY', '採擷農場天然枝葉，敲打出大自然的青翠紋理')">
+            <img src="images/IMG_20261028_144500.jpg" alt="植物敲拓染" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">植物敲拓染環保帆布包</div>
+            <div class="gallery-card-desc">以小木槌敲出草木原色脈絡，留下自然的印記。</div>
+          </div>
+        </div>
+
+        <!-- Item: 橘之鄉金桔蜜餞 -->
+        <div class="gallery-card" data-category="food">
+          <div class="gallery-card-img-wrap" onclick="openLightbox('images/IMG_20261028_164449.jpg', '花布手工金桔蜜餞玻璃罐', '天然無防腐劑醃漬的鮮美金桔，綁上復古客家花布')">
+            <img src="images/IMG_20261028_164449.jpg" alt="金桔蜜餞成品" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">手作花布金桔蜜餞罐</div>
+            <div class="gallery-card-desc">將蘭陽秋日果實的甘醇生津，封存在透明玻璃罐中。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Notes & Summary Table -->
+  <section class="py-5" id="travel-notes">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Itinerary Summary & Notes</span>
+        <h2 class="section-title">旅程手帖 ‧ 重點備忘錄</h2>
+        <p class="section-desc">兩天一夜精華行程一覽表，以及貼心的宜蘭在地旅行穿搭、天氣與好物建議。</p>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-header bg-dark text-white p-3 fw-bold">
+              <i class="bi bi-table me-2"></i> 2026 宜蘭秋季慢旅 ‧ 日程摘要表
+            </div>
+            <div class="table-responsive">
+              <table class="travel-table mb-0">
+                <thead>
+                  <tr>
+                    <th>日期 / 時間</th>
+                    <th>站點名稱</th>
+                    <th>核心體驗與手作</th>
+                    <th>亮點備忘</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Day 1</strong> 09:50</td>
+                    <td>福成玩染工坊</td>
+                    <td>天然植物藍染隨身杯袋手作</td>
+                    <td>純棉紮染、氧化顯色</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 1</strong> 11:50</td>
+                    <td>蘭陽船菜</td>
+                    <td>傳統宜蘭船菜風味午席</td>
+                    <td>藍染桌布、經典炒麵油雞</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 1</strong> 14:00</td>
+                    <td>宜蘭人故事館</td>
+                    <td>阮義忠攝影展、糕模木雕、日式錦鯉庭院</td>
+                    <td>舊議會歷史建築</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 1</strong> 16:00</td>
+                    <td>竹林松杉靈芝農場</td>
+                    <td>溫室靈芝參觀、靈芝茶包 DIY</td>
+                    <td>相思木太空包、養生草本</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 1</strong> 17:15</td>
+                    <td>捷絲旅宜蘭礁溪館</td>
+                    <td>合棗園晚餐、房內雙人超大石池美人湯</td>
+                    <td>弱鹼性碳酸氫鈉泉</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 2</strong> 06:30</td>
+                    <td>礁溪晨光 ＆ 朝食</td>
+                    <td>溫泉街漫步、捷絲旅自助早餐吧</td>
+                    <td>三星蔥與在地食材</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 2</strong> 09:30</td>
+                    <td>豐盛愛玉果園</td>
+                    <td>愛玉藤蔓水泥柱果園生態解說</td>
+                    <td>台灣特有種、小蜂授粉</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 2</strong> 11:15</td>
+                    <td>內城生態社區</td>
+                    <td>紅色鐵牛力阿卡車隊、太陽埤湧泉</td>
+                    <td>耕耘機巡禮、清冽湧泉</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 2</strong> 12:30</td>
+                    <td>農村傳統割稻飯</td>
+                    <td>經典油亮厚切滷控肉、香酥魚割稻飯</td>
+                    <td>相放伴古早味人情味</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 2</strong> 14:15</td>
+                    <td>棗稻田休閒農場</td>
+                    <td>引水大水車湖景、植物敲拓染環保袋</td>
+                    <td>落羽松、原色草木紋理</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day 2</strong> 16:15</td>
+                    <td>橘之鄉蜜餞形象館</td>
+                    <td>手工金桔蜜餞封罐 DIY、伴手禮選購</td>
+                    <td>客家花布、生津潤喉</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- Travel Tips Card -->
+          <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white">
+            <h4 class="h5 fw-bold text-dark mb-3">
+              <i class="bi bi-compass-fill text-success me-2"></i> 宜蘭秋季慢活小叮嚀
+            </h4>
+            
+            <div class="mb-3 pb-3 border-bottom">
+              <h6 class="fw-bold text-primary mb-1"><i class="bi bi-thermometer-half me-1"></i> 天氣與穿著</h6>
+              <p class="small text-muted mb-0">
+                10月下旬蘭陽平原氣候宜人、微風徐涼（約 20℃ - 26℃）。建議洋蔥式穿著，攜帶一件防風薄外套，因偶有陣雨，折傘與防滑好走的休閒鞋為必備。
+              </p>
+            </div>
+
+            <div class="mb-3 pb-3 border-bottom">
+              <h6 class="fw-bold text-primary mb-1"><i class="bi bi-bag-check me-1"></i> 手作品保存</h6>
+              <p class="small text-muted mb-0">
+                本趟行程滿載 4 項手作品：手染杯袋請陰乾定色；靈芝茶包可置於乾燥陰涼處；金桔蜜餞靜置 2-3 天入味後冷藏風味最佳！
+              </p>
+            </div>
+
+            <div>
+              <h6 class="fw-bold text-primary mb-1"><i class="bi bi-droplet me-1"></i> 溫泉泡湯守則</h6>
+              <p class="small text-muted mb-0">
+                礁溪碳酸氫鈉泉水質無色無味，富含礦物質。泡湯前記得補充足量溫開水，每次浸泡建議 15 分鐘為宜，起身時注意防滑。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-counter" id="lightboxCounter">Photo 1 of 16</div>
+    <button class="lightbox-close" onclick="closeLightboxDirect()"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-nav-btn lightbox-prev" onclick="prevLightbox(event)"><i class="bi bi-chevron-left"></i></button>
+    <button class="lightbox-nav-btn lightbox-next" onclick="nextLightbox(event)"><i class="bi bi-chevron-right"></i></button>
+
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-caption-title" id="lightboxTitle"></div>
+        <div class="lightbox-caption-desc" id="lightboxDesc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTopBtn" aria-label="返回頂部">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+        <i class="bi bi-compass fs-3 text-success"></i>
+        <span class="fs-5 fw-bold text-white tracking-wide">TIME FOR YILAN 宜蘭二日慢旅手帖</span>
+      </div>
+      <p class="text-white-50 max-w-600 mx-auto small mb-4">
+        記錄於 2026 年 10 月 27 日至 28 日 ‧ 慢步蘭陽平原水鄉與山野間的溫柔記憶。<br>
+        版面設計參考 Time for Taiwan 台灣觀光美學風格。
+      </p>
+      <div class="d-flex justify-content-center gap-3 text-white-50 small mb-3">
+        <a href="#overview">旅程總覽</a> &bull; 
+        <a href="#highlights">四大主題</a> &bull; 
+        <a href="#itinerary">日程時間軸</a> &bull; 
+        <a href="#gallery">精彩相簿</a> &bull; 
+        <a href="#travel-notes">旅人手記</a>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="small text-secondary">
+        &copy; 2026 宜蘭慢旅小組 ‧ All Memories & Photography Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Lightbox Data Store
+    let currentLightboxIndex = 0;
+    const lightboxItems = [];
+
+    // Collect all clickable images for lightbox navigation
+    document.addEventListener("DOMContentLoaded", () => {
+      const thumbs = document.querySelectorAll(".photo-thumb-wrap, .gallery-card-img-wrap");
+      thumbs.forEach((thumb, idx) => {
+        const img = thumb.querySelector("img");
+        if (img) {
+          // extract onclick data or construct
+          const title = thumb.closest('.spot-card')?.querySelector('.spot-title')?.innerText || 
+                        thumb.closest('.gallery-card')?.querySelector('.gallery-card-title')?.innerText || '精彩照片';
+          const desc = thumb.querySelector('.photo-overlay-caption')?.innerText || 
+                       thumb.closest('.gallery-card')?.querySelector('.gallery-card-desc')?.innerText || '';
+          
+          lightboxItems.push({
+            src: img.getAttribute("src"),
+            title: title,
+            desc: desc
+          });
+
+          // assign index
+          thumb.dataset.lightboxIndex = idx;
+        }
+      });
+
+      // Scroll spy back to top
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add("show");
+        } else {
+          backToTopBtn.classList.remove("show");
+        }
+      });
+    });
+
+    function openLightbox(src, title, desc) {
+      const modal = document.getElementById("lightboxModal");
+      const img = document.getElementById("lightboxImg");
+      const titleEl = document.getElementById("lightboxTitle");
+      const descEl = document.getElementById("lightboxDesc");
+      const counterEl = document.getElementById("lightboxCounter");
+
+      // find index
+      const foundIdx = lightboxItems.findIndex(item => item.src === src);
+      if (foundIdx !== -1) {
+        currentLightboxIndex = foundIdx;
+      } else {
+        // add on the fly
+        lightboxItems.push({ src, title, desc });
+        currentLightboxIndex = lightboxItems.length - 1;
+      }
+
+      updateLightboxView();
+      modal.classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function updateLightboxView() {
+      const item = lightboxItems[currentLightboxIndex];
+      const img = document.getElementById("lightboxImg");
+      const titleEl = document.getElementById("lightboxTitle");
+      const descEl = document.getElementById("lightboxDesc");
+      const counterEl = document.getElementById("lightboxCounter");
+
+      img.src = item.src;
+      img.alt = item.title;
+      titleEl.innerText = item.title;
+      descEl.innerText = item.desc;
+      counterEl.innerText = `Photo ${currentLightboxIndex + 1} of ${lightboxItems.length}`;
+    }
+
+    function closeLightbox(event) {
+      const modal = document.getElementById("lightboxModal");
+      modal.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function closeLightboxDirect() {
+      const modal = document.getElementById("lightboxModal");
+      modal.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function prevLightbox(event) {
+      if (event) event.stopPropagation();
+      if (currentLightboxIndex > 0) {
+        currentLightboxIndex--;
+      } else {
+        currentLightboxIndex = lightboxItems.length - 1;
+      }
+      updateLightboxView();
+    }
+
+    function nextLightbox(event) {
+      if (event) event.stopPropagation();
+      if (currentLightboxIndex < lightboxItems.length - 1) {
+        currentLightboxIndex++;
+      } else {
+        currentLightboxIndex = 0;
+      }
+      updateLightboxView();
+    }
+
+    // Keyboard support for Lightbox
+    document.addEventListener("keydown", (e) => {
+      const modal = document.getElementById("lightboxModal");
+      if (modal.classList.contains("show")) {
+        if (e.key === "Escape") closeLightboxDirect();
+        if (e.key === "ArrowLeft") prevLightbox();
+        if (e.key === "ArrowRight") nextLightbox();
+      }
+    });
+
+    // Itinerary Filter
+    function filterItinerary(day, btnEl) {
+      const groupDay1 = document.getElementById("group-day1");
+      const groupDay2 = document.getElementById("group-day2");
+      const buttons = document.querySelectorAll(".filter-btn-pill");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      if (btnEl) {
+        btnEl.classList.add("active");
+      }
+
+      if (day === "all") {
+        groupDay1.style.display = "block";
+        groupDay2.style.display = "block";
+      } else if (day === "day1") {
+        groupDay1.style.display = "block";
+        groupDay2.style.display = "none";
+      } else if (day === "day2") {
+        groupDay1.style.display = "none";
+        groupDay2.style.display = "block";
+      }
+
+      // Smooth scroll to container top
+      const offsetTop = document.getElementById("itinerary").offsetTop - 20;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+
+    // Gallery Category Filter
+    function filterGallery(category, btnEl) {
+      const cards = document.querySelectorAll(".gallery-card");
+      const buttons = document.querySelectorAll(".gallery-filter-btn");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      if (btnEl) {
+        btnEl.classList.add("active");
+      }
+
+      cards.forEach(card => {
+        if (category === "all" || card.dataset.category === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
