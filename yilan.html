@@ -1,0 +1,2909 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宜蘭二日慢旅手帖 ｜ TIME FOR YILAN 2026 - Yilan 2-Day Slow Travel Journal</title>
+  <meta name="description" content="宜蘭二日慢旅手帖：綠意水鄉 × 匠心手作 × 名湯漫活。Yilan 2-Day Slow Travel Journal: Verdant Waterscapes, Artisanal Crafts, and Hot Spring Living.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #065f46;
+      --primary-light: #ecfdf5;
+      --primary-hover: #10b981;
+      --secondary: #d97706;
+      --secondary-light: #fffbeb;
+      --accent: #2563eb;
+      --slate-dark: #0f172a;
+      --slate-body: #334155;
+      --slate-muted: #64748b;
+      --bg-cream: #fbfbf9;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      --card-hover-shadow: 0 20px 35px -10px rgba(5, 150, 105, 0.12), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--slate-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--slate-dark);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .font-serif-brand {
+      font-family: 'Playfair Display', 'Noto Sans TC', serif;
+    }
+
+    /* Bilingual Helper Styles */
+    .lang-en {
+      display: block;
+    }
+    span.lang-en {
+      display: inline;
+    }
+    .narrative-zh {
+      color: var(--slate-body);
+      font-size: 1.02rem;
+      line-height: 1.85;
+      margin-bottom: 0.85rem;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .narrative-en {
+      color: #475569;
+      font-size: 0.93rem;
+      line-height: 1.68;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding-top: 0.85rem;
+      border-top: 1px dashed rgba(226, 232, 240, 0.9);
+      margin-bottom: 1.5rem;
+    }
+    .spot-title-en {
+      display: block;
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 0.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.01em;
+    }
+    .spot-subtitle-en {
+      display: block;
+      font-size: 0.84rem;
+      color: #94a3b8;
+      margin-top: 0.15rem;
+    }
+    .nav-link-en {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: -2px;
+    }
+    .nav-link:hover .nav-link-en, .nav-link.active .nav-link-en {
+      color: var(--primary);
+    }
+    .gallery-card-desc-en {
+      display: block;
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 0.35rem;
+      line-height: 1.45;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .gallery-card-title-en {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 0.1rem;
+    }
+    .tip-en {
+      font-size: 0.88rem;
+      color: #9a3412;
+      margin-top: 0.4rem;
+      padding-top: 0.4rem;
+      border-top: 1px dashed rgba(254, 215, 170, 0.8);
+      line-height: 1.55;
+    }
+
+    /* Language Switcher Bar */
+    .lang-switcher-wrap {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 3px;
+      border-radius: 30px;
+      border: 1px solid var(--border-color);
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .lang-btn:hover {
+      color: var(--slate-dark);
+    }
+    .lang-btn.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Language View Toggle Rules */
+    body.view-zh-only .lang-en,
+    body.view-zh-only .narrative-en,
+    body.view-zh-only .spot-title-en,
+    body.view-zh-only .spot-subtitle-en,
+    body.view-zh-only .nav-link-en,
+    body.view-zh-only .gallery-card-desc-en,
+    body.view-zh-only .gallery-card-title-en,
+    body.view-zh-only .table-en,
+    body.view-zh-only .tip-en {
+      display: none !important;
+    }
+    body.view-en-only .lang-zh,
+    body.view-en-only .narrative-zh,
+    body.view-en-only .spot-title-zh,
+    body.view-en-only .spot-subtitle-zh,
+    body.view-en-only .nav-link-zh,
+    body.view-en-only .gallery-card-desc-zh,
+    body.view-en-only .gallery-card-title-zh,
+    body.view-en-only .table-zh,
+    body.view-en-only .tip-zh {
+      display: none !important;
+    }
+
+    /* Navbar */
+    .custom-navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      z-index: 1040;
+    }
+
+    .navbar-brand-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: var(--slate-dark);
+      padding: 0.4rem 0.85rem !important;
+      border-radius: 18px;
+      transition: all 0.25s ease;
+      font-size: 0.92rem;
+      line-height: 1.25;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary) !important;
+      background-color: var(--primary-light);
+    }
+
+    /* Hero Section with exact original background image path */
+    .hero-section {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.78) 100%),
+                  url('./img/Yilan//IMG_20261028_154510.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 120px 0 80px 0;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 0.45rem 1.25rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4.8vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.25;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 860px;
+      margin: 1.5rem auto 2.5rem auto;
+      font-weight: 400;
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-stat-card {
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 18px;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .hero-stat-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .hero-stat-icon {
+      font-size: 1.8rem;
+      color: #fbbf24;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-stat-val {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.15rem;
+    }
+
+    .hero-stat-label {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+    }
+
+    /* Section Headers */
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      background: var(--primary-light);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-desc {
+      color: var(--slate-muted);
+      font-size: 1.02rem;
+      max-width: 780px;
+      margin: 0 auto 3rem auto;
+    }
+
+    /* Highlights Section */
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      height: 100%;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow);
+    }
+
+    .highlight-card:hover::before {
+      opacity: 1;
+    }
+
+    .highlight-icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.3rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-card:hover .highlight-icon-box {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    /* Day Tabs & Controls */
+    .filter-tabs-wrapper {
+      position: sticky;
+      top: 76px;
+      z-index: 1030;
+      background: rgba(251, 251, 249, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn-pill {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--slate-dark);
+      font-weight: 600;
+      padding: 0.65rem 1.4rem;
+      border-radius: 50px;
+      transition: all 0.25s ease;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .filter-btn-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .filter-btn-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+    }
+
+    /* Timeline & Itinerary Cards */
+    .timeline-day-header {
+      background: linear-gradient(135deg, #065f46, #059669);
+      color: #ffffff;
+      padding: 1.6rem 2rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(5, 150, 105, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .day-badge-large {
+      font-size: 1.15rem;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.4rem 1.1rem;
+      border-radius: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    .spot-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 22px;
+      padding: 2.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .spot-card:hover {
+      box-shadow: var(--card-hover-shadow);
+      border-color: #cbd5e1;
+    }
+
+    .spot-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.3rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .spot-time-pill {
+      background: var(--slate-dark);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.35rem 0.95rem;
+      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .spot-category-pill {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.35rem 0.95rem;
+      border-radius: 30px;
+    }
+
+    .spot-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--slate-dark);
+      margin-top: 0.4rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+
+    .spot-subtitle {
+      font-size: 0.95rem;
+      color: var(--slate-muted);
+      font-weight: 500;
+    }
+
+    .spot-map-link {
+      font-size: 0.88rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      background: var(--primary-light);
+      transition: all 0.2s ease;
+    }
+
+    .spot-map-link:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .spot-narrative {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Spot Photo Grid */
+    .spot-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .photo-thumb-wrap {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #e2e8f0;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .photo-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .photo-thumb-wrap:hover img {
+      transform: scale(1.08);
+    }
+
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.8) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem;
+      color: #ffffff;
+    }
+
+    .photo-thumb-wrap:hover .photo-overlay {
+      opacity: 1;
+    }
+
+    .photo-overlay-caption {
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.35;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .photo-zoom-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease;
+    }
+
+    .photo-thumb-wrap:hover .photo-zoom-icon {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Spot Tags & Callout */
+    .spot-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .spot-tag-pill {
+      font-size: 0.82rem;
+      color: var(--slate-muted);
+      background: #f1f5f9;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-weight: 500;
+    }
+
+    .spot-tip-box {
+      background: #fffdf5;
+      border: 1px solid #fed7aa;
+      border-left: 4px solid var(--secondary);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-size: 0.92rem;
+      color: #7c2d12;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .spot-tip-icon {
+      font-size: 1.25rem;
+      color: var(--secondary);
+      margin-top: 1px;
+    }
+
+    /* Gallery Section */
+    .gallery-filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--slate-body);
+      padding: 0.4rem 1.1rem;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin: 0.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-filter-btn.active, .gallery-filter-btn:hover {
+      background: var(--slate-dark);
+      color: #ffffff;
+      border-color: var(--slate-dark);
+    }
+
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery-card-img-wrap {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card-img-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-card-body {
+      padding: 1rem 1.25rem;
+    }
+
+    .gallery-card-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--slate-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-card-desc {
+      font-size: 0.84rem;
+      color: var(--slate-muted);
+      line-height: 1.5;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 15, 29, 0.94);
+      backdrop-filter: blur(14px);
+      z-index: 2000;
+      padding: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .lightbox-modal.show {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-caption-bar {
+      margin-top: 1rem;
+      text-align: center;
+      color: #ffffff;
+      max-width: 800px;
+    }
+
+    .lightbox-caption-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .lightbox-caption-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .lightbox-prev {
+      left: 2rem;
+    }
+
+    .lightbox-next {
+      right: 2rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #ffffff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.25s ease;
+    }
+
+    .lightbox-close:hover {
+      background: #ef4444;
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      top: 1.8rem;
+      left: 2rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    /* Info Table & Summary */
+    .travel-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--card-shadow);
+    }
+
+    .travel-table th {
+      background: #f8fafc;
+      color: var(--slate-dark);
+      font-weight: 700;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+
+    .travel-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--slate-body);
+      font-size: 0.92rem;
+      vertical-align: top;
+    }
+
+    .travel-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .travel-table tr:hover td {
+      background: #fbfcfe;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.35);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-4px);
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--slate-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 4rem 0 2rem 0;
+      font-size: 0.92rem;
+    }
+
+    footer h5 {
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: 1.2rem;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--primary-hover);
+    }
+
+    @media (max-width: 768px) {
+      .spot-card {
+        padding: 1.5rem;
+      }
+      .timeline-day-header {
+        padding: 1.25rem 1.5rem;
+      }
+      .lightbox-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      .lightbox-prev {
+        left: 0.5rem;
+      }
+      .lightbox-next {
+        right: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="fs-4 text-success"><i class="bi bi-compass"></i></span>
+        <div>
+          <span class="fw-bold tracking-tight text-dark">TIME FOR YILAN</span>
+          <span class="navbar-brand-pill ms-1">2026 AUTUMN</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#overview">
+              <span class="lang-zh nav-link-zh">旅程總覽</span>
+              <span class="lang-en nav-link-en">Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#highlights">
+              <span class="lang-zh nav-link-zh">核心亮點</span>
+              <span class="lang-en nav-link-en">Highlights</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#itinerary">
+              <span class="lang-zh nav-link-zh">詳細行程</span>
+              <span class="lang-en nav-link-en">Itinerary</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#gallery">
+              <span class="lang-zh nav-link-zh">精彩影集</span>
+              <span class="lang-en nav-link-en">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#travel-notes">
+              <span class="lang-zh nav-link-zh">旅人手記</span>
+              <span class="lang-en nav-link-en">Notes</span>
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn btn-sm btn-success rounded-pill px-3 shadow-sm d-flex align-items-center gap-1" href="#itinerary" style="background-color: var(--primary); border: none;">
+              <i class="bi bi-calendar2-check"></i>
+              <span class="lang-zh">查看日程</span>
+              <span class="lang-en small opacity-75">/ Itinerary</span>
+            </a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <div class="lang-switcher-wrap" role="group" aria-label="Language Mode">
+              <button type="button" class="lang-btn active" id="btn-lang-both" onclick="setLangView('both', this)">
+                <i class="bi bi-translate"></i>雙語 Bilingual
+              </button>
+              <button type="button" class="lang-btn" id="btn-lang-zh" onclick="setLangView('zh', this)">繁中</button>
+              <button type="button" class="lang-btn" id="btn-lang-en" onclick="setLangView('en', this)">EN</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-section text-center" id="overview">
+    <div class="container position-relative">
+      <div class="hero-badge mx-auto">
+        <i class="bi bi-geo-alt-fill text-warning"></i>
+        <span class="lang-zh">台灣觀光精選 ‧ 宜蘭秋季慢旅手帖</span>
+        <span class="lang-en text-white-50 ms-1">| Taiwan Tourism: Yilan Autumn Slow Travel</span>
+      </div>
+      <h1 class="hero-title font-serif-brand">
+        <span class="lang-zh d-block">綠意水鄉 × 匠心手作 × 名湯漫活</span>
+        <span class="lang-en d-block fs-3 fw-normal text-white-50 mt-2" style="font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.02em;">Verdant Waterscapes × Artisanal Crafts × Hot Spring Living</span>
+      </h1>
+      <div class="hero-lead">
+        <p class="lang-zh mb-2">
+          走進蘭陽平原的溫柔秋日。穿梭冬山藍染工坊的靛藍幻化、探訪老城舊議會的故事記憶、感受靈芝培育與草本茶香；夜宿礁溪沉浸弱鹼溫泉，次日搭乘紅色鐵牛力阿卡探訪天然湧泉，品味古早味割稻飯，在水車湖畔敲拓自然、親手醃漬酸甜金桔蜜餞。
+        </p>
+        <p class="lang-en text-white-50 small mb-0" style="line-height: 1.68;">
+          Step into the gentle autumn breeze across the Lanyang Plain. Experience the natural magic of indigo dyeing in Dongshan, retrace historic memories at the Yilan Old County Council, and discover the art of cultivating Lingzhi mushrooms and herbal teas. Retreat for a soothing soak in Jiaoxi's hot springs, ride the iconic red "Iron Ox" carts to pristine natural springs, savor a traditional farmers' rice feast, craft botanical leaf prints beside the waterwheel, and pickle sweet-and-sour kumquats by hand.
+        </p>
+      </div>
+
+      <!-- Hero Stats Grid -->
+      <div class="hero-stats-grid">
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-calendar3"></i></div>
+          <div class="hero-stat-val">
+            <span class="lang-zh">2 天 1 夜</span>
+            <span class="lang-en fs-6 fw-semibold opacity-75">/ 2 Days 1 Night</span>
+          </div>
+          <div class="hero-stat-label">
+            <span class="lang-zh">2026年 秋天 (平日價格和假日價格不同)</span>
+            <span class="lang-en d-block small opacity-75">Autumn 2026 (Weekday & Weekend rates differ)</span>
+          </div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-palette2"></i></div>
+          <div class="hero-stat-val">
+            <span class="lang-zh">4 場手作體驗</span>
+            <span class="lang-en fs-6 fw-semibold opacity-75">/ 4 Workshops</span>
+          </div>
+          <div class="hero-stat-label">
+            <span class="lang-zh">植物藍染 ‧ 靈芝茶 ‧ 拓印 ‧ 金桔</span>
+            <span class="lang-en d-block small opacity-75">Indigo · Herbal Tea · Leaf Print · Kumquat</span>
+          </div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-water"></i></div>
+          <div class="hero-stat-val">
+            <span class="lang-zh">湧泉 × 碳酸湯宿</span>
+            <span class="lang-en fs-6 fw-semibold opacity-75">/ Springs & Spa</span>
+          </div>
+          <div class="hero-stat-label">
+            <span class="lang-zh">太陽埤純淨泉水 ＆ 捷絲旅美人湯</span>
+            <span class="lang-en d-block small opacity-75">Taiyangpi Springs & Just Sleep Jiaoxi</span>
+          </div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><i class="bi bi-cup-hot"></i></div>
+          <div class="hero-stat-val">
+            <span class="lang-zh">在地產地旬味</span>
+            <span class="lang-en fs-6 fw-semibold opacity-75">/ Farm Flavors</span>
+          </div>
+          <div class="hero-stat-label">
+            <span class="lang-zh">傳統蘭陽船菜 ＆ 農村割稻飯</span>
+            <span class="lang-en d-block small opacity-75">Lanyang Boat Feast & Harvest Rice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section: Travel Highlights -->
+  <section class="py-5" id="highlights">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Trip Highlights ‧ 核心亮點</span>
+        <h2 class="section-title">
+          <span class="lang-zh">旅程四大核心主題</span>
+          <span class="lang-en d-block fs-3 text-muted fw-semibold mt-1">Four Core Travel Themes</span>
+        </h2>
+        <div class="section-desc">
+          <p class="lang-zh mb-2">結合在地匠人工藝、水文生態、慢活名湯與食農文化，打造深具溫度與記憶點的深度旅行提案。</p>
+          <p class="lang-en small mb-0">Blending local craftsmanship, hydrological ecology, soothing hot springs, and farm-to-table culture into an enriching, unforgettable in-depth journey.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box">
+              <i class="bi bi-brush"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">
+              <span class="lang-zh d-block">手作匠心工藝</span>
+              <span class="lang-en fs-6 text-muted fw-semibold">Artisanal Crafts</span>
+            </h4>
+            <div class="text-muted small mb-0">
+              <p class="lang-zh mb-2">親手紮綁布巾浸潤天然靛藍染液，完成專屬隨行杯套；調配松杉靈芝養生茶包，敲拓農場花葉紋理，封存純手工蜜漬金桔。</p>
+              <p class="lang-en mb-0 text-secondary">Tie-dye cotton with natural indigo, blend herbal Lingzhi wellness tea, hammer fresh botanical leaf prints, and hand-cure sweet-and-sour candied kumquats.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box" style="background: #eff6ff; color: #2563eb;">
+              <i class="bi bi-building"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">
+              <span class="lang-zh d-block">老城故事紀實</span>
+              <span class="lang-en fs-6 text-muted fw-semibold">Historic Old Town</span>
+            </h4>
+            <div class="text-muted small mb-0">
+              <p class="lang-zh mb-2">走進宜蘭人故事館舊縣議會空間與阮義忠攝影故事館，漫步日式迴廊與錦鯉水塘，重溫傳統木刻糕印與純樸歷史縮影。</p>
+              <p class="lang-en mb-0 text-secondary">Explore the Yilan Story Museum and Juan I-Jong Photography Museum, stroll Japanese-style koi pond corridors, and admire antique hand-carved pastry molds.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box" style="background: #fef3c7; color: #d97706;">
+              <i class="bi bi-truck"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">
+              <span class="lang-zh d-block">水鄉湧泉農遊</span>
+              <span class="lang-en fs-6 text-muted fw-semibold">Rural Springs Tour</span>
+            </h4>
+            <div class="text-muted small mb-0">
+              <p class="lang-zh mb-2">坐上員山內城古樸熱鬧的紅色「鐵牛力阿卡」，微風迎面駛過田疇，造訪澄淨透綠的太陽埤湧泉與攀藤愛玉果園。</p>
+              <p class="lang-en mb-0 text-secondary">Hop aboard the cheerful red "Iron Ox Li-a-ka" farm carts in Neicheng, cruise country lanes, and visit pristine Taiyangpi springs and lush climbing Aiyu orchards.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="highlight-card">
+            <div class="highlight-icon-box" style="background: #fdf2f8; color: #db2777;">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">
+              <span class="lang-zh d-block">名湯舒活 × 割稻飯</span>
+              <span class="lang-en fs-6 text-muted fw-semibold">Springs & Harvest Feast</span>
+            </h4>
+            <div class="text-muted small mb-0">
+              <p class="lang-zh mb-2">入住礁溪捷絲旅享受雙人超大石砌碳酸氫鈉泉，品味濃郁香醇的農村古早味滷控肉割稻飯與傳統蘭陽船菜手路料理。</p>
+              <p class="lang-en mb-0 text-secondary">Unwind at Just Sleep Jiaoxi in private stone hot spring baths, and indulge in hearty farmhouse braised pork "Harvest Rice" and classic riverboat feasts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Day Filter Controls -->
+  <div class="filter-tabs-wrapper" id="itinerary">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
+        <button class="filter-btn-pill active" onclick="filterItinerary('all', this)">
+          <i class="bi bi-grid-fill"></i>
+          <span class="lang-zh">全部精選行程 (10 站)</span>
+          <span class="lang-en small opacity-75">/ All 10 Stops</span>
+        </button>
+        <button class="filter-btn-pill" onclick="filterItinerary('day1', this)">
+          <i class="bi bi-sun-fill text-warning"></i>
+          <span class="lang-zh">Day 1 玩染茶香 ‧ 老城 ‧ 礁溪好湯</span>
+          <span class="lang-en small opacity-75">/ Day 1: Dyeing, Old Town, Springs</span>
+        </button>
+        <button class="filter-btn-pill" onclick="filterItinerary('day2', this)">
+          <i class="bi bi-tree-fill text-success"></i>
+          <span class="lang-zh">Day 2 愛玉 ‧ 鐵牛湧泉 ‧ 割稻飯 ‧ 蜜餞</span>
+          <span class="lang-en small opacity-75">/ Day 2: Aiyu, Iron Ox, Harvest Rice</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITINERARY SECTION -->
+  <section class="py-5" id="spots-container">
+    <div class="container">
+
+      <!-- DAY 1 GROUP -->
+      <div class="itinerary-day-group" id="group-day1">
+        <div class="timeline-day-header">
+          <div class="day-badge">Day 1</div>
+          <div class="ms-3">
+            <h3 class="mb-1 text-dark fw-bold">
+              <span class="lang-zh">第一天：玩染茶香 ‧ 老城風華 ‧ 礁溪好湯</span>
+              <span class="lang-en d-block fs-5 text-secondary fw-normal">Natural Dyeing, Historic Town & Jiaoxi Onsen Serenity</span>
+            </h3>
+            <p class="text-muted small mb-0">
+              <span class="lang-zh"><i class="bi bi-geo-alt-fill text-danger me-1"></i>冬山鄉 ➔ 五結鄉 ➔ 宜蘭市 ➔ 礁溪鄉</span>
+              <span class="lang-en ms-2">Dongshan ➔ Wujie ➔ Yilan City ➔ Jiaoxi</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- SPOT 1: 福成玩染 -->
+        <article class="spot-card" id="spot-1">
+          <div class="spot-card-header">
+            <div class="spot-number">01</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>10:00 - 11:30 | 
+                <span class="lang-zh">傳統工藝體驗</span>
+                <span class="lang-en">Traditional Craft Experience</span>
+              </div>
+              <h3 class="spot-title-zh">福成玩染 ── 植物與茶的色彩密碼</h3>
+              <div class="spot-title-en">Fucheng Natural Dyeing Workshop: Botanical & Tea Hues</div>
+              <a href="https://maps.google.com/?q=宜蘭縣冬山鄉福成路" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣冬山鄉福成路 (Google 地圖)</span>
+                <span class="lang-en">Dongshan Township, Yilan (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">走進隱身於冬山茶鄉的福成社區，這裡以在地採摘的茶葉、植物與天然礦物為染材。在工藝師引領下，折疊、綑綁、浸泡至反覆氧化，純白棉麻布料在染缸中緩緩綻放深淺有致的溫潤大地色澤。親手拆開棉繩的瞬間，每件作品都是獨一無二的大自然光影印記。</p>
+            <p class="lang-en text-secondary">Tucked away in the serene tea country of Dongshan, Fucheng Community preserves the timeless craft of natural botanical dyeing. Utilizing locally harvested tea leaves, herbs, and natural minerals, artisans guide you through folding, binding, and immersion oxidation. As you untie the bindings, reveal unique patterns imprinted with the gentle earth tones of Yilan.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/Fucheng-1.jpg', '染布晾曬', 'Fabric Drying in Sunshine', '陽光下晾曬的手工天然染布，隨風飄逸散發自然樸實色澤。', 'Hand-dyed organic fabrics drying gently in the sun, reflecting earthy natural hues.')">
+              <img src="img/Yilan/Fucheng-1.jpg" alt="染布晾曬 / Fabric Drying" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">染布晾曬</div>
+                <div class="photo-overlay-title lang-en">Fabric Drying</div>
+                <div class="photo-overlay-desc lang-zh">陽光下晾曬的手工天然染布</div>
+                <div class="photo-overlay-desc lang-en">Handcrafted dyed cloth drying in the sun</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/Fucheng-2.jpg', '天然染料與工藝', 'Natural Dyeing Materials', '使用在地植物與茶葉萃取的天然染液，安全環保且散發清香。', 'Eco-friendly natural dye baths extracted from local tea leaves and botanicals.')">
+              <img src="img/Yilan/Fucheng-2.jpg" alt="天然染料與工藝 / Dyeing Materials" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">天然染液</div>
+                <div class="photo-overlay-title lang-en">Natural Dye Baths</div>
+                <div class="photo-overlay-desc lang-zh">在地植物與茶葉萃取染液</div>
+                <div class="photo-overlay-desc lang-en">Herbal and tea-based organic dyes</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/Fucheng-3.jpg', '綁染技巧與工具', 'Tie-Dye Craft Techniques', '運用傳統木板、彈珠與棉線紮綁，創造出豐富幾何變化。', 'Traditional clamps, marbles, and strings creating intricate geometric patterns.')">
+              <img src="img/Yilan/Fucheng-3.jpg" alt="綁染技巧 / Tie-dye Techniques" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">傳統綁染</div>
+                <div class="photo-overlay-title lang-en">Tie-Dye Techniques</div>
+                <div class="photo-overlay-desc lang-zh">木板與棉線紮綁工藝</div>
+                <div class="photo-overlay-desc lang-en">Geometric clamp and bind folding</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/Fucheng-4.jpg', '手作染布成品', 'Finished Dyed Cloths', '藍染與茶染呈現樸實溫潤的層次，兼具生活美學與實用價值。', 'Indigo and warm tea earth tones creating elegant, wearable everyday art.')">
+              <img src="img/Yilan/Fucheng-4.jpg" alt="成品展示 / Finished Dyed Cloths" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">染布作品</div>
+                <div class="photo-overlay-title lang-en">Finished Creations</div>
+                <div class="photo-overlay-desc lang-zh">溫潤藍染與茶染層次</div>
+                <div class="photo-overlay-desc lang-en">Layers of earthy indigo & tea tones</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">體驗貼士</span>
+              <span class="lang-en">Traveler Tips</span>
+            </div>
+            <p class="lang-zh mb-1 small">天然染作建議穿著深色衣物；每件成品均經現場固色處理，回家後以清水輕柔手洗即可長久保存鮮活色彩。</p>
+            <p class="lang-en mb-0 text-secondary small">Dark attire is recommended for dye workshops. Finished fabrics are color-fixed on site; gentle hand-wash in cool water preserves the organic hues.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#天然植物染</span><span class="lang-en">#BotanicalDye</span></span>
+            <span class="spot-tag"><span class="lang-zh">#茶染手作</span><span class="lang-en">#TeaDyeing</span></span>
+            <span class="spot-tag"><span class="lang-zh">#冬山文創</span><span class="lang-en">#DongshanCraft</span></span>
+            <span class="spot-tag"><span class="lang-zh">#職人體驗</span><span class="lang-en">#ArtisanWorkshop</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 2: 蘭陽船菜 -->
+        <article class="spot-card" id="spot-2">
+          <div class="spot-card-header">
+            <div class="spot-number">02</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>12:00 - 13:30 | 
+                <span class="lang-zh">經典蘭陽美饌</span>
+                <span class="lang-en">Lanyang Specialty Dining</span>
+              </div>
+              <h3 class="spot-title-zh">蘭陽船菜 ── 尋訪老宜蘭的水路盛宴</h3>
+              <div class="spot-title-en">Lanyang Riverboat Cuisine: Historic Culinary Feast</div>
+              <a href="https://maps.google.com/?q=蘭陽船菜" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣五結鄉 (Google 地圖)</span>
+                <span class="lang-en">Wujie Township, Yilan (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">昔日宜蘭水路發達，船工與商賈在沿河航行中衍生出講究火候與滋味的「船菜」飲食文化。主廚堅持傳承老宜蘭手路，端出湯頭甘醇鮮美的經典「西魯肉」、酥脆噴香的「卜肉」與古法蒸鮮魚。每一道料理都是數十年炊煙裡淬煉的濃郁鄉土情懷。</p>
+            <p class="lang-en text-secondary">In eras when waterways served as Yilan’s lifelines, boatmen and merchants developed "Riverboat Cuisine" — hearty, flavor-packed dishes slow-cooked onboard or at bustling river wharves. Experience culinary heritage through authentic Silu pork stew, crispy Bu-Rou pork fritters, and steamed catch-of-the-day infused with vintage home-style comfort.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/boatmeal-1.jpg', '蘭陽船菜經典宴席', 'Riverboat Feast', '傳承昔日河運水路人家的手工手路菜，道道美味鮮香。', 'Traditional riverboat dishes passed down through generations of boatmen.')">
+              <img src="img/Yilan/boatmeal-1.jpg" alt="蘭陽船菜經典宴席 / Riverboat Feast" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">水路家席</div>
+                <div class="photo-overlay-title lang-en">Riverboat Banquet</div>
+                <div class="photo-overlay-desc lang-zh">傳承河運人家的傳統手路菜</div>
+                <div class="photo-overlay-desc lang-en">Classic heirloom waterway recipes</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/boatmeal-2.jpg', '正宗老宜蘭西魯肉', 'Classic Silu Broth', '傳統宜蘭西魯肉滿滿大白菜甜味與香脆金黃蛋酥，香氣撲鼻。', 'Authentic Yilan Silu soup crowned with crispy egg shred crisps.')">
+              <img src="img/Yilan/boatmeal-2.jpg" alt="西魯肉與傳統小吃 / Classic Silu Pork Broth" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">老宜蘭西魯肉</div>
+                <div class="photo-overlay-title lang-en">Classic Silu Broth</div>
+                <div class="photo-overlay-desc lang-zh">白菜甘甜與金黃蛋酥香氣</div>
+                <div class="photo-overlay-desc lang-en">Sweet cabbage & crisp egg crumbs</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/boatmeal-1.jpg', '在地時令蒸鮮海味', 'Steamed Fresh Seafood', '選用當季新鮮漁獲，古法清蒸呈現原汁原味的清甜。', 'Seasonal fresh seafood steamed with scallions and vintage soy.')">
+              <img src="img/Yilan/boatmeal-1.jpg" alt="宜蘭特色冷盤與海鮮 / Seafood & Cold Appetizers" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">時令海鮮</div>
+                <div class="photo-overlay-title lang-en">Fresh Daily Catch</div>
+                <div class="photo-overlay-desc lang-zh">古法烹製展現在地鮮味</div>
+                <div class="photo-overlay-desc lang-en">Steamed seasonal marine delicacies</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">主廚推薦</span>
+              <span class="lang-en">Chef Recommendation</span>
+            </div>
+            <p class="lang-zh mb-1 small">傳承三代的正宗西魯肉搭配香脆蛋酥，淋在白飯上滋味一絕；合菜桌宴建議提前去電預約以確保最佳食材準備。</p>
+            <p class="lang-en mb-0 text-secondary small">Traditional Silu Pork Broth topped with crispy golden egg crisps over steamed rice is an unforgettable staple. Advance group booking recommended.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#蘭陽手路菜</span><span class="lang-en">#LanyangCuisine</span></span>
+            <span class="spot-tag"><span class="lang-zh">#老宜蘭西魯肉</span><span class="lang-en">#SiluPork</span></span>
+            <span class="spot-tag"><span class="lang-zh">#五結鄉美食</span><span class="lang-en">#WujieFood</span></span>
+            <span class="spot-tag"><span class="lang-zh">#在地飲食文化</span><span class="lang-en">#FoodHeritage</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 3: 阮義忠台灣故事館 -->
+        <article class="spot-card" id="spot-3">
+          <div class="spot-card-header">
+            <div class="spot-number">03</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>14:00 - 15:30 | 
+                <span class="lang-zh">影像人文巡禮</span>
+                <span class="lang-en">Photography & Heritage</span>
+              </div>
+              <h3 class="spot-title-zh">阮義忠台灣故事館 ── 光影凝結的歲月溫度</h3>
+              <div class="spot-title-en">Juan I-Jong Taiwan Story House: Frozen Memories & Human Warmth</div>
+              <a href="https://maps.google.com/?q=阮義忠台灣故事館" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭市復興路 (Google 地圖)</span>
+                <span class="lang-en">Yilan City (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">坐落於宜蘭市區綠樹掩映的日治官舍群，這座人文空間由國際知名紀實攝影大師阮義忠創立。展館以深刻的黑白影像，記錄半世紀以來台灣鄉村與常民生活的質樸笑靨。每季策劃不同主題展覽，讓觀者在光影交疊間，讀懂台灣最深層的土地記憶與人文情懷。</p>
+            <p class="lang-en text-secondary">Housed in converted heritage dormitories shaded by century-old trees in downtown Yilan, this cultural haven was founded by master documentary photographer Juan I-Jong. Through emotive black-and-white photography capturing half a century of everyday rural life, the exhibitions celebrate human warmth, ancestral wisdom, and timeless Taiwanese stories.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/story-1.jpg', '故事館歷史紅磚洋樓', 'Historic Brick Architecture', '昔日縣府舊眷舍修復而成的歷史人文空間，紅磚與木窗交織時光印記。', 'Old government dormitories respectfully restored into an evocative cultural center.')">
+              <img src="img/Yilan/story-1.jpg" alt="故事館歷史紅磚洋樓 / Historic Brick Architecture" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">老屋風貌</div>
+                <div class="photo-overlay-title lang-en">Historic Venue</div>
+                <div class="photo-overlay-desc lang-zh">舊眷舍修復的人文空間</div>
+                <div class="photo-overlay-desc lang-en">Restored heritage brick dormitories</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/story-2.jpg', '攝影展廳與黑白光影', 'Black & White Gallery', '展出阮義忠老師凝結台灣常民生活的經典黑白底片，筆觸細膩深沉。', 'Master Juan’s iconic black-and-white prints preserving poignant moments in rural Taiwan.')">
+              <img src="img/Yilan/story-2.jpg" alt="攝影展廳與黑白光影 / Black and White Gallery" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">光影展廳</div>
+                <div class="photo-overlay-title lang-en">Photo Gallery</div>
+                <div class="photo-overlay-desc lang-zh">凝結常民生活的黑白經典</div>
+                <div class="photo-overlay-desc lang-en">Classic documentary monochrome prints</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/story-4.jpg', '院落綠意與文創展品', 'Courtyard & Cultural Space', '老樹掩映下的老屋庭院，靜謐幽雅，充滿慢活氣息。', 'Lush shaded garden courtyards inviting quiet contemplation.')">
+              <img src="img/Yilan/story-4.jpg" alt="院落綠意與文創展品 / Courtyard & Cultural Exhibits" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">庭院綠意</div>
+                <div class="photo-overlay-title lang-en">Courtyard Garden</div>
+                <div class="photo-overlay-desc lang-zh">老樹掩映下的靜謐角落</div>
+                <div class="photo-overlay-desc lang-en">Shaded serene historical yard</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/yuan.jpg', '阮義忠攝影展《石碇的笑顏》', 'Juan I-Jong Exhibition: Shiding Smiles', '《石碇的笑顏》紀錄台灣土地上最純粹動人的笑容與生活記憶。', 'Emotive portraits capturing the resilient and heartfelt smiles of Shiding elders.')">
+              <img src="img/Yilan/yuan.jpg" alt="阮義忠台灣故事館《石碇的笑顏》" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">石碇的笑顏</div>
+                <div class="photo-overlay-title lang-en">Shiding Smiles</div>
+                <div class="photo-overlay-desc lang-zh">阮義忠大師攝影珍貴紀錄</div>
+                <div class="photo-overlay-desc lang-en">Iconic documentary photo portrait series</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">參觀資訊</span>
+              <span class="lang-en">Visitor Notes</span>
+            </div>
+            <p class="lang-zh mb-1 small">週二至週日免費開放入館；館內提供精美集章紀念冊與大師攝影專書，適合靜心慢賞漫遊。</p>
+            <p class="lang-en mb-0 text-secondary small">Free admission Tuesday through Sunday. Commemorative stamps and Juan I-Jong photo anthologies available inside.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#紀實攝影</span><span class="lang-en">#DocuPhoto</span></span>
+            <span class="spot-tag"><span class="lang-zh">#阮義忠故事館</span><span class="lang-en">#JuanIJong</span></span>
+            <span class="spot-tag"><span class="lang-zh">#老建築活化</span><span class="lang-en">#HeritageRestoration</span></span>
+            <span class="spot-tag"><span class="lang-zh">#宜蘭文青地圖</span><span class="lang-en">#CulturalYilan</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 4: 靈芝菇菇農場 -->
+        <article class="spot-card" id="spot-4">
+          <div class="spot-card-header">
+            <div class="spot-number">04</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>16:00 - 17:30 | 
+                <span class="lang-zh">生態科技農業</span>
+                <span class="lang-en">Eco-Agri & Wellness</span>
+              </div>
+              <h3 class="spot-title-zh">靈芝菇菇農場 ── 科技環保與生技仙草探索</h3>
+              <div class="spot-title-en">Reishi Mushroom Eco Farm: Biotech & Fungi Heritage</div>
+              <a href="https://maps.google.com/?q=礁溪靈芝農場" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣礁溪鄉 (Google 地圖)</span>
+                <span class="lang-en">Jiaoxi Township, Yilan (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">走進綠意盎然的靈芝與蕈菇科技溫室，撲鼻而來的是濕潤清新的木質香氣。農場結合純淨雪山山泉水源與現代化環境控制技術，孕育出金黃珍稀的鹿角靈芝與飽滿赤芝。專業導覽員深入淺出地解說菇菌生命史，並安排現採新鮮菇菇與靈芝回甘養生茶品茗。</p>
+            <p class="lang-en text-secondary">Step into state-of-the-art climate-controlled greenhouses where pristine Snow Mountain spring water nurtures prized antler-shaped and red reishi mushrooms. Learn about the lifecycle of edible fungi, explore organic spore propagation, and enjoy tastings of soothing, bittersweet reishi herbal tea and crisp mushroom snacks.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/reishi-1.jpg', '靈芝溫室生態培育', 'Climate-Controlled Reishi House', '現代化智慧溫室以雪山山泉培育出造型獨特的金黃鹿角靈芝。', 'High-tech greenhouses cultivating premium antler-shaped medicinal reishi.')">
+              <img src="img/Yilan/reishi-1.jpg" alt="靈芝溫室生態培育 / Climate-Controlled Reishi Cultivation" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">鹿角靈芝</div>
+                <div class="photo-overlay-title lang-en">Antler Reishi</div>
+                <div class="photo-overlay-desc lang-zh">純淨雪山泉水現代溫室培育</div>
+                <div class="photo-overlay-desc lang-en">Pristine spring-water greenhouse culture</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/reishi-2.jpg', '各類有機食用蕈菇', 'Organic Edible Mushrooms', '生機盎然的太空包菇菌林，展示多樣富含營養的有機蕈菇品系。', 'Thriving organic mushroom grow-bags showcasing healthy fungi species.')">
+              <img src="img/Yilan/reishi-2.jpg" alt="各類食用菇菌 / Organic Mushroom Varieties" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">有機蕈菇</div>
+                <div class="photo-overlay-title lang-en">Organic Fungi</div>
+                <div class="photo-overlay-desc lang-zh">天然太空包菌菇培育</div>
+                <div class="photo-overlay-desc lang-en">Sustainable organic mushroom beds</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/reishi-3.jpg', '養生靈芝茶飲體驗', 'Reishi Tea Tasting', '現沖甘醇微苦回甘的靈芝養生茶，搭配酥脆手作菇菇脆片。', 'Tasting freshly steeped therapeutic reishi herbal tea and mushroom snacks.')">
+              <img src="img/Yilan/reishi-3.jpg" alt="養生靈芝茶飲體驗 / Reishi Herbal Tea Tasting" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">品茗養生</div>
+                <div class="photo-overlay-title lang-en">Herbal Tasting</div>
+                <div class="photo-overlay-desc lang-zh">回甘靈芝茶與健康蕈菇脆片</div>
+                <div class="photo-overlay-desc lang-en">Bittersweet tea & organic fungi crisps</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">體驗推薦</span>
+              <span class="lang-en">Experience Tip</span>
+            </div>
+            <p class="lang-zh mb-1 small">現場備有現沖靈芝養生茶供細細品嚐，亦可親手採摘生鮮香菇作為旅程伴手禮，健康養生又具教育意義。</p>
+            <p class="lang-en mb-0 text-secondary small">Fresh reishi tea tastings are provided throughout guided tours. Visitors can also pick seasonal organic mushrooms to take home.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#生態農場</span><span class="lang-en">#EcoFarm</span></span>
+            <span class="spot-tag"><span class="lang-zh">#鹿角靈芝</span><span class="lang-en">#AntlerReishi</span></span>
+            <span class="spot-tag"><span class="lang-zh">#食農教育</span><span class="lang-en">#AgriEducation</span></span>
+            <span class="spot-tag"><span class="lang-zh">#礁溪健康養生</span><span class="lang-en">#JiaoxiWellness</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 5: 捷絲旅礁溪館 -->
+        <article class="spot-card" id="spot-5">
+          <div class="spot-card-header">
+            <div class="spot-number">05</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>18:00 - 翌日 | 
+                <span class="lang-zh">溫泉渡假宿旅</span>
+                <span class="lang-en">Hot Spring Resort & Spa</span>
+              </div>
+              <h3 class="spot-title-zh">捷絲旅礁溪館 ── 碳酸氫鈉泉與旅人舒心之夜</h3>
+              <div class="spot-title-en">Just Sleep Jiaoxi: Natural Sodium Bicarbonate Springs & Cozy Night</div>
+              <a href="https://maps.google.com/?q=捷絲旅宜蘭礁溪館" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣礁溪鄉德陽路24巷8號 (Google 地圖)</span>
+                <span class="lang-en">No. 8, Ln. 24, Deyang Rd., Jiaoxi (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">傍晚入住礁溪極富設計感的精品溫泉旅店。每間客房均配置專屬的超大磨石子溫泉泡湯池，引流富含礦物質的無色無味「美人湯」碳酸氫鈉泉。在溫潤水波輕撫下全然卸除旅途勞頓，隨後漫步礁溪溫泉街或在館內童玩空間放鬆，度過悠然愜意的泉鄉之夜。</p>
+            <p class="lang-en text-secondary">Check in at Just Sleep Jiaoxi, a stylish boutique onsen resort. Every guestroom features an expansive, handcrafted stone tub tapped into the town's famed natural sodium bicarbonate spring — renowned for soothing skin and restoring vitality. Stroll the illuminated onsen avenues or lounge in retro playrooms for a restful evening.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-0.jpg', '客房專屬超大磨石子湯池', 'In-Room Handcrafted Stone Onsen', '每間客房皆備有超大磨石子溫泉湯池，享受富含礦物質的無味美人湯。', 'Every room features a spacious private stone onsen tub fed by pure spring water.')">
+              <img src="img/Yilan/justsleep-0.jpg" alt="捷絲旅礁溪館客房大浴池 / In-room Stone Onsen Tub" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">客房專屬私湯</div>
+                <div class="photo-overlay-title lang-en">Private Stone Tub</div>
+                <div class="photo-overlay-desc lang-zh">超大磨石子美人湯浴池</div>
+                <div class="photo-overlay-desc lang-en">Expansive handcrafted in-room onsen</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-2.jpg', '澐露天溫泉風呂', 'Outdoor Hot Spring Pools', '綠意盎然的戶外露天溫泉風呂，水溫宜人，洗滌一身疲憊。', 'Open-air hydrotherapy thermal pools surrounded by lush landscaping.')">
+              <img src="img/Yilan/justsleep-2.jpg" alt="澄洋露天溫泉池 / Outdoor Hot Spring Pool" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">澐露天風呂</div>
+                <div class="photo-overlay-title lang-en">Outdoor Onsen</div>
+                <div class="photo-overlay-desc lang-zh">綠意盎然的水療風呂</div>
+                <div class="photo-overlay-desc lang-en">Open-air spring water pools</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-3.jpg', '懷舊傳統童玩遊藝區', 'Retro Playroom & Games', '館內特別規劃童年回憶遊藝間，提供劍玉、陀螺等傳統木玩。', 'Nostalgic game zone stocked with kendama, spinning tops, and retro board games.')">
+              <img src="img/Yilan/justsleep-3.jpg" alt="傳統童玩遊藝區 / Traditional Playroom" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">童玩遊藝</div>
+                <div class="photo-overlay-title lang-en">Retro Games</div>
+                <div class="photo-overlay-desc lang-zh">懷舊童年木作玩具區</div>
+                <div class="photo-overlay-desc lang-en">Nostalgic traditional game lounge</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-5.jpg', '礁溪夜間溫泉街漫遊', 'Jiaoxi Hot Spring Night Stroll', '步行數分鐘即可抵達湯圍溝公園與溫泉小吃街，體驗熱鬧泉鄉風情。', 'Minutes on foot to Tangweigou Onsen Park and buzzing evening food stalls.')">
+              <img src="img/Yilan/justsleep-5.jpg" alt="礁溪夜間溫泉街漫遊 / Jiaoxi Hot Spring Night Walk" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">夜巡泉鄉</div>
+                <div class="photo-overlay-title lang-en">Night Walk</div>
+                <div class="photo-overlay-desc lang-zh">漫步礁溪溫泉熱鬧街區</div>
+                <div class="photo-overlay-desc lang-en">Evening stroll in vibrant Jiaoxi town</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">設施亮點</span>
+              <span class="lang-en">Facility Highlights</span>
+            </div>
+            <p class="lang-zh mb-1 small">館內澐露天風呂與澄大浴場水質清澈，頂樓休憩區提供古早味點心與在地茶飲，入住即享極致放鬆體驗。</p>
+            <p class="lang-en mb-0 text-secondary small">Features open-air hydrotherapy pools and public baths, complemented by complimentary nostalgic Taiwanese treats and tea in the lounge.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#礁溪美人湯</span><span class="lang-en">#BeautySpring</span></span>
+            <span class="spot-tag"><span class="lang-zh">#捷絲旅礁溪館</span><span class="lang-en">#JustSleepJiaoxi</span></span>
+            <span class="spot-tag"><span class="lang-zh">#碳酸氫鈉泉</span><span class="lang-en">#OnsenResort</span></span>
+            <span class="spot-tag"><span class="lang-zh">#溫泉療癒旅宿</span><span class="lang-en">#HealingSpa</span></span>
+          </div>
+        </article>
+      </div>
+      <!-- END DAY 1 GROUP -->
+
+      <!-- DAY 2 GROUP -->
+      <div class="itinerary-day-group" id="group-day2">
+        <div class="timeline-day-header">
+          <div class="day-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">Day 2</div>
+          <div class="ms-3">
+            <h3 class="mb-1 text-dark fw-bold">
+              <span class="lang-zh">第二天：愛玉手作 ‧ 鐵牛湧泉 ‧ 割稻飯 ‧ 蜜餞甘醇</span>
+              <span class="lang-en d-block fs-5 text-secondary fw-normal">Aiyu Craft, Iron Ox Springs, Harvest Rice & Candied Kumquats</span>
+            </h3>
+            <p class="text-muted small mb-0">
+              <span class="lang-zh"><i class="bi bi-geo-alt-fill text-success me-1"></i>礁溪鄉 ➔ 員山鄉 (內城、深溝) ➔ 宜蘭市</span>
+              <span class="lang-en ms-2">Jiaoxi ➔ Yuanshan (Neicheng, Shengou) ➔ Yilan City</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- SPOT 6: 晨光溫泉浴與在地晨食 -->
+        <article class="spot-card" id="spot-6">
+          <div class="spot-card-header">
+            <div class="spot-number">06</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>07:30 - 09:00 | 
+                <span class="lang-zh">晨間活力甦醒</span>
+                <span class="lang-en">Morning Wellness & Breakfast</span>
+              </div>
+              <h3 class="spot-title-zh">晨光溫泉浴與在地晨食 ── 身心舒展的早晨</h3>
+              <div class="spot-title-en">Morning Onsen Soak & Local Breakfast Feast: Gentle Rejuvenation</div>
+              <a href="https://maps.google.com/?q=捷絲旅宜蘭礁溪館" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">捷絲旅宜蘭礁溪館 (Google 地圖)</span>
+                <span class="lang-en">Just Sleep Jiaoxi (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">破曉時分，讓礁溪天然溫泉的氤氳水氣喚醒感官。晨浴後，至 Just Café 享用融入宜蘭風土的精緻早餐：現煮三星蔥熱粥、溫泉時蔬、古法小菜與現焙咖啡。在雪山晨巒的微風中儲備飽滿元氣，開啟第二天充滿田園野趣的精彩旅程。</p>
+            <p class="lang-en text-secondary">Greet the dawn with a gentle soak as morning sunlight filters into the stone bath. Head down to Just Café for an energizing breakfast highlighting regional produce: hot Sanxing scallion congee, crisp watercress grown in spring water, artisan bread, and freshly brewed coffee overlooking misty mountain ridges.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-morning.jpg', '礁溪晨光山嵐風景', 'Morning View of Jiaoxi', '清晨遠眺雪山山脈晨嵐薄霧，空氣清新如洗，遠離塵囂。', 'Crisp morning air and mist enveloping the Snow Mountain Range ridges.')">
+              <img src="img/Yilan/justsleep-morning.jpg" alt="礁溪晨光山嵐風景 / Morning View of Jiaoxi" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">晨嵐山色</div>
+                <div class="photo-overlay-title lang-en">Misty Ridges</div>
+                <div class="photo-overlay-desc lang-zh">雪山山脈晨光薄霧</div>
+                <div class="photo-overlay-desc lang-en">Peaceful morning mountain panorama</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-hotspring.jpg', '晨間溫泉風呂享受', 'Morning Hot Spring Soak', '晨光灑落溫泉池中，享受一場靜謐的早湯時光，喚醒全身細胞。', 'Basking in warm thermal minerals under the soft morning sun rays.')">
+              <img src="img/Yilan/justsleep-hotspring.jpg" alt="晨間溫泉風呂享受 / Morning Hot Spring Soak" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">早湯靜謐</div>
+                <div class="photo-overlay-title lang-en">Morning Soak</div>
+                <div class="photo-overlay-desc lang-zh">溫暖泉水喚醒感官活力</div>
+                <div class="photo-overlay-desc lang-en">Gentle morning hot spring rejuvenation</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-6.jpg', '豐富中西式在地早餐', 'Healthy Buffet Breakfast', '捷絲旅 Just Café 精緻自助百匯，融入三星蔥等在地食材。', 'Generous breakfast buffet showcasing famous Sanxing scallions.')">
+              <img src="img/Yilan/justsleep-6.jpg" alt="豐富中西式在地早餐 / Healthy Buffet Breakfast" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">百匯晨食</div>
+                <div class="photo-overlay-title lang-en">Buffet Breakfast</div>
+                <div class="photo-overlay-desc lang-zh">融入宜蘭當季在地食材</div>
+                <div class="photo-overlay-desc lang-en">Fresh regional farm-to-table breakfast</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/justsleep-7.jpg', '溫泉蔬菜與精緻料理', 'Hot Spring Veggies & Delicacies', '當季溫泉時蔬、在地肉品與手作點心，營養均衡元氣滿滿。', 'Locally grown hot-spring watercress, artisan savory dishes, and treats.')">
+              <img src="img/Yilan/justsleep-7.jpg" alt="溫泉蔬菜與精緻料理 / Hot Spring Veggies & Delicacies" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">在地時鮮</div>
+                <div class="photo-overlay-title lang-en">Fresh Produce</div>
+                <div class="photo-overlay-desc lang-zh">清脆溫泉時蔬元氣早餐</div>
+                <div class="photo-overlay-desc lang-en">Crisp hot-spring greens & local bites</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">早晨建議</span>
+              <span class="lang-en">Morning Routine</span>
+            </div>
+            <p class="lang-zh mb-1 small">晨起泡湯水溫不宜過燙，浸泡約15分鐘即可促進血液循環，讓神清氣爽，隨後享用早餐更容易消化吸收。</p>
+            <p class="lang-en mb-0 text-secondary small">A 15-minute gentle onsen soak before breakfast stimulates circulation and primes your body for countryside adventures.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#礁溪早湯</span><span class="lang-en">#MorningOnsen</span></span>
+            <span class="spot-tag"><span class="lang-zh">#在地早餐盛宴</span><span class="lang-en">#LocalBreakfast</span></span>
+            <span class="spot-tag"><span class="lang-zh">#三星蔥料理</span><span class="lang-en">#SanxingScallions</span></span>
+            <span class="spot-tag"><span class="lang-zh">#晨光舒活</span><span class="lang-en">#WellnessMorning</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 7: 豐盛愛玉 -->
+        <article class="spot-card" id="spot-7">
+          <div class="spot-card-header">
+            <div class="spot-number">07</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>09:30 - 11:00 | 
+                <span class="lang-zh">農事體驗與手作</span>
+                <span class="lang-en">Farming Craft & Hand-rubbed Aiyu</span>
+              </div>
+              <h3 class="spot-title-zh">豐盛愛玉 ── 穿梭黃金果實藤蔓下的手揉晶瑩</h3>
+              <div class="spot-title-en">Feng Sheng Aiyu Orchard: Forest Canopy & Silky Jelly Crafting</div>
+              <a href="https://maps.google.com/?q=豐盛愛玉" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣員山鄉 (Google 地圖)</span>
+                <span class="lang-en">Yuanshan Township, Yilan (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">台灣特有的愛玉樹是世界上唯一產出愛玉凍的神奇植物。走進豐盛愛玉農場由綠葉藤蔓構築的清涼綠廊，農場主人親自解說愛玉小蜂傳粉的奇妙共生生態。遊客挽起袖子，用純淨天然礦泉親手揉搓愛玉子，看著果膠逐漸凝聚成琥珀般通透的消暑愛玉凍，成就感滿滿。</p>
+            <p class="lang-en text-secondary">Endemic to Taiwan's mountainous woodlands, the Aiyu fig is the world’s only natural source of plant-based pectin jelly. Walk beneath shady arbored trellises while farmers explain the fascinating symbiosis with microscopic aiyu wasps. Using mineral-rich spring water, hand-rub seeds to watch golden, silky, cooling jelly form before your eyes.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/aiyu-1.jpg', '愛玉果園天然綠廊', 'Aiyu Fruit Pergola', '攀爬於綠意廊架上的特有種台灣愛玉子果實，青翠如玉。', 'Taiwanese endemic climbing aiyu figs hanging under cool shady trellises.')">
+              <img src="img/Yilan/aiyu-1.jpg" alt="愛玉果園天然綠廊 / Aiyu Fruit Pergola" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">愛玉綠廊</div>
+                <div class="photo-overlay-title lang-en">Aiyu Vines</div>
+                <div class="photo-overlay-desc lang-zh">台灣特有種藤蔓綠蔭果架</div>
+                <div class="photo-overlay-desc lang-en">Lush shade-giving aiyu fig orchard canopy</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/aiyu-2.jpg', '熟成愛玉子剖開乾燥', 'Dried Aiyu Seeds', '剖開翻曬的金黃愛玉子，散發淡淡自然木質清香。', 'Golden sun-dried split aiyu figs loaded with pectin-rich amber seeds.')">
+              <img src="img/Yilan/aiyu-2.jpg" alt="熟成愛玉子剖開乾燥 / Dried Aiyu Seeds" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">金黃愛玉子</div>
+                <div class="photo-overlay-title lang-en">Amber Seeds</div>
+                <div class="photo-overlay-desc lang-zh">日曬熟成天然果膠結晶</div>
+                <div class="photo-overlay-desc lang-en">Sun-cured natural seed pods</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/aiyu-3.jpg', '手揉天然愛玉體驗', 'Hand-rubbing Aiyu Jelly', '在富含礦物質的天然湧泉中親手揉搓出晶瑩果凍，滑嫩可口。', 'Rubbing seed packets in mineral spring water to create sparkling, refreshing jelly.')">
+              <img src="img/Yilan/aiyu-3.jpg" alt="手揉天然愛玉體驗 / Hand-rubbing Aiyu Jelly" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">手揉晶瑩</div>
+                <div class="photo-overlay-title lang-en">Silky Jelly DIY</div>
+                <div class="photo-overlay-desc lang-zh">湧泉水中揉搓天然果膠</div>
+                <div class="photo-overlay-desc lang-en">Hand-extracted botanical natural jelly</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">手作技巧</span>
+              <span class="lang-en">Crafting Secret</span>
+            </div>
+            <p class="lang-zh mb-1 small">揉搓愛玉務必使用未經逆滲透的天然礦泉水或湧泉水，水中豐富鈣鎂離子才能促使果膠完美凝固；完成後淋上金桔檸檬汁更是消暑聖品！</p>
+            <p class="lang-en mb-0 text-secondary small">Natural mineral or spring water containing calcium is essential for the pectin to set into sparkling jelly. Serve with fresh kumquat and lemon syrup for optimal refreshment.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#台灣特有種</span><span class="lang-en">#TaiwanEndemic</span></span>
+            <span class="spot-tag"><span class="lang-zh">#愛玉果園</span><span class="lang-en">#AiyuOrchard</span></span>
+            <span class="spot-tag"><span class="lang-zh">#手作愛玉凍</span><span class="lang-en">#HandmadeJelly</span></span>
+            <span class="spot-tag"><span class="lang-zh">#生態共生體驗</span><span class="lang-en">#SymbiosisTour</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 8: 內城鐵牛力阿卡 -->
+        <article class="spot-card" id="spot-8">
+          <div class="spot-card-header">
+            <div class="spot-number">08</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>11:15 - 12:30 | 
+                <span class="lang-zh">農村漫遊與湧泉探秘</span>
+                <span class="lang-en">Rural Heritage & Scenic Tractor Ride</span>
+              </div>
+              <h3 class="spot-title-zh">內城鐵牛力阿卡 ── 穿越田埂古道與清冽湧泉</h3>
+              <div class="spot-title-en">Neicheng Iron Ox Cart: Farm Tractor Adventure & Crystalline Springs</div>
+              <a href="https://maps.google.com/?q=內城社區鐵牛力阿卡" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣員山鄉內城社區 (Google 地圖)</span>
+                <span class="lang-en">Neicheng, Yuanshan Township (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">坐上由傳統耕耘機改裝而成的「鐵牛力阿卡」，在老司機幽默風趣的鄉土導覽中出發！伴隨「咚咚咚」清脆引擎聲，穿梭在金黃稻浪與綿延青山之間。車隊帶領造訪終年恆溫約19度的清冽湧泉、三百年歷史的茄苳大樹公與隘勇古道，感受內城社區濃郁的鄉土人情與土地溫度。</p>
+            <p class="lang-en text-secondary">Hop aboard "Iron Ox" carts — retrofitted two-wheel farm tractors — driven by charismatic elder villagers for a scenic roll through emerald rice paddies. Rhythmic engine purrs escort you past hidden bamboo groves to 19°C crystalline spring ponds, a 300-year-old sacred Bishopwood tree, and historic trails rich with pioneer lore.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/tractor-1.jpg', '耕耘機改裝鐵牛力阿卡車隊', 'Tractor Cart Convoy', '昔日退役耕耘機改裝的鐵牛車，載著旅人漫遊田埂古道與鄉野。', 'Repurposed diesel farming tractors leading cheerful tours through rural byways.')">
+              <img src="img/Yilan/tractor-1.jpg" alt="耕耘機改裝鐵牛力阿卡車隊 / Tractor Cart Convoy" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">鐵牛車隊</div>
+                <div class="photo-overlay-title lang-en">Tractor Cart</div>
+                <div class="photo-overlay-desc lang-zh">老耕耘機改裝鄉土觀光車</div>
+                <div class="photo-overlay-desc lang-en">Vintage tractor carts rolling through fields</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/tractor-2.jpg', '內城湧泉公園清澈溪水', 'Crystal Clear Neicheng Springs', '員山終年不竭的沁涼湧泉，溪水清澈見底、游魚可數，清涼透心。', 'Pure 19°C underground spring waters flowing year-round with clear visibility.')">
+              <img src="img/Yilan/tractor-2.jpg" alt="內城湧泉公園清澈溪水 / Crystal Clear Neicheng Springs" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">清冽湧泉</div>
+                <div class="photo-overlay-title lang-en">Natural Springs</div>
+                <div class="photo-overlay-desc lang-zh">終年19度清澈見底天然泉水</div>
+                <div class="photo-overlay-desc lang-en">Pristine year-round cold spring streams</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/tractor-3.jpg', '鄉野田園風光與老樹巡禮', 'Countryside & Sacred Banyan', '穿梭青山綠野間，探訪百年大樹公與古樸隘勇古道，景致遼闊。', 'Exploring venerable centuries-old sacred trees and scenic countryside trails.')">
+              <img src="img/Yilan/tractor-3.jpg" alt="鄉野田園風光與老樹巡禮 / Countryside Fields & Banyan Tree" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">田園老樹</div>
+                <div class="photo-overlay-title lang-en">Sacred Banyan</div>
+                <div class="photo-overlay-desc lang-zh">探訪三百年大樹公與古道</div>
+                <div class="photo-overlay-desc lang-en">Centuries-old sacred tree & historic trails</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">遊程特色</span>
+              <span class="lang-en">Tour Highlights</span>
+            </div>
+            <p class="lang-zh mb-1 small">鐵牛車設有遮陽頂棚，乘風穿梭田間非常涼爽；夏季或秋爽時節可脫鞋踏入湧泉池戲水消暑，建議自備小毛巾。</p>
+            <p class="lang-en mb-0 text-secondary small">The covered carts catch refreshing river breezes. Bring a towel so you can wade into the cool natural spring waters at the park.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#鐵牛力阿卡</span><span class="lang-en">#IronOxCart</span></span>
+            <span class="spot-tag"><span class="lang-zh">#內城社區</span><span class="lang-en">#NeichengVillage</span></span>
+            <span class="spot-tag"><span class="lang-zh">#天然湧泉</span><span class="lang-en">#NaturalSprings</span></span>
+            <span class="spot-tag"><span class="lang-zh">#鄉村慢活體驗</span><span class="lang-en">#SlowLifeTour</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 9: 割稻飯體驗 -->
+        <article class="spot-card" id="spot-9">
+          <div class="spot-card-header">
+            <div class="spot-number">09</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>12:30 - 13:45 | 
+                <span class="lang-zh">傳統農家懷舊風味</span>
+                <span class="lang-en">Vintage Countryside Dining</span>
+              </div>
+              <h3 class="spot-title-zh">割稻飯體驗 ── 復刻昔日秋收農家的豪邁饗宴</h3>
+              <div class="spot-title-en">Traditional Harvest Rice Feast: Farmhouse Communal Banquet</div>
+              <a href="https://maps.google.com/?q=員山割稻飯" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣員山鄉 (Google 地圖)</span>
+                <span class="lang-en">Yuanshan Township, Yilan (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">早期農村秋收季節，左鄰右舍互助「換工」割稻，農家女主人必會挑來滿滿一大缸熱騰騰的「割稻飯」犒勞眾人。大碗公盛著吸飽濃郁滷汁的香Q白米，鋪上厚切入味的甘醇控肉、手工菜脯煎蛋與時令鮮嫩山菜。吃的不只是滿口鹹香，更是台灣農村真摯動人的互助精神。</p>
+            <p class="lang-en text-secondary">During bustling harvest times, Taiwanese farmers practiced "Huan Gong" — reciprocal labor helping neighbors cut and thresh rice. Farm hostesses thanked workers with bountiful bowls of "Harvest Rice": thick-cut caramel braised pork belly, preserved radish omelets, and locally harvested river greens atop fragrant rice bowls.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/rice-0.jpg', '古早味割稻飯大碗公', 'Classic Harvest Rice Bowl', '大碗公裡盛裝著香噴噴米飯、古法滷肉與在地時蔬，豪邁實在。', 'Big traditional earthenware bowls laden with slow-simmered pork belly and farm greens.')">
+              <img src="img/Yilan/rice-0.jpg" alt="古早味割稻飯大碗公 / Classic Harvest Rice Bowl" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">大碗公割稻飯</div>
+                <div class="photo-overlay-title lang-en">Harvest Rice Bowl</div>
+                <div class="photo-overlay-desc lang-zh">厚切古法滷肉與滿滿好料</div>
+                <div class="photo-overlay-desc lang-en">Generous braised pork belly & side dishes</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/rice-2.jpg', '農家柴火大鼎熱炒', 'Wood-fired Wok Cooking', '柴火灶上翻炒的家常好滋味，鑊氣十足香氣四溢。', 'Stir-frying freshly picked vegetables over fragrant rustic wood-fired hearths.')">
+              <img src="img/Yilan/rice-2.jpg" alt="農家柴火大鼎熱炒 / Wood-fired Wok Cooking" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">大鼎鑊氣</div>
+                <div class="photo-overlay-title lang-en">Wood-Fired Wok</div>
+                <div class="photo-overlay-desc lang-zh">柴燒烹調濃郁家鄉滋味</div>
+                <div class="photo-overlay-desc lang-en">Aromatic wood-fired traditional wok cuisine</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/rice-3.jpg', '社區長輩親手烹煮的家鄉菜', 'Farmhouse Home Cooking', '醃瓜菜脯、炒山芹菜與金黃煎蛋，重現秋收感恩情懷。', 'Sun-dried pickled radish, mountain celery, and farm-fresh omelets celebrate harvest gratitude.')">
+              <img src="img/Yilan/rice-3.jpg" alt="社區長輩親手烹煮的家鄉菜 / Farmhouse Home Cooking" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">農家手工菜</div>
+                <div class="photo-overlay-title lang-en">Farm Delicacies</div>
+                <div class="photo-overlay-desc lang-zh">菜脯蛋與在地當季時蔬</div>
+                <div class="photo-overlay-desc lang-en">Preserved radish omelet & fresh greens</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">經典搭配</span>
+              <span class="lang-en">Serving Tip</span>
+            </div>
+            <p class="lang-zh mb-1 small">一定要淋上兩匙老滷肉汁與特製辣蘿蔔乾，鹹香回甘，讓人連扒兩大碗飯！團體參訪請務必提前預約割稻飯合菜席。</p>
+            <p class="lang-en mb-0 text-secondary small">Spoon extra braised meat gravy and house-cured spicy dried radish over your rice for the ultimate rural flavor explosion. Advance group reservation required.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#割稻飯</span><span class="lang-en">#HarvestRice</span></span>
+            <span class="spot-tag"><span class="lang-zh">#古早味農村料理</span><span class="lang-en">#FarmhouseCuisine</span></span>
+            <span class="spot-tag"><span class="lang-zh">#大碗公飯</span><span class="lang-en">#CommunalBowl</span></span>
+            <span class="spot-tag"><span class="lang-zh">#秋收風情</span><span class="lang-en">#HarvestTradition</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 10: 棗稻田食玩農創空間 -->
+        <article class="spot-card" id="spot-10">
+          <div class="spot-card-header">
+            <div class="spot-number">10</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>14:15 - 15:45 | 
+                <span class="lang-zh">綠建築與有機生活</span>
+                <span class="lang-en">Green Architecture & Artisan Bakery</span>
+              </div>
+              <h3 class="spot-title-zh">棗稻田食玩農創空間 ── 水圳旁的木構現代莊園</h3>
+              <div class="spot-title-en">Zaodaotian Organic Farming Hub: Timber Architecture & Kumquat Bakery</div>
+              <a href="https://maps.google.com/?q=棗稻田有機農場" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭縣員山鄉員山路二段172巷17號 (Google 地圖)</span>
+                <span class="lang-en">Yuanshan Township, Yilan (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">座落於員山沃野水圳旁，棗稻田是一棟榮獲多項建築大獎的頂級木造綠建築。農場堅持全有機耕作，園內滿植金棗樹、溫室有機蔬果與金黃稻禾。走進採光充沛的空間，木質清香撲鼻而來；點一份手作金棗生吐司與特調冷泡茶，倚窗凝望水車慢悠悠轉動，時光彷彿在此慢了下來。</p>
+            <p class="lang-en text-secondary">Set beside crystalline irrigation canals, Zaodaotian is a national-award-winning timber eco-estate. Dedicated to certified organic stewardship, the grounds boast kumquat groves, greenhouse produce, and rice terraces. Breathe in aromatic cedarwood scents while tasting artisanal kumquat sourdough bread beside lazily turning waterwheels.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/ricefarm-1.jpg', '棗稻田綠建築全貌', 'Zaodaotian Wooden Estate', '水圳圍繞的鑽石級木造綠建築，純木構工藝與大自然和諧共存。', 'Diamond-grade timber green architecture coexisting gracefully with rural water canals.')">
+              <img src="img/Yilan/ricefarm-1.jpg" alt="棗稻田綠建築全貌 / Zaodaotian Wooden Estate" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">木構綠建築</div>
+                <div class="photo-overlay-title lang-en">Green Timber Hub</div>
+                <div class="photo-overlay-desc lang-zh">水圳環繞的鑽石級低碳建築</div>
+                <div class="photo-overlay-desc lang-en">Award-winning sustainable wood architecture</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/ricefarm-5.jpg', '生態水圳與古早水車', 'Canal and Historic Water Wheel', '清澈湍急的田間水圳與轉動古水車，景致悠遠如詩。', 'Rushing mountain streams powering a turning waterwheel beside emerald paddies.')">
+              <img src="img/Yilan/ricefarm-5.jpg" alt="生態水圳與古早水車 / Canal and Water Wheel" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">水車流水</div>
+                <div class="photo-overlay-title lang-en">Waterwheel Canal</div>
+                <div class="photo-overlay-desc lang-zh">悠然轉動的古早木水車</div>
+                <div class="photo-overlay-desc lang-en">Pastoral waterwheel turning gently</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/ricefarm-3.jpg', '現烤金棗手工窯烤麵包', 'Artisan Kumquat Sourdough', '選用在地新鮮金棗與有機小麥粉揉製的手工窯烤麵包，果香濃郁。', 'Artisanal bread and rolls baked fresh with local kumquat preserves.')">
+              <img src="img/Yilan/ricefarm-3.jpg" alt="現烤金棗手工窯烤麵包 / Fresh Artisan Sourdough & Bread" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">金棗烘焙</div>
+                <div class="photo-overlay-title lang-en">Kumquat Bakery</div>
+                <div class="photo-overlay-desc lang-zh">手工柴燒窯烤金棗麵包</div>
+                <div class="photo-overlay-desc lang-en">Artisan bread with citrus kumquat fragrance</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/ricefarm-1.jpg', '棗稻田文創展示空間', 'Farm Lifestyle Space', '結合友善耕作、文創伴手禮與自然咖啡館的生活美學館。', 'A stylish countryside lifestyle showroom celebrating mindful sustainable living.')">
+              <img src="img/Yilan/ricefarm-1.jpg" alt="棗稻田文創展示空間 / Farm Cultural Space" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">美學空間</div>
+                <div class="photo-overlay-title lang-en">Artisan Showroom</div>
+                <div class="photo-overlay-desc lang-zh">結合咖啡、伴手禮與農創美學</div>
+                <div class="photo-overlay-desc lang-en">Harmonious lifestyle café and farm boutique</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">必買伴手禮</span>
+              <span class="lang-en">Souvenir Tips</span>
+            </div>
+            <p class="lang-zh mb-1 small">農場自產的純天然金棗果醬、窯烤手作生吐司與米香米果，無添加香精色素，是不可錯過的純淨好物。</p>
+            <p class="lang-en mb-0 text-secondary small">Farm-crafted pure kumquat preserve, artisan sourdough loaves, and puffed organic rice cakes make wholesome gifts to bring home.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#棗稻田</span><span class="lang-en">#Zaodaotian</span></span>
+            <span class="spot-tag"><span class="lang-zh">#綠建築農場</span><span class="lang-en">#GreenArchitecture</span></span>
+            <span class="spot-tag"><span class="lang-zh">#金棗烘焙</span><span class="lang-en">#KumquatBakery</span></span>
+            <span class="spot-tag"><span class="lang-zh">#有機田園美學</span><span class="lang-en">#OrganicLifestyle</span></span>
+          </div>
+        </article>
+
+        <!-- SPOT 11: 橘之鄉蜜餞形象館 -->
+        <article class="spot-card" id="spot-11">
+          <div class="spot-card-header">
+            <div class="spot-number">11</div>
+            <div>
+              <div class="spot-time">
+                <i class="bi bi-clock me-1"></i>16:15 - 17:30 | 
+                <span class="lang-zh">觀光工廠與文創手作</span>
+                <span class="lang-en">Agritourism & Candied Fruit Workshop</span>
+              </div>
+              <h3 class="spot-title-zh">橘之鄉蜜餞形象館 ── 舌尖上的酸甜記憶與文創手作</h3>
+              <div class="spot-title-en">AGRIOZ Candied Fruit Museum: Golden Kumquat Sweet Craft & Glasshouse</div>
+              <a href="https://maps.google.com/?q=橘之鄉蜜餞形象館" target="_blank" rel="noopener noreferrer" class="spot-map-link mt-2">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span class="lang-zh">宜蘭市梅洲二路33號 (Google 地圖)</span>
+                <span class="lang-en">No. 33, Meizhou 2nd Rd., Yilan City (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="spot-narrative">
+            <p class="lang-zh">台灣第一座蜜餞主題觀光形象館，顛覆傳統蜜餞給人的重鹹印象，堅持「不添加防腐劑、色素與糖精」。漫步走入純白典雅的英式鄉村玻璃屋，宛如步入童話繪本；在工作坊親手拿切果器為金棗劃上均勻花紋，加入糖與鹽反覆搖勻封罐，把蘭陽平原最富盛名的酸甜滋味帶回家。</p>
+            <p class="lang-en text-secondary">Taiwan’s premier candied fruit heritage museum redefines fruit preserving with a pure philosophy: zero artificial preservatives, food colorings, or sweeteners. Within sunlit white country glasshouses, marvel at whimsical giant fairytale furnishings, observe modern processing facilities, and hand-craft custom jars of candied kumquat to conclude your Yilan journey.</p>
+          </div>
+
+          <div class="spot-gallery-grid">
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/kumquat-0.jpg', '橘之鄉吉米巨大木桌椅', 'Giant Fairytale Furniture', '宛如掉進童話巨人國度的超巨大木桌椅裝置藝術，拍照打卡熱門地標。', 'Whimsical oversized wooden table and chairs creating playful fairy-tale photo moments.')">
+              <img src="img/Yilan/kumquat-0.jpg" alt="橘之鄉吉米巨大木桌椅 / Giant Wooden Table & Chair" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">巨人國桌椅</div>
+                <div class="photo-overlay-title lang-en">Giant Furniture</div>
+                <div class="photo-overlay-desc lang-zh">童話風超巨大木作裝置藝術</div>
+                <div class="photo-overlay-desc lang-en">Playful oversized fairytale furniture</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/kumquat-1.jpg', '手作金棗蜜餞DIY體驗', 'Kumquat Preserving DIY', '依循傳統古法，親手切劃、醃漬一罐專屬的酸甜金棗蜜餞。', 'Slitting fresh kumquats and shaking with sugar and salt into custom preserves.')">
+              <img src="img/Yilan/kumquat-1.jpg" alt="手作金棗蜜餞DIY體驗 / Kumquat Preserving DIY" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">金棗DIY</div>
+                <div class="photo-overlay-title lang-en">Kumquat DIY</div>
+                <div class="photo-overlay-desc lang-zh">親手醃漬純天然酸甜蜜餞罐</div>
+                <div class="photo-overlay-desc lang-en">Hand-shaken natural preserved kumquats</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/kumquat-2.jpg', '透明玻璃果醬製程展廊', 'Modern Clean Production', '堅持無添加化學防腐劑的現代化透明安心生產線，衛生看得見。', 'Transparent hygiene-controlled manufacturing line producing clean preserves.')">
+              <img src="img/Yilan/kumquat-2.jpg" alt="透明玻璃果醬製程展廊 / Modern Candied Fruit Factory" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">透明產線</div>
+                <div class="photo-overlay-title lang-en">Clean Facility</div>
+                <div class="photo-overlay-desc lang-zh">無添加防腐劑透明化製程</div>
+                <div class="photo-overlay-desc lang-en">Transparent eco-conscious production floor</div>
+              </div>
+            </div>
+            <div class="spot-photo-wrap" onclick="openLightbox('img/Yilan/kumquat-3.jpg', 'AGRIOZ 玻璃屋咖啡館', 'Glasshouse Café', '歐風純白玻璃屋咖啡廳，陽光穿透綠意，優雅愜意，品嚐招牌金棗茶。', 'Sun-dappled European-style white greenhouse café serving soothing hot kumquat tea.')">
+              <img src="img/Yilan/kumquat-3.jpg" alt="AGRIOZ 玻璃屋咖啡館 / Glasshouse Café" class="spot-photo" loading="lazy">
+              <div class="spot-photo-overlay">
+                <div class="photo-overlay-title lang-zh">純白玻璃屋</div>
+                <div class="photo-overlay-title lang-en">White Glasshouse</div>
+                <div class="photo-overlay-desc lang-zh">綠意環繞的優雅採光咖啡館</div>
+                <div class="photo-overlay-desc lang-en">Sunlit greenhouse café sipping citrus tea</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spot-tip-box">
+            <div class="fw-bold mb-1">
+              <i class="bi bi-lightbulb-fill me-1"></i>
+              <span class="lang-zh">拍照與體驗</span>
+              <span class="lang-en">Photo & Workshop</span>
+            </div>
+            <p class="lang-zh mb-1 small">純白玻璃屋咖啡館光線極佳；金棗蜜餞DIY約需20分鐘，完成後即可裝入復古玻璃罐帶走，送禮自用兩相宜。</p>
+            <p class="lang-en mb-0 text-secondary small">The white glasshouse offers superb natural lighting. The 20-minute kumquat preserving workshop includes a nostalgic glass keepsake jar.</p>
+          </div>
+
+          <div class="spot-tags">
+            <span class="spot-tag"><span class="lang-zh">#橘之鄉</span><span class="lang-en">#Agrioz</span></span>
+            <span class="spot-tag"><span class="lang-zh">#金棗蜜餞手作</span><span class="lang-en">#CandiedKumquat</span></span>
+            <span class="spot-tag"><span class="lang-zh">#純白玻璃屋</span><span class="lang-en">#GlasshouseCafe</span></span>
+            <span class="spot-tag"><span class="lang-zh">#宜蘭伴手禮名店</span><span class="lang-en">#YilanSouvenir</span></span>
+          </div>
+        </article>
+
+      </div>
+      <!-- END DAY 2 GROUP -->
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section py-5" id="gallery">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-tag">
+          <i class="bi bi-camera me-1"></i>
+          <span class="lang-zh">旅途影格記錄</span>
+          <span class="lang-en">Visual Journey Highlights</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-zh">宜蘭秋日精選影廊</span>
+          <span class="lang-en d-block fs-3 text-secondary mt-1">Yilan Autumn Photo Gallery</span>
+        </h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          <span class="lang-zh">凝結染布的純樸、老街的幽光、林泉的清冽與豐盛手作的溫度。點擊任一照片可開啟大圖欣賞。</span>
+          <span class="lang-en d-block mt-1">Capturing the warmth of natural dyes, nostalgic alleys, crystalline springs, and harvest feasts. Click any image to view high-resolution photos.</span>
+        </p>
+      </div>
+
+      <!-- Gallery Filter Controls -->
+      <div class="gallery-filter-nav">
+        <button class="gallery-pill active" onclick="filterGallery('all', this)">
+          <span class="lang-zh">全部影像 (16)</span>
+          <span class="lang-en small">/ All Photos</span>
+        </button>
+        <button class="gallery-pill" onclick="filterGallery('craft', this)">
+          <i class="bi bi-palette text-primary me-1"></i>
+          <span class="lang-zh">手作工藝</span>
+          <span class="lang-en small">/ Craft & Culture</span>
+        </button>
+        <button class="gallery-pill" onclick="filterGallery('food', this)">
+          <i class="bi bi-cup-hot text-danger me-1"></i>
+          <span class="lang-zh">在地風味</span>
+          <span class="lang-en small">/ Local Flavors</span>
+        </button>
+        <button class="gallery-pill" onclick="filterGallery('nature', this)">
+          <i class="bi bi-water text-info me-1"></i>
+          <span class="lang-zh">自然湧泉</span>
+          <span class="lang-en small">/ Nature & Springs</span>
+        </button>
+        <button class="gallery-pill" onclick="filterGallery('hotel', this)">
+          <i class="bi bi-house-heart text-warning me-1"></i>
+          <span class="lang-zh">溫泉旅宿</span>
+          <span class="lang-en small">/ Hot Spring Stay</span>
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- 1: craft -->
+        <div class="gallery-card" data-category="craft" onclick="openLightbox('img/Yilan/Fucheng-2.jpg', '福成藍染與植物原料', 'Fucheng Natural Dyeing Raw Materials', '傳統天然草木染工藝，萃取茶葉與在地植物的溫潤色彩。', 'Traditional botanical dyeing extracting gentle earthy colors from tea and local plants.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/Fucheng-2.jpg" alt="福成藍染與植物原料 / Fucheng Natural Dyeing Raw Materials" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">手作工藝 / Craft</span>
+            <h5 class="gallery-card-title-zh">福成藍染與植物原料</h5>
+            <div class="gallery-card-title-en">Fucheng Botanical Dyeing Materials</div>
+            <p class="gallery-card-desc lang-zh">傳統天然草木染工藝，淬煉自然溫潤的大地色彩。</p>
+            <p class="gallery-card-desc lang-en">Traditional botanical craft extracting soft earth tones.</p>
+          </div>
+        </div>
+
+        <!-- 2: craft -->
+        <div class="gallery-card" data-category="craft" onclick="openLightbox('img/Yilan/Fucheng-3.jpg', '傳統綁染技法圖騰', 'Traditional Tie-Dye Patterns', '精巧綁繩與夾板，在白布上展開獨一無二的手作幾何紋樣。', 'Artful clamping and binding techniques creating unique geometric patterns on fabric.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/Fucheng-3.jpg" alt="傳統綁染技法圖騰 / Traditional Tie-Dye Patterns" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">手作工藝 / Craft</span>
+            <h5 class="gallery-card-title-zh">傳統綁染技法圖騰</h5>
+            <div class="gallery-card-title-en">Traditional Tie-Dye Patterns</div>
+            <p class="gallery-card-desc lang-zh">精巧綁繩與夾板，展現獨一無二的手作花紋。</p>
+            <p class="gallery-card-desc lang-en">Clamping and binding techniques creating unique patterns.</p>
+          </div>
+        </div>
+
+        <!-- 3: food -->
+        <div class="gallery-card" data-category="food" onclick="openLightbox('img/Yilan/boatmeal-3.jpg', '蘭陽老手路船菜', 'Historic Riverboat Specialties', '承載河運歷史的經典水路家常美饌，湯濃料足鑊氣滿溢。', 'Hearty waterway home cooking steeped in history, rich with broth and authentic flavors.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/boatmeal-3.jpg" alt="蘭陽老手路船菜 / Historic Riverboat Specialties" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">在地風味 / Food</span>
+            <h5 class="gallery-card-title-zh">蘭陽老手路船菜</h5>
+            <div class="gallery-card-title-en">Historic Riverboat Cuisine</div>
+            <p class="gallery-card-desc lang-zh">承載河運歷史的經典水路家常美饌。</p>
+            <p class="gallery-card-desc lang-en">Hearty waterway home cooking steeped in history.</p>
+          </div>
+        </div>
+
+        <!-- 4: nature -->
+        <div class="gallery-card" data-category="nature" onclick="openLightbox('img/Yilan/story-2.jpg', '阮義忠攝影光影展廳', 'Juan I-Jong Gallery Space', '黑白光影間凝結半世紀台灣常民溫情，每幅影像都是動人故事。', 'Monochrome photography preserving 50 years of human warmth and resilient Taiwanese stories.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/story-2.jpg" alt="阮義忠攝影光影展廳 / Juan I-Jong Gallery Space" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">人文歷史 / Culture</span>
+            <h5 class="gallery-card-title-zh">阮義忠攝影光影展廳</h5>
+            <div class="gallery-card-title-en">Juan I-Jong Gallery Hall</div>
+            <p class="gallery-card-desc lang-zh">黑白光影間凝結半世紀台灣常民溫情。</p>
+            <p class="gallery-card-desc lang-en">Monochrome photography preserving 50 years of human warmth.</p>
+          </div>
+        </div>
+
+        <!-- 5: craft -->
+        <div class="gallery-card" data-category="craft" onclick="openLightbox('img/Yilan/story-3.jpg', '老眷舍木窗與時光走廊', 'Heritage Wooden Corridors', '修復完好的日治官舍建築，木櫺花格靜靜訴說歲月流淌的記憶。', 'Well-preserved heritage corridors and wooden latticework whispering tales of the past.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/story-3.jpg" alt="老眷舍木窗與時光走廊 / Heritage Wooden Corridors" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">建築古蹟 / Architecture</span>
+            <h5 class="gallery-card-title-zh">老眷舍木窗與時光走廊</h5>
+            <div class="gallery-card-title-en">Heritage Wooden Corridors</div>
+            <p class="gallery-card-desc lang-zh">修復完好的日治官舍建築，靜靜訴說歲月記憶。</p>
+            <p class="gallery-card-desc lang-en">Well-preserved heritage corridors whispering tales of the past.</p>
+          </div>
+        </div>
+
+        <!-- 6: nature -->
+        <div class="gallery-card" data-category="nature" onclick="openLightbox('img/Yilan/reishi-2.jpg', '科技溫室生機菇菌', 'Eco-Greenhouse Fungi Colony', '純淨山泉水與智慧環控培育出飽滿鮮美的有機蕈菇群。', 'Pure mountain spring waters and smart climate control nurturing organic mushroom colonies.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/reishi-2.jpg" alt="科技溫室生機菇菌 / Eco-Greenhouse Fungi Colony" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">生態農業 / Eco-Agri</span>
+            <h5 class="gallery-card-title-zh">科技溫室生機菇菌</h5>
+            <div class="gallery-card-title-en">Greenhouse Organic Fungi</div>
+            <p class="gallery-card-desc lang-zh">純淨山泉水孕育出飽滿鮮美的有機蕈菇。</p>
+            <p class="gallery-card-desc lang-en">Pure spring waters nurturing thriving organic mushroom colonies.</p>
+          </div>
+        </div>
+
+        <!-- 7: craft -->
+        <div class="gallery-card" data-category="craft" onclick="openLightbox('img/Yilan/reishi-3.jpg', '養生靈芝品茗體驗', 'Reishi Herbal Tea Tasting', '微苦回甘的珍貴靈芝茶飲與健康概念，調養身心。', 'Soothing bittersweet reishi tea promoting wellness and balanced living.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/reishi-3.jpg" alt="養生靈芝品茗體驗 / Reishi Herbal Tea Tasting" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">健康養生 / Wellness</span>
+            <h5 class="gallery-card-title-zh">養生靈芝品茗體驗</h5>
+            <div class="gallery-card-title-en">Reishi Herbal Tea Tasting</div>
+            <p class="gallery-card-desc lang-zh">微苦回甘的珍貴靈芝茶飲與健康概念。</p>
+            <p class="gallery-card-desc lang-en">Soothing bittersweet reishi tea promoting wellness and health.</p>
+          </div>
+        </div>
+
+        <!-- 8: hotel -->
+        <div class="gallery-card" data-category="hotel" onclick="openLightbox('img/Yilan/justsleep-1.jpg', '礁溪捷絲旅客房風貌', 'Just Sleep Jiaoxi Guest Room', '簡約日式禪風設計，搭配專屬超大磨石子碳酸氫鈉泉湯池。', 'Minimalist Zen aesthetics paired with a private oversized stone soaking tub.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/justsleep-1.jpg" alt="礁溪捷絲旅客房風貌 / Just Sleep Jiaoxi Guest Room" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">溫泉旅宿 / Resort</span>
+            <h5 class="gallery-card-title-zh">礁溪捷絲旅客房風貌</h5>
+            <div class="gallery-card-title-en">Just Sleep Jiaoxi Guest Room</div>
+            <p class="gallery-card-desc lang-zh">簡約日式禪風設計，搭配專屬超大磨石子湯池。</p>
+            <p class="gallery-card-desc lang-en">Minimalist Zen aesthetics paired with private stone soaking tub.</p>
+          </div>
+        </div>
+
+        <!-- 9: hotel -->
+        <div class="gallery-card" data-category="hotel" onclick="openLightbox('img/Yilan/justsleep-3.jpg', '復古傳統童玩休閒角落', 'Nostalgic Playroom', '滿載兒時回憶的童玩遊藝空間，讓旅人重溫純真快樂時光。', 'Joyful vintage Taiwanese games evoking sweet childhood memories in a retro lounge.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/justsleep-3.jpg" alt="復古傳統童玩休閒角落 / Nostalgic Playroom" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">休閒娛樂 / Leisure</span>
+            <h5 class="gallery-card-title-zh">復古傳統童玩休閒角落</h5>
+            <div class="gallery-card-title-en">Nostalgic Playroom Lounge</div>
+            <p class="gallery-card-desc lang-zh">滿載兒時回憶的童玩遊藝空間，放鬆自在。</p>
+            <p class="gallery-card-desc lang-en">Joyful vintage Taiwanese games evoking sweet childhood memories.</p>
+          </div>
+        </div>
+
+        <!-- 10: nature -->
+        <div class="gallery-card" data-category="nature" onclick="openLightbox('img/Yilan/aiyu-1.jpg', '豐盛愛玉綠意藤蔓廊架', 'Verdant Aiyu Vine Trellises', '台灣特有種植物攀附成蔭，形成清涼宜人的天然綠色隧道。', 'Taiwanese endemic vines forming shady, lush green fruit pergolas.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/aiyu-1.jpg" alt="豐盛愛玉綠意藤蔓廊架 / Verdant Aiyu Vine Trellises" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">生態景觀 / Nature</span>
+            <h5 class="gallery-card-title-zh">豐盛愛玉綠意藤蔓廊架</h5>
+            <div class="gallery-card-title-en">Verdant Aiyu Vine Trellis</div>
+            <p class="gallery-card-desc lang-zh">台灣特有種植物攀附成蔭，生機盎然。</p>
+            <p class="gallery-card-desc lang-en">Endemic vines forming shady, lush green canopies.</p>
+          </div>
+        </div>
+
+        <!-- 11: nature -->
+        <div class="gallery-card" data-category="nature" onclick="openLightbox('img/Yilan/tractor-1.jpg', '內城耕耘機鐵牛力阿卡', 'Neicheng Iron Ox Tractor Cart', '鄉村阿伯駕著改裝鐵牛車，熱情穿梭田埂古道，分享在地故事。', 'Friendly village elders guiding tractor carts through rice fields with humor and warmth.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/tractor-1.jpg" alt="內城耕耘機鐵牛力阿卡 / Neicheng Iron Ox Tractor Cart" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">鄉土體驗 / Heritage</span>
+            <h5 class="gallery-card-title-zh">內城耕耘機鐵牛力阿卡</h5>
+            <div class="gallery-card-title-en">Neicheng Tractor Cart Ride</div>
+            <p class="gallery-card-desc lang-zh">鄉村阿伯駕著改裝鐵牛車，熱情穿梭田埂古道。</p>
+            <p class="gallery-card-desc lang-en">Friendly village elders guiding tractor carts through rice fields.</p>
+          </div>
+        </div>
+
+        <!-- 12: nature -->
+        <div class="gallery-card" data-category="nature" onclick="openLightbox('img/Yilan/tractor-2.jpg', '員山沁涼天然湧泉', 'Neicheng Natural Spring Pool', '終年清澈見底的19度清泉，夏秋消暑的天然沁涼寶地。', 'Crystalline 19°C spring waters offering soothing, natural cooling year-round.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/tractor-2.jpg" alt="員山沁涼天然湧泉 / Neicheng Natural Spring Pool" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">自然湧泉 / Springs</span>
+            <h5 class="gallery-card-title-zh">員山沁涼天然湧泉</h5>
+            <div class="gallery-card-title-en">Crystalline Cold Springs</div>
+            <p class="gallery-card-desc lang-zh">終年清澈見底的19度清泉，夏日消暑勝地。</p>
+            <p class="gallery-card-desc lang-en">Crystalline 19°C spring waters offering natural cooling relief.</p>
+          </div>
+        </div>
+
+        <!-- 13: food -->
+        <div class="gallery-card" data-category="food" onclick="openLightbox('img/Yilan/rice-1.jpg', '大碗公農村古早味割稻飯', 'Traditional Harvest Rice Feast', '厚切滷控肉、菜脯蛋與在地山菜，滿載秋收感恩的豪邁人情。', 'Generous braised pork belly and farm-fresh omelets honoring autumn harvest gratitude.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/rice-1.jpg" alt="大碗公農村古早味割稻飯 / Traditional Harvest Rice Feast" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">在地風味 / Food</span>
+            <h5 class="gallery-card-title-zh">大碗公農村古早味割稻飯</h5>
+            <div class="gallery-card-title-en">Harvest Rice Earthenware Bowl</div>
+            <p class="gallery-card-desc lang-zh">厚切滷控肉、菜脯蛋與在地山菜，滿載秋收豪情。</p>
+            <p class="gallery-card-desc lang-en">Generous braised pork belly and omelets honoring autumn harvest.</p>
+          </div>
+        </div>
+
+        <!-- 14: food -->
+        <div class="gallery-card" data-category="food" onclick="openLightbox('img/Yilan/kumquat-3.jpg', '橘之鄉純白鄉村玻璃屋', 'AGRIOZ White Glasshouse Café', '綠意環繞的純白歐式玻璃屋，品嚐現泡熱金棗茶與果香甜點。', 'Sunlit European greenhouse café serving fragrant hot kumquat tea and pastries.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/kumquat-3.jpg" alt="橘之鄉純白鄉村玻璃屋 / AGRIOZ White Glasshouse Café" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">休閒甜品 / Café</span>
+            <h5 class="gallery-card-title-zh">橘之鄉純白鄉村玻璃屋</h5>
+            <div class="gallery-card-title-en">AGRIOZ Glasshouse Café</div>
+            <p class="gallery-card-desc lang-zh">綠意環繞的純白歐式玻璃屋，品嚐現泡金棗茶。</p>
+            <p class="gallery-card-desc lang-en">Sunlit European greenhouse café serving fragrant hot kumquat tea.</p>
+          </div>
+        </div>
+
+        <!-- 15: craft -->
+        <div class="gallery-card" data-category="craft" onclick="openLightbox('img/Yilan/ricefarm-2.jpg', '棗稻田獲獎木構綠建築', 'Zaodaotian Award-Winning Architecture', '鑽石級低碳木造工藝，與田野水圳和諧共鳴的現代莊園。', 'Diamond-grade low-carbon timber craft harmonious with surrounding rice paddies and canals.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/ricefarm-2.jpg" alt="棗稻田獲獎木構綠建築 / Zaodaotian Award-Winning Architecture" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">綠能建築 / Green Architecture</span>
+            <h5 class="gallery-card-title-zh">棗稻田獲獎木構綠建築</h5>
+            <div class="gallery-card-title-en">Timber Eco-Architecture</div>
+            <p class="gallery-card-desc lang-zh">鑽石級低碳木造工藝，與田野水圳和諧共鳴。</p>
+            <p class="gallery-card-desc lang-en">Diamond-grade low-carbon timber craft harmonious with nature.</p>
+          </div>
+        </div>
+
+        <!-- 16: nature -->
+        <div class="gallery-card" data-category="nature" onclick="openLightbox('img/Yilan/ricefarm-3.jpg', '水圳古水車與有機莊園', 'Canal Waterwheel & Orchard', '潺潺流水推動古老水車，洗滌都會喧囂，重返田園詩意。', 'Rushing canal water turning heritage waterwheels peacefully beside organic orchards.')">
+          <div class="gallery-img-wrap">
+            <img src="img/Yilan/ricefarm-3.jpg" alt="水圳古水車與有機莊園 / Canal Waterwheel & Orchard" class="gallery-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-category-badge">田園景致 / Countryside</span>
+            <h5 class="gallery-card-title-zh">水圳古水車與有機莊園</h5>
+            <div class="gallery-card-title-en">Waterwheel Canal & Orchard</div>
+            <p class="gallery-card-desc lang-zh">潺潺流水推動古老水車，洗滌都會喧囂。</p>
+            <p class="gallery-card-desc lang-en">Rushing canal water turning heritage waterwheels peacefully.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVEL NOTES & SUMMARY SECTION -->
+  <section class="py-5 bg-white border-top" id="travel-notes">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-tag">
+          <i class="bi bi-journal-bookmark-fill me-1"></i>
+          <span class="lang-zh">實用行程資訊</span>
+          <span class="lang-en">Practical Travel Guide</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-zh">旅程總覽與實用筆記</span>
+          <span class="lang-en d-block fs-3 text-secondary mt-1">Travel Summary & Practical Notes</span>
+        </h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          <span class="lang-zh">兩天一夜十處經典景點時間軸、交通規劃與貼心叮嚀，助您輕鬆成行。</span>
+          <span class="lang-en d-block mt-1">Complete 2-day timeline, navigation links, and insider recommendations for a seamless journey.</span>
+        </p>
+      </div>
+
+      <!-- Itinerary Summary Table -->
+      <div class="table-responsive my-4 shadow-sm rounded-4 border overflow-hidden">
+        <table class="table table-hover align-middle mb-0 summary-table">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" style="width: 10%;">
+                <span class="lang-zh">站次</span>
+                <span class="lang-en small text-muted d-block">Stop</span>
+              </th>
+              <th scope="col" style="width: 14%;">
+                <span class="lang-zh">時間</span>
+                <span class="lang-en small text-muted d-block">Time</span>
+              </th>
+              <th scope="col" style="width: 26%;">
+                <span class="lang-zh">行程站點</span>
+                <span class="lang-en small text-muted d-block">Destination</span>
+              </th>
+              <th scope="col" style="width: 14%;">
+                <span class="lang-zh">行政區</span>
+                <span class="lang-en small text-muted d-block">Area</span>
+              </th>
+              <th scope="col" style="width: 26%;">
+                <span class="lang-zh">體驗亮點</span>
+                <span class="lang-en small text-muted d-block">Highlights</span>
+              </th>
+              <th scope="col" style="width: 10%;" class="text-center">
+                <span class="lang-zh">地圖</span>
+                <span class="lang-en small text-muted d-block">Map</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Day 1 -->
+            <tr>
+              <td><span class="badge bg-primary-subtle text-primary fw-bold">Day 1 - 01</span></td>
+              <td>10:00 - 11:30</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">福成玩染工藝坊</div>
+                <div class="small text-secondary lang-en">Fucheng Natural Dyeing Workshop</div>
+              </td>
+              <td>
+                <span class="lang-zh">冬山鄉</span>
+                <span class="lang-en small text-muted">/ Dongshan</span>
+              </td>
+              <td>
+                <span class="lang-zh small">植物染DIY、茶染手作體驗</span>
+                <span class="lang-en small text-muted d-block">Botanical & Tea Dyeing DIY</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=宜蘭縣冬山鄉福成路" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-primary-subtle text-primary fw-bold">Day 1 - 02</span></td>
+              <td>12:00 - 13:30</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">蘭陽船菜傳統料理</div>
+                <div class="small text-secondary lang-en">Lanyang Riverboat Cuisine</div>
+              </td>
+              <td>
+                <span class="lang-zh">五結鄉</span>
+                <span class="lang-en small text-muted">/ Wujie</span>
+              </td>
+              <td>
+                <span class="lang-zh small">正宗老宜蘭西魯肉、蘭陽傳統手路菜</span>
+                <span class="lang-en small text-muted d-block">Authentic Silu Pork Stew & Riverboat Feast</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=蘭陽船菜" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-primary-subtle text-primary fw-bold">Day 1 - 03</span></td>
+              <td>14:00 - 15:30</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">阮義忠台灣故事館</div>
+                <div class="small text-secondary lang-en">Juan I-Jong Taiwan Story House</div>
+              </td>
+              <td>
+                <span class="lang-zh">宜蘭市</span>
+                <span class="lang-en small text-muted">/ Yilan City</span>
+              </td>
+              <td>
+                <span class="lang-zh small">台灣經典紀實攝影、舊眷舍木構美學</span>
+                <span class="lang-en small text-muted d-block">Documentary Photo Exhibitions & Architecture</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=阮義忠台灣故事館" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-primary-subtle text-primary fw-bold">Day 1 - 04</span></td>
+              <td>16:00 - 17:30</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">靈芝菇菇農場</div>
+                <div class="small text-secondary lang-en">Reishi Mushroom Eco Farm</div>
+              </td>
+              <td>
+                <span class="lang-zh">礁溪鄉</span>
+                <span class="lang-en small text-muted">/ Jiaoxi</span>
+              </td>
+              <td>
+                <span class="lang-zh small">鹿角靈芝生技溫室、新鮮菇菌採摘品茗</span>
+                <span class="lang-en small text-muted d-block">Antler Reishi Greenhouse & Herbal Tea</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=礁溪靈芝農場" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-primary-subtle text-primary fw-bold">Day 1 - 05</span></td>
+              <td>18:00 - 翌日</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">捷絲旅宜蘭礁溪館</div>
+                <div class="small text-secondary lang-en">Just Sleep Jiaoxi Resort</div>
+              </td>
+              <td>
+                <span class="lang-zh">礁溪鄉</span>
+                <span class="lang-en small text-muted">/ Jiaoxi</span>
+              </td>
+              <td>
+                <span class="lang-zh small">客房大浴池、露天風呂、溫泉街漫遊</span>
+                <span class="lang-en small text-muted d-block">In-Room Stone Tub, Outdoor Onsen, Night Walk</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=捷絲旅宜蘭礁溪館" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+
+            <!-- Day 2 -->
+            <tr>
+              <td><span class="badge bg-success-subtle text-success fw-bold">Day 2 - 06</span></td>
+              <td>07:30 - 09:00</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">晨光溫泉浴與在地晨食</div>
+                <div class="small text-secondary lang-en">Morning Onsen & Local Breakfast</div>
+              </td>
+              <td>
+                <span class="lang-zh">礁溪鄉</span>
+                <span class="lang-en small text-muted">/ Jiaoxi</span>
+              </td>
+              <td>
+                <span class="lang-zh small">晨浴美人湯、Just Café 三星蔥晨食</span>
+                <span class="lang-en small text-muted d-block">Morning Soak & Local Regional Buffet</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=捷絲旅宜蘭礁溪館" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-success-subtle text-success fw-bold">Day 2 - 07</span></td>
+              <td>09:30 - 11:00</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">豐盛愛玉農場</div>
+                <div class="small text-secondary lang-en">Feng Sheng Aiyu Orchard</div>
+              </td>
+              <td>
+                <span class="lang-zh">員山鄉</span>
+                <span class="lang-en small text-muted">/ Yuanshan</span>
+              </td>
+              <td>
+                <span class="lang-zh small">愛玉藤廊生態巡禮、手揉天然愛玉凍</span>
+                <span class="lang-en small text-muted d-block">Aiyu Vine Pergola & Silky Jelly DIY</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=豐盛愛玉" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-success-subtle text-success fw-bold">Day 2 - 08</span></td>
+              <td>11:15 - 12:30</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">內城鐵牛力阿卡</div>
+                <div class="small text-secondary lang-en">Neicheng Iron Ox Cart Ride</div>
+              </td>
+              <td>
+                <span class="lang-zh">員山鄉</span>
+                <span class="lang-en small text-muted">/ Yuanshan</span>
+              </td>
+              <td>
+                <span class="lang-zh small">耕耘機力阿卡車隊、19度清冽湧泉公園</span>
+                <span class="lang-en small text-muted d-block">Tractor Convoy & 19°C Spring Park</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=內城社區鐵牛力阿卡" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-success-subtle text-success fw-bold">Day 2 - 09</span></td>
+              <td>12:30 - 13:45</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">員山農家割稻飯</div>
+                <div class="small text-secondary lang-en">Traditional Harvest Rice Feast</div>
+              </td>
+              <td>
+                <span class="lang-zh">員山鄉</span>
+                <span class="lang-en small text-muted">/ Yuanshan</span>
+              </td>
+              <td>
+                <span class="lang-zh small">大碗公控肉飯、柴燒家常菜、換工人情味</span>
+                <span class="lang-en small text-muted d-block">Hearty Braised Pork Bowls & Countryside Hospitality</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=員山割稻飯" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-success-subtle text-success fw-bold">Day 2 - 10</span></td>
+              <td>14:15 - 15:45</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">棗稻田食玩農創空間</div>
+                <div class="small text-secondary lang-en">Zaodaotian Organic Farming Hub</div>
+              </td>
+              <td>
+                <span class="lang-zh">員山鄉</span>
+                <span class="lang-en small text-muted">/ Yuanshan</span>
+              </td>
+              <td>
+                <span class="lang-zh small">木構綠建築、金棗窯烤麵包、水車水圳</span>
+                <span class="lang-en small text-muted d-block">Timber Eco-Architecture, Waterwheel & Kumquat Bread</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=棗稻田有機農場" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-success-subtle text-success fw-bold">Day 2 - 11</span></td>
+              <td>16:15 - 17:30</td>
+              <td>
+                <div class="fw-bold text-dark lang-zh">橘之鄉蜜餞形象館</div>
+                <div class="small text-secondary lang-en">AGRIOZ Candied Fruit Museum</div>
+              </td>
+              <td>
+                <span class="lang-zh">宜蘭市</span>
+                <span class="lang-en small text-muted">/ Yilan City</span>
+              </td>
+              <td>
+                <span class="lang-zh small">純白玻璃屋、手作金棗蜜餞DIY、巨型桌椅</span>
+                <span class="lang-en small text-muted d-block">Glasshouse Café & Kumquat Preserving DIY</span>
+              </td>
+              <td class="text-center">
+                <a href="https://maps.google.com/?q=橘之鄉蜜餞形象館" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill px-2" title="Google 地圖">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Travel Tips 3 Cards -->
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-light border h-100 shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-circle me-3" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                <i class="bi bi-car-front-fill"></i>
+              </div>
+              <h5 class="mb-0 fw-bold">
+                <span class="lang-zh">交通出行指南</span>
+                <span class="lang-en d-block fs-6 text-secondary fw-normal">Transportation Guide</span>
+              </h5>
+            </div>
+            <p class="lang-zh text-muted small mb-2">自駕循國道5號經雪山隧道前往宜蘭約50-60分鐘；搭乘台鐵至宜蘭火車站或礁溪火車站後轉乘台灣好行公車或租車自駕，移動更為自由便捷。</p>
+            <p class="lang-en text-secondary small mb-0">Via National Freeway No. 5 through Hsuehshan Tunnel (approx. 50-60 min from Taipei). Alternatively take Taiwan Railway to Yilan or Jiaoxi Station and connect via Taiwan Tourist Shuttle bus or local rental car.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-light border h-100 shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-circle me-3" style="width: 44px; height: 44px; font-size: 1.25rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                <i class="bi bi-cloud-sun-fill"></i>
+              </div>
+              <h5 class="mb-0 fw-bold">
+                <span class="lang-zh">季節著裝與必備裝備</span>
+                <span class="lang-en d-block fs-6 text-secondary fw-normal">Seasonal Attire & Essentials</span>
+              </h5>
+            </div>
+            <p class="lang-zh text-muted small mb-2">宜蘭秋冬氣候溫和但偶有迎風面短暫陣雨，建議攜帶輕便防風雨外套、雨具與好走的防滑健行鞋；參訪農事體驗時建議穿著深色耐磨衣物。</p>
+            <p class="lang-en text-secondary small mb-0">Autumn and winter in Yilan are pleasantly mild with occasional passing showers. Bring a lightweight windbreaker/rain jacket, umbrella, and comfortable walking shoes. Dark clothing is recommended for farm crafts.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-light border h-100 shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-circle me-3" style="width: 44px; height: 44px; font-size: 1.25rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+                <i class="bi bi-calendar-check-fill"></i>
+              </div>
+              <h5 class="mb-0 fw-bold">
+                <span class="lang-zh">預約與體驗叮嚀</span>
+                <span class="lang-en d-block fs-6 text-secondary fw-normal">Booking & Workshop Notes</span>
+              </h5>
+            </div>
+            <p class="lang-zh text-muted small mb-2">福成手作染布、內城鐵牛車隊與割稻飯合菜因需預先準備食材與導覽人力，強烈建議出發前一週去電預約確認；橘之鄉DIY隨到隨體驗。</p>
+            <p class="lang-en text-secondary small mb-0">Natural dyeing at Fucheng, Neicheng Iron Ox carts, and Harvest Rice banquets require advance preparation; booking at least one week ahead is highly recommended. AGRIOZ DIY is available on a walk-in basis.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close Lightbox">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <img id="lightboxImg" src="" alt="Popup Preview" class="lightbox-img">
+      <div class="lightbox-caption">
+        <div id="lightboxTitleZh" class="lightbox-title-zh lang-zh"></div>
+        <div id="lightboxTitleEn" class="lightbox-title-en lang-en"></div>
+        <div id="lightboxDescZh" class="lightbox-desc-zh lang-zh"></div>
+        <div id="lightboxDescEn" class="lightbox-desc-en lang-en"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <a href="#page-top" class="back-to-top" id="backToTopBtn" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer-wrap">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="#page-top" class="d-inline-flex align-items-center text-decoration-none text-white gap-2">
+          <i class="bi bi-compass fs-3 text-warning"></i>
+          <span class="fs-5 fw-bold font-serif">Time for Taiwan 臺灣觀光指南</span>
+        </a>
+      </div>
+      <p class="text-white-50 small mb-2">
+        <span class="lang-zh">宜蘭秋日文化與自然雙語深度旅程 ‧ 發現蘭陽平原最動人的風土溫度</span>
+        <span class="lang-en d-block">Yilan Autumn Cultural & Ecological Bilingual Guide · Unveiling the Authentic Warmth of Lanyang Plain</span>
+      </p>
+      <div class="d-flex justify-content-center gap-3 text-white-50 small my-3">
+        <a href="#overview" class="text-white-50 text-decoration-none hover-white">行程亮點 / Highlights</a>
+        <span>•</span>
+        <a href="#itinerary" class="text-white-50 text-decoration-none hover-white">每日行程 / Itinerary</a>
+        <span>•</span>
+        <a href="#gallery" class="text-white-50 text-decoration-none hover-white">精選影廊 / Gallery</a>
+        <span>•</span>
+        <a href="#travel-notes" class="text-white-50 text-decoration-none hover-white">實用筆記 / Travel Notes</a>
+      </div>
+      <hr class="border-secondary opacity-25 my-3">
+      <p class="text-white-50 small mb-0">
+        © 2026 宜蘭秋季雙語深度旅程指南 | Yilan Bilingual Autumn Travel Guide. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOOTSTRAP 5.3 BUNDLE JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Language Toggle Logic
+    function setLangView(mode) {
+      const body = document.body;
+      body.classList.remove('view-bilingual', 'view-zh-only', 'view-en-only');
+
+      const btnBi = document.getElementById('btn-lang-both');
+      const btnZh = document.getElementById('btn-lang-zh');
+      const btnEn = document.getElementById('btn-lang-en');
+
+      if (btnBi) btnBi.classList.remove('active');
+      if (btnZh) btnZh.classList.remove('active');
+      if (btnEn) btnEn.classList.remove('active');
+
+      if (mode === 'zh') {
+        body.classList.add('view-zh-only');
+        if (btnZh) btnZh.classList.add('active');
+        localStorage.setItem('preferredLangView', 'zh');
+      } else if (mode === 'en') {
+        body.classList.add('view-en-only');
+        if (btnEn) btnEn.classList.add('active');
+        localStorage.setItem('preferredLangView', 'en');
+      } else {
+        body.classList.add('view-bilingual');
+        if (btnBi) btnBi.classList.add('active');
+        localStorage.setItem('preferredLangView', 'both');
+      }
+    }
+
+    // Initialize preferred language view from localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLangView') || 'both';
+      setLangView(savedLang);
+
+      // Back to top visibility listener
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      });
+    });
+
+    // 2. Lightbox Modal Logic
+    function openLightbox(src, titleZh, titleEn, descZh, descEn) {
+      const modal = document.getElementById('imageLightbox');
+      const img = document.getElementById('lightboxImg');
+      const tZh = document.getElementById('lightboxTitleZh');
+      const tEn = document.getElementById('lightboxTitleEn');
+      const dZh = document.getElementById('lightboxDescZh');
+      const dEn = document.getElementById('lightboxDescEn');
+
+      img.src = src;
+      img.alt = titleZh || titleEn || 'Enlarged Image Preview';
+      tZh.textContent = titleZh || '';
+      tEn.textContent = titleEn || '';
+      dZh.textContent = descZh || '';
+      dEn.textContent = descEn || '';
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      const modal = document.getElementById('imageLightbox');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Keyboard ESC to close lightbox
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+
+    // 3. Day Itinerary Filter Logic
+    function filterItinerary(day, btn) {
+      const allPills = document.querySelectorAll('.filter-tabs-wrapper .filter-btn-pill');
+      allPills.forEach(p => p.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const groupDay1 = document.getElementById('group-day1');
+      const groupDay2 = document.getElementById('group-day2');
+
+      if (day === 'day1') {
+        if (groupDay1) groupDay1.style.display = 'block';
+        if (groupDay2) groupDay2.style.display = 'none';
+      } else if (day === 'day2') {
+        if (groupDay1) groupDay1.style.display = 'none';
+        if (groupDay2) groupDay2.style.display = 'block';
+      } else {
+        if (groupDay1) groupDay1.style.display = 'block';
+        if (groupDay2) groupDay2.style.display = 'block';
+      }
+    }
+
+    // 4. Gallery Category Filter Logic
+    function filterGallery(category, btn) {
+      const allPills = document.querySelectorAll('.gallery-filter-nav .gallery-pill');
+      allPills.forEach(p => p.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#galleryGrid .gallery-card');
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
